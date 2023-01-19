@@ -140,6 +140,11 @@ chapter {
     font-size: 25pt;
 }
 
+subchapter {
+    font-style: italic;
+    color: black;
+}
+
 img {
     display: block;
     margin: 0 auto;
