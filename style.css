@@ -3,7 +3,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
-    background: white;
+    background: #f6edf6;
     overflow: hidden;
 }
 
@@ -35,7 +35,7 @@ h2 {
     font-size: 20pt;
     font-style: italic;
     font-weight: lighter;
-    color: #888;
+    color: #702963;
 }
 
 .header {
@@ -60,7 +60,7 @@ h2 {
     position: fixed;
     display: block;
     width: 100%;
-    background: white;
+    background: #f6edf6;
     transition: color 0.6s, background 0.6s;
     margin: 0;
     padding-top: 6px;
@@ -87,6 +87,7 @@ h2 {
     margin-top: 24px;
     background-size: cover;
     background-repeat: no-repeat;
+
 }
 
 @media screen and (max-width: 980px) {
@@ -119,7 +120,7 @@ p {
 
 a {
 
-    color: #b97c2c;
+    color: #702963;
     font-family: sans-serif;
     transition: color 0.6s;
     text-decoration: none;
@@ -135,14 +136,28 @@ strong {
     font-weight: bold;
 }
 
+warning {
+    color: black;
+}
+
 chapter {
-    color: #b97c2c;
+    color: #702963;
     font-size: 25pt;
 }
 
 subchapter {
     font-style: italic;
     color: black;
+}
+
+expl {
+    font-size: 11pt;
+    color: #555;
+    font-weight: lighter;
+    margin-left: 4em;
+    margin-right: 2em;
+    display: block; 
+    font-style: italic;   
 }
 
 img {
@@ -253,7 +268,7 @@ body.dark {
 }
 
 .dark a {
-    color: #cc8f1a;
+    color: #BF40BF;
     transition: color 0.6s;
 }
 
@@ -263,6 +278,10 @@ body.dark {
 
 .dark strong {
     color: white;
+}
+
+.dark chapter {
+    color: #BF40BF;
 }
 
 .dark #controls [disabled] {
