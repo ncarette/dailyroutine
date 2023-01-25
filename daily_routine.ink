@@ -20,7 +20,7 @@ VAR packrushed = false
 
 <chapter>Chapter 1: A Rough Start</chapter>
 
-The alarm clock blares, jolting Zucchi from their slumber. They groggily reach over and silence it, rubbing the sleep from their eyes. As they sit up, they notice the dull ache of fatigue in their bones, a feeling that's all too familiar. They are living with type 1 diabetes, and they know that this is going to be another day of constant balancing.
+The alarm clock blares, jolting Zucchi from their slumber. <a onclick="CreateDialogBox()">They</a> groggily reach over and silence it, rubbing the sleep from their eyes. As they sit up, they notice the dull ache of fatigue in their bones, a feeling that's all too familiar. They are living with type 1 diabetes, and they know that this is going to be another day of constant balancing.
     **[Get up !]
 
 Zucchi reaches for their phone on the nightstand and looks at their blood sugar levels on the CGM app. 

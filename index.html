@@ -16,10 +16,12 @@
     <div class="outerContainer">
 
         <div id="controls" class="buttons">
+          <a onclick="CreateDialogBox()"><i><b>Learn about the use of 'they' as singular</b></i></a>
           <a id="rewind" title="Restart story from beginning">restart</a>
           <a id="save" title="Save progress">save</a>
           <a id="reload" title="Reload from save point">load</a>
-        </div>
+        </div>        
+        <div id="dialogbox"></div>
 
         <div id="story" class="container">
             <div class="header">
@@ -30,6 +32,21 @@
         </div>
     </div>
 
+    <script>
+        function CreateDialogBox() {
+            var CloseBtn = document.createElement("span");
+            CloseBtn.setAttribute("class", "closebtn");
+            CloseBtn.setAttribute("onclick", "this.parentElement.style.display='none';");
+            CloseBtn.innerHTML = "&times;";
+
+            var DialogBox = document.createElement("div");
+            DialogBox.setAttribute("class", "alert");
+            DialogBox.innerHTML = 'The use of the pronoun <i><b>they</b></i>&nbsp to refer to the person of Zucchi is in order not to invoke a gender bias when reading the fiction.  In particular, the <i>Cambridge Dictionary</i> defines it as a pronoun "used to refer to a person whose gender is not known or does not need to be mentioned". In our case, this is exactly the effect we want. An unaccustomed reader might read it the same way they would read "she" or "he".';
+        
+            DialogBox.appendChild(CloseBtn);
+            document.getElementById("dialogbox").appendChild(DialogBox);
+            };
+    </script>
     <script src="ink.js"></script>
     <script src="daily_routine.js"></script>
     <script src="main.js"></script>
