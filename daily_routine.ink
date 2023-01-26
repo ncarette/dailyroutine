@@ -71,7 +71,7 @@ Zucchi skips breakfast altogether feeling the pressure of time and the stress of
 
             <expl> A <a href="https:\/\/www.verywellhealth.com/how-to-use-a-glucometer-1087304" target="_blank">glucometer</a> is a small medical device used to determine the concentration of glucose in the blood. The diabetic must prick his finger to extract a drop of blood, which will then be analyzed by the device. The glucometer is the most reliable device for measuring the concentration of glucose in the blood. Therefore, when blood sugar values seem critical, it is important to use a glucometer to check what your body is feeling and what the much less reliable CGM is telling you.</expl>
             
-                *[Ok.]->final_breakfast_skip
+                *[Ok.]->Finalbreakfast
         
             =quick_sugar
                         
@@ -79,11 +79,7 @@ Zucchi skips breakfast altogether feeling the pressure of time and the stress of
             
             <expl> A <a href="https:\/\/www.verywellhealth.com/how-to-use-a-glucometer-1087304" target="_blank">glucometer</a> is a small medical device used to determine the concentration of glucose in the blood. The diabetic must prick his finger to extract a drop of blood, which will then be analyzed by the device. The glucometer is the most reliable device for measuring the concentration of glucose in the blood. Therefore, when blood sugar values seem critical, it is important to use a glucometer to check what your body is feeling and what the much less reliable CGM is telling you.</expl>
 
-                *[Ok.]->final_breakfast_skip
-        
-            ==final_breakfast_skip
-            /*The choice to skip breakfast has consequences on Zucchi's blood sugar level, and the player must make a decision on how to address it. Each choice has negative consequences, like being late for work, or having an unstable blood sugar, reflecting the reality of the challenges of managing diabetes and the difficult decisions that must be made on a daily basis.*/
-                ->Finalbreakfast
+                *[Ok.]->Finalbreakfast
 
 ===Finalbreakfast===
 Breakfast is a crucial part of managing diabetes, but it can also be a source of stress and frustration, especially when time is a factor. Zucchi has to balance the need to eat a healthy breakfast with the reality of their busy schedule, and this can be a difficult task, with consequences. In their daily routine, Zucchi always needs to make choices and experience the consequences of those choices, which may or may not take up a lot of mental space.
@@ -208,7 +204,7 @@ All these tasks and decisions, which may seem small, add up to a big and overwhe
     *[But time flies. It's time to think about the day ahead.]
     -> End_of_chapter_1
 
-
+TODO: implement subchapter 5 ?
 /* **********************Sub-chapter 5: get dressed ************************* */
 ===Dress===
 
@@ -253,14 +249,39 @@ Zucchi is now facing the decision of how to proceed with their day. Even if they
 *[Go somewhere else] -> go_somewhere_else
 =stay_at_home
 Zucchi decides to stay at home and rest. They feel guilty for not going to work, but also relieved to have some time to recover from their morning struggles. They spend the day taking care of themselves and their diabetes, trying to regain their energy and balance.
-    -> END
+
+*<strong>The end.</strong>
+
+<i>Zucchi's decision to stay at home and rest was the right choice for their health. They spend the day focusing on their well-being, monitoring their blood sugar levels, and taking care of themselves. They feel more in control of their diabetes and are better prepared to face the challenges of the next day. As they lay down to sleep, they feel a sense of peace and accomplishment for taking care of themselves.<warning> The story ends here, but the journey of managing diabetes continues.</warning></i>
+    -> end
+    
 =go_to_work_late
 Zucchi rushes to get ready for work, but ends up arriving late. They feel guilty for not being punctual, but also relieved to have had the time to take care of their diabetes. Their boss is not happy, they are behind in all their tasks, which makes them very anxious. But the time he spent at least made him feel as good as possible about his diabetes.
-     -> END
+
+*<strong>The end.</strong>
+
+<i>Zucchi's decision to prioritize their diabetes over being punctual had consequences at work, but also allowed them to take care of their health. They feel guilty for being late, but also relieved that they were able to address their low blood sugar level. Despite the challenges they faced at work, they remain determined to find a balance between their professional and personal lives.<warning> The story ends here, but the journey of managing diabetes continues.</warning></i>
+    -> end
+    
 =go_to_work_rushed
 Zucchi rushes to get ready for work, but barely makes it on time. They feel stressed and anxious, as they did not take the time to take care of their diabetes. They spend the day struggling to catch up with their tasks and constantly monitoring their blood sugar.
-    -> END
+
+*<strong>The end.</strong>
+
+<i>Zucchi's decision to prioritize work over their diabetes had consequences on their health. They spend the day struggling to catch up with their tasks and constantly monitoring their blood sugar. Despite the challenges they faced, they learn an important lesson about the importance of taking care of themselves. As they lay down to sleep, they make a mental note to make better decisions in the future.<warning> The story ends here, but the journey of managing diabetes continues.</warning></i>
+    -> end
+
 =go_somewhere_else
 Zucchi decides to go somewhere else instead of going to work. They feel guilty for not going to work, but also relieved to have some time to recover from their morning struggles. They spend the day taking care of themselves and their diabetes, trying to regain their energy and balance.
-    -> END
 
+*<strong>The end.</strong>
+
+<i>Zucchi's decision to put their health first and take a break has helped them to regain control of their diabetes. They spend the day enjoying simple times and having fun, while being aware of their diabetes and staying healthy. They feel more motivated than ever before. As they lay down to sleep, they feel a sense of accomplishment for taking control of their diabetes. <warning> The story ends here, but the journey of managing diabetes continues.</warning></i>
+
+    -> end
+
+=== end ===
+TODO: add link embed in "continues" to get to the end
+<strong><i>Thank you for taking the time to play 'A Rough Start'. You may have now a deeper understanding of the daily struggles of managing type 1 diabetes, and that it's a full-time job. We hope that this story has shown you the importance of supporting those who are living with diabetes. Please consider spreading awareness about the condition and educating others. That's how we can all make a difference. For diabetes – but obviously not only.</i></strong>
+
+-> END
