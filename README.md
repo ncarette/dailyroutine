@@ -2,9 +2,9 @@
 
 <i> Experience T1D life through Zucchi's daily struggles.. </i>
 
-Projet pour le cours de Fiction Interactive, SLI - Faculté des lettres, UNIL, automne 2022.
+Projet pour le master en Informatique pour les sciences humaines, SLI - Faculté des lettres, UNIL, printemps 2024.
 
-lien de la visualisation : https://ncarette.github.io/dailyroutine/
+lien de la visualisation du premier chapitre : https://ncarette.github.io/dailyroutine/
 
 ## Auteur
 
@@ -20,7 +20,7 @@ Zucchi se réveille un beau matin, pas plus particulier que les autres. À trave
 
 ## Mécaniques ludiques
 
-La narration est basée sur des choix qui ont un impact sur des scores internes non-divulgués : time, bloodsugar, comfort, happiness, anxiety.
+La narration est basée sur des choix qui sont dépendant du diabète de Zucchi et qui se révèlent donc souvent avoir un impact sur sa glycémie et aussi sur la gestion du temps dans une journée type. Ces deux valeurs, "Glycémie" et "Temps" sont des scores, - dont il faut toujours que je trouve la visualisation parfaite.
 
 ## État du développement
 
