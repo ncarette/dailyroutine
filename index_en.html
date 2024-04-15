@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Équilibre au Quotidien</title>
+    <title>A Daily Routine</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,17 +16,17 @@
     <div class="outerContainer">
 
         <div id="controls" class="buttons">
-          <a onclick="CreateDialogBox()"><i><b>Pourquoi le pronom "iel" ?</b></i></a>
-          <a id="rewind" title="Restart story from beginning">recommencer</a>
-          <a id="save" title="Save progress">sauvegarder</a>
-          <a id="reload" title="Reload from save point">charger</a>
+          <a onclick="CreateDialogBox()"><i><b>Learn about the use of 'they' as singular</b></i></a>
+          <a id="rewind" title="Restart story from beginning">restart</a>
+          <a id="save" title="Save progress">save</a>
+          <a id="reload" title="Reload from save point">load</a>
         </div>        
         <div id="dialogbox"></div>
 
         <div id="story" class="container">
             <div class="header">
-                <h1>Équilibre au Quotidien</h1>
-                <h1 class="subtitle">Expérimente la vie de diabétique de type 1 à travers les difficultés quotidiennes de Zucchi.</h1>
+                <h1>A Daily Routine</h1>
+                <h1 class="subtitle">Experience T1D life through Zucchi's daily struggles.</h1>
                 <h2 class="byline"></h2>
             </div>
         </div>
@@ -41,7 +41,7 @@
 
             var DialogBox = document.createElement("div");
             DialogBox.setAttribute("class", "alert");
-            DialogBox.innerHTML = 'L\'utilisation du pronom <i><b>iel</b></i>&nbsp pour désigner la personne de Zucchi vise à éviter tout préjugé sexiste dans la lecture de la fiction.  En particulier, le Robert le définit comme un "Pronom personnel sujet de la troisième personne du singulier (iel) et du pluriel (iels), employé pour évoquer une personne quel que soit son genre.". Dans notre cas, c\'est exactement l\'effet recherché. Un.e lecteur.ice non habitué.e pourrait le lire de la même manière qu\'iel lirait "elle" ou "il".;'
+            DialogBox.innerHTML = 'The use of the pronoun <i><b>they</b></i>&nbsp to refer to the person of Zucchi is in order not to invoke a gender bias when reading the fiction.  In particular, the <i>Cambridge Dictionary</i> defines it as a pronoun "used to refer to a person whose gender is not known or does not need to be mentioned". In our case, this is exactly the effect we want. An unaccustomed reader might read it the same way they would read "she" or "he".';
         
             DialogBox.appendChild(CloseBtn);
             document.getElementById("dialogbox").appendChild(DialogBox);
