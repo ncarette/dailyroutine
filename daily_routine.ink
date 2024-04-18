@@ -358,7 +358,7 @@ Cependant, son soulagement est de courte durée lorsque son regard croise celui 
 *[Umpf]
 Iel se sent déçu·e de ellui-même car la ponctualité ne semble pas être quelque chose de compliqué, du moins aux yeux des autres. Ces perceptions se rabatent sur ellui, et avec elles la culpabilité de ne pas en faire assez, de ne pas assez bien gérer sa vie, ses devoirs, sa santé. Pourtant, iel fait de son mieux, et cela constamment : le poids d'une maladie toujours présente est parfois trop difficile à gérer tout en gardant un rythme de vie aussi intense que les personnes qui n'ont pas cette charge mentale. 
 
--> midi
+**[continuer]-> midi
 
 ===retard_moyen===
 *[Entrer]
@@ -369,7 +369,7 @@ Une fois installé·e à son bureau, iel préfère rester discret·e en sortant 
 **[Se mettre au travail]
 En commençant à lire ses mails, iel ressent sur lui le jugement de ses collègues. En vrai, iel peut les comprendre : ses difficultés quotidiennes sont principalement invisibles, et les autres doivent ressentir un sentiment d'injustice à le·a voir souvent arriver en retard. Pour les autres, être ponctuel·le semble être une évidence, mais pour ellui, c'est tout le contraire. Iel se sent accablé·e par le regard des autres et la culpabilité l'envahit, car iel se sent incapable de gérer correctement sa vie, ses responsabilités et sa santé. Malgré ses efforts constants, iel se heurte au poids persistant de sa maladie, qui rend parfois les choses insurmontables, surtout lorsqu'iel tente de suivre le rythme trépidant de celleux qui n'ont pas à porter ce fardeau mental.
 
--> midi
+***[Humpf]-> midi
 
 ===retard_sans===
 *[Entrer]
@@ -380,12 +380,12 @@ Installé·e à son bureau, Zucchi adresse un sourire tendu à ses collègues, t
 
 Malgré tout, Zucchi se sent comme un funambule sur un fil, jonglant entre les exigences du travail et la gestion discrète du diabète. Chaque battement de cœur lui rappelle la nécessité de rester vigilant·e. La réalité d'une gestion souvent invisible ajoute une touche de complexité à la journée. Comment rendre visible sans en avoir honte le fait que d'arriver à l'heure constitue non seulement un exploit pour lui aujourd'hui, mais s'accompagne également de son lot de conséquences sur sa santé ?
 
--> midi
+***[Humpf]-> midi
 
 /* **********************Sous-chapitre 3: Glycemie et midi ************************* */
 
 ===midi===
-**[Se mettre au travail]
+
 {capteur==false: ->midi_glucometre | ->midi_check_cgm}
 
 =midi_check_cgm
@@ -413,16 +413,17 @@ Zucchi ouvre la trousse de son glucomètre, installe les outils, et prends une p
 <>trop basse, plongeant son esprit dans une urgence silencieuse. Une vague de vertige menace de le·a submerger alors qu'iel prend conscience de la gravité de la situation. Les pensées se bousculent dans sa tête, cherchant frénétiquement la meilleure façon de rétablir son équilibre glycémique. Iel sait qu'iel doit agir rapidement pour éviter les complications de l'hypoglycémie, son pouls s'accélérant à mesure que l'urgence de la situation se fait sentir.
 
 {not situ_hypo_trajet:<expl> L'hypoglycémie survient lorsque le taux de glucose dans le sang d'une personne atteinte de diabète de type 1 devient anormalement bas. Cela peut se produire si trop d'insuline est injectée par rapport à la quantité de glucose consommée ou si le repas est retardé ou manqué. Les symptômes de l'hypoglycémie peuvent inclure la faim, la transpiration, les tremblements, les étourdissements et la confusion. Pour traiter l'hypoglycémie, il est recommandé de consommer rapidement des aliments ou des boissons contenant du sucre, comme du soda, des comprimés de glucose ou des bonbons. Il est également important de surveiller de près son taux de glucose sanguin pour éviter que l'hypoglycémie ne devienne grave, ainsi que d'éviter toute activité physique. En cas d'hypoglycémie sévère, les conséquences peuvent être graves, avec un risque de déséquilibre important du taux de sucre dans le cerveau, pouvant conduire à des dissociations, une perte de conscience, voire, dans les cas extrêmes, au décès. </expl>|}
-
+*[Ok]
 {petitdejsans==true: Zucchi réalise que sa glycémie basse est probablement due au fait qu'iel n'a pas eu l'occasion de manger au matin, trop accaparé·e par les obstacles rencontrés dès le début de sa journée. Les souvenirs de l'agitation matinale refont surface alors qu'iel se rappelle avoir quitté précipitamment son domicile sans prendre le temps de prendre un petit-déjeuner nourrissant. La culpabilité s'ajoute à l'anxiété qui enveloppe Zucchi alors qu'iel prend conscience que son propre oubli a contribué à cette situation précaire. Pourtant, dans ce moment de vulnérabilité, iel trouve une détermination renouvelée à surmonter cet épisode d'hypoglycémie et à prendre soin de sa santé de manière plus proactive à l'avenir.|{velo==true: Zucchi réalise que sa glycémie basse est probablement due au fait qu'iel s'est précipité·e pour se rendre au travail à vélo ce matin. Les images de la course effrénée à travers la ville lui reviennent en mémoire, le vent fouettant son visage alors qu'iel tentait de rattraper le temps perdu. Dans son empressement, iel a négligé l'importance de prendre un peu de sucre pour maintenir son taux de glucose stable. Le regret mêlé à une pointe de frustration envahit Zucchi alors qu'iel réalise que cette hâte matinale a eu des répercussions sur sa santé. Cependant, cette prise de conscience est également une opportunité pour iel de planifier plus attentivement ses déplacements et de s'accorder le temps nécessaire pour prendre soin de sa santé, même dans les moments les plus pressés. |}}
 
+**[Soigner l'hypoglycémie]
 Midi arrive, et Zucchi comprend que la meilleure chose à faire est d'anticiper sa pause repas de quelques temps. Iel se lève de son poste de travail, conscient·e des coups d'oeils curieux de ses collègues. Certains lui lancent des regards interrogateurs, se demandant pourquoi iel part si tôt en pause. Zucchi se sent exposé·e, mais priorise sa santé et se dirige vers la salle de pause.
 
+***[Manger]
 Alors que Zucchi s'assoit seul·e au refectoire, iel ressent un pincement au cœur en voyant ses collègues vaquer à leurs occupations, loin de la salle de pause. L'absence de compagnie autour de la table accentue le sentiment de solitude, renforcé par le fait que les autres semblent occupés à leurs tâches. Les chaises vides autour d'ellui résonnent comme un écho de son isolement momentané. Pourtant, même si ses collègues ne partagent pas ce repas avec ellui, leur indifférence apparente ajoute une couche supplémentaire à son sentiment d'incompréhension. Cette solitude forcée, conséquence de sa pause anticipée pour gérer son hypoglycémie, laisse un goût amer dans sa bouche, symbolisant la distance qui persiste parfois entre sa réalité et celle des autres.
 
 Peu après, ses collègues se retrouvent pour partager un repas ensemble, riant et échangeant des plaisanteries autour de la table. Le dessert qu'une des collègues a apporté est partagé avec enthousiasme, créant un sentiment de camaraderie qui semble exclure involontairement Zucchi. Cette scène, qui aurait pu être un moment de connexion et de détente, devient pour ellui un rappel douloureux de l'écart entre sa vie et celle de ses collègues. Le fossé se creuse davantage alors que les rires résonnent dans la salle, laissant Zucchi se sentir isolé·e et incompris·e.
-
--> aprem
+****[Retourner à son poste de travail]-> aprem
 
 ===situ_hyper_midi===
 
@@ -438,10 +439,13 @@ Peu après, ses collègues se retrouvent pour partager un repas ensemble, riant 
     =midi_manger
     La glycémie de Zucchi est élevée, ce qui rend son choix de repas pour la pause déjeuner plus compliqué. Iel se sent fatigué·e et affamé·e, sachant qu'iel doit faire attention à ce qu'iel mange pour contenir l'hyperglycémie.
     
+    *[Choisir un plat]    
     Zucchi opte finalement pour une salade garnie, choix pauvre en sucre, conscient·e qu'iel risque d'avoir faim rapidement cet après-midi. Cependant, cela apporte un peu de réconfort à Zucchi de savoir que sa glycémie pourrait se stabiliser.
     
+    **[Manger]
     Pendant le repas, il est difficile pour Zucchi de ne pas envier ses collègues qui mangent des repas qu'iel aurait tant aimé déguster. La frustration s'installe davantage lorsque l'une de ses collègues apporte un gâteau qu'elle a préparé, et que tout le monde se réunit autour pour le déguster ensemble. Cette exclusion involontaire renforce le sentiment de solitude et d'incompréhension de Zucchi face à sa santé.
-        -> aprem
+    
+    ***[Retourner travailler]-> aprem
     
     =midi_plus_tard
     
@@ -482,7 +486,6 @@ La pause se poursuit et l'ambiance se détend alors qu'une collègue apporte un 
 /* **********************Sous-chapitre 1B: Repos mérité ************************* */
 
 ===maison===
-
 Après un matin difficile marqué par des retards et des fluctuations de sa glycémie, Zucchi décide qu'il est préférable de ne pas se rendre au travail aujourd'hui. La fatigue accumulée et le stress persistant l'incitent à prendre soin de ellui-même avant de penser à affronter une journée complète au bureau. D'un geste décidé, iel envoie un message à son supérieur, expliquant qu'iel est malheureusement incapable de se présenter aujourd'hui en raison de problèmes de santé. Cette décision lui pèse, mais iel sait que c'est la meilleure option pour l'instant.
 
 <subchapter>Une fois la décision prise, Zucchi se concentre sur les tâches à accomplir à la maison:</subchapter>
