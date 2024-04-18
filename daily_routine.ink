@@ -224,6 +224,7 @@ Toutes ces tâches et décisions, qui peuvent sembler petites, s'accumulent pour
 Zucchi est maintenant face à la décision de comment poursuivre sa journée. Même s'iel essaie d'oublier sa maladie, iel sait que ce n'est pas possible. Chaque jour est un nouveau voyage dans le monde du diabète, et parfois, iel ne peut pas toujours tenir ses promesses, que ce soit concernant a santé, ses objectifs professionnels ou ses relations. Mais le plus important est de s'écouter, de tolérer et d'être indulgent envers ce qu'iel pense être des échecs, des déviations. S'iel veut rester déterminé·e, c'est à cela qu'iel doit donner tout son cœur.
 
 <subchapitre>Alors, que devrait faire Zucchi de sa journée?</subchapitre>
+
 *[Rester à la maison et se reposer] -> maison
 *{temps >= 6 }[Aller au travail, mais arriver en retard] -> trajet
 *{temps < 6 }[Aller au travail en se pressant et peut-être pas en retard] -> trajet
@@ -237,7 +238,7 @@ Zucchi est maintenant face à la décision de comment poursuivre sa journée. M�
  
  ===trajet===
 
-Zucchi se prépare à partir pour le travail, conscient·e que le choix entre le vélo et le bus dépendra de sa glycémie. Le vélo le·a fera arriver le plus rapidement au travail, mais chacune de ces options présente ses propres défis et conséquences :
+Zucchi décide d'aller tout de même au travail et se prépare à partir, conscient·e que le choix entre le vélo et le bus dépendra de sa glycémie. Le vélo le·a fera arriver le plus rapidement au travail, mais chacune de ces options présente ses propres défis et conséquences :
 
 * [Prendre le bus] -> trajet_bus
 * [Prendre le vélo] -> trajet_velo
@@ -298,7 +299,7 @@ Zucchi se prépare à partir pour le travail, conscient·e que le choix entre le
     
     <expl> L'hyperglycémie se produit lorsque le taux de glucose dans le sang d'une personne atteinte de diabète de type 1 devient anormalement élevé. Cela peut se produire si l'insuline n'est pas administrée en quantité suffisante par rapport à la quantité de glucose consommée, si les injections sont manquées ou si les réserves d'insuline deviennent inefficaces. Les symptômes de l'hyperglycémie comprennent la soif excessive, l'envie fréquente d'uriner, la fatigue, la vision floue et une sensation générale de malaise. Pour traiter l'hyperglycémie, il est recommandé de boire beaucoup d'eau pour aider à éliminer le glucose en excès dans le sang. En outre, l'administration d'insuline supplémentaire peut être nécessaire pour ramener le taux de glucose sanguin à des niveaux normaux. Il est important de surveiller de près son taux de glucose sanguin et de consulter un professionnel de la santé si les symptômes persistent ou s'aggravent. Une hyperglycémie non traitée peut entraîner des complications à long terme telles que des dommages aux vaisseaux sanguins, aux nerfs et aux organes, et nécessite une attention médicale immédiate pour éviter toute complication grave.</expl>
     
-    Zucchi sent que sa glycémie est élevée, ce qui le·a pousse à envisager de s'injecter de l'insuline dans le bus. Cependant, l'idée de le faire en public, alors que le bus est bondé et en mouvement, le·a met mal à l'aise. Zucchi doit alors prendre une décision :
+    Cependant, l'idée de le faire en public, alors que le bus est bondé et en mouvement, le·a met mal à l'aise. Zucchi doit alors prendre une décision :
     
     * [Trouver une place assise afin de prendre son insuline] -> hyper_assis
     * [Attendre l'arrivée] -> hyper_attendre
@@ -317,9 +318,9 @@ Zucchi se prépare à partir pour le travail, conscient·e que le choix entre le
 
     ===situ_normale_trajet===
     
-    Zucchi se sent à l'aise dans le bus, sa glycémie étant dans la normale. Iel se détend un peu malgré le retard du bus, ne sachant pas si iel arrivera à l'heure au travail. La douce oscillation du véhicule et le brouhaha apaisant des passagers endormis l'entourent, créant un cocon de tranquillité dans lequel iel se laisse volontiers envelopper. Les pensées tourbillonnantes qui avaient agité son esprit semblent s'évanouir lentement, remplacées par un sentiment de calme et de sérénité.
+    Zucchi se sent à l'aise dans le bus, sa glycémie étant dans la normale. Iel se détend un peu malgré le retard du bus, ne sachant pas si iel arrivera à l'heure au travail. La douce oscillation du véhicule et le brouhaha apaisant des passagers endormis l'entourent, créant un cocon de tranquillité dans lequel iel se laisse volontiers envelopper.
 
-    {temps > 12: Malgré sa glycémie stable, Zucchi ressent une pointe d'impatience alors que le bus avance lentement vers son arrêt. Le confort du véhicule est tempéré par l'urgence de la situation, iel se rongeant les ongles en regardant le trafic congestionné. Même si son état de santé est stable, l'incertitude de son retard persiste, un rappel constant de la réalité mouvante de sa condition. Iel finit par arriver au travail. ->retard_gros |{temps<6: Dans le bus, Zucchi savoure chaque instant de calme alors que le véhicule avance en douceur vers son arrêt. Sa glycémie normale lui procure un sentiment de soulagement, et iel se laisse bercer par le mouvement régulier du bus. Les pensées qui tourbillonnaient autrefois dans son esprit semblent s'être apaisées, laissant place à un sentiment de détente et de tranquillité. Malgré le retard potentiel du bus, iel apprécie ce moment de répit avant de plonger dans les tumultes de la journée de travail. En sortant du bus, après une petite marche, iel arrive devant son bureau.  ->retard_sans | Bien que sa glycémie soit stable, Zucchi ressent une légère tension alors que le bus avance à un rythme régulier vers son arrêt. Iel regarde anxieusement par la fenêtre, calculant mentalement le temps qu'il lui reste pour arriver à l'heure. Malgré le confort relatif du bus, l'ombre du retard plane toujours, une source constante de préoccupation dans l'esprit de Zucchi. Sorti.e du bus, iel se dépèche jusqu'à son bureau, et arrive enfin devant. ->retard_moyen}}
+    {temps > 12: Malgré sa glycémie stable, Zucchi ressent une pointe d'impatience alors que le bus avance lentement vers son arrêt. Le confort du véhicule est tempéré par l'urgence de la situation, iel se rongeant les ongles en regardant le trafic congestionné. Même si son état de santé est stable, l'incertitude de son retard persiste, un rappel constant de la réalité mouvante de sa condition. Iel finit par arriver au travail. ->retard_gros |{temps<6: Dans le bus, Zucchi savoure chaque instant de calme alors que le véhicule avance en douceur vers son arrêt. Sa glycémie normale lui procure un sentiment de soulagement, et iel se laisse bercer par le mouvement régulier du bus. Les pensées qui tourbillonnaient autrefois dans son esprit semblent s'être apaisées, laissant place à un sentiment de détente et de tranquillité. Malgré le retard potentiel du bus, iel apprécie ce moment de répit avant de plonger dans les tumultes de la journée de travail. En sortant du bus, après une petite marche, iel arrive devant son bureau.  ->retard_sans | Bien que sa glycémie soit stable, Zucchi ressent une légère tension alors que le bus avance à un rythme régulier vers son arrêt. Iel regarde anxieusement par la fenêtre, calculant mentalement le temps qu'il lui reste pour arriver à l'heure. Malgré le confort relatif du bus, l'ombre du retard plane toujours, une source constante de préoccupation dans l'esprit de Zucchi. Sorti·e du bus, iel se dépèche jusqu'à son bureau, et arrive enfin devant. ->retard_moyen}}
 
  
 /* **********************Sous-chapitre 2: Début de la journée ************************* */
@@ -327,15 +328,15 @@ Zucchi se prépare à partir pour le travail, conscient·e que le choix entre le
 
 ===retard_gros===
 *[Entrer]
-Iel se faufile dans le bâtiment, les yeux baissés, conscient de l'heure tardive affichée sur son téléphone. Les regards curieux et accusateurs de ses collègues le mettent encore plus mal à l'aise alors qu'iel essaie de se frayer un chemin jusqu'à son bureau. L'air lourd de l'incertitude pèse sur ses épaules, son esprit tourmenté par les réprimandes potentielles du patron. Arrivé·e à son poste, iel tente de se faire le plus discret possible en sortant ses dossiers et en allumant sa machine de travail. Iel s'assied et respire un grand coup : malgré toutes les difficultés du matin, le·a voici au travail !
-
+Iel se faufile dans le bâtiment, les yeux baissés, conscient de l'heure tardive affichée sur son téléphone. Les regards curieux et accusateurs de ses collègues le·a mettent encore plus mal à l'aise alors qu'iel essaie de se frayer un chemin jusqu'à son bureau. L'air lourd de l'incertitude pèse sur ses épaules, son esprit tourmenté par les réprimandes potentielles du patron. Arrivé·e à son poste, iel tente de se faire le plus discret possible en sortant ses dossiers et en allumant sa machine de travail. Iel s'assied et respire un grand coup : malgré toutes les difficultés du matin, le·a voici au travail !
+**[Ouf]
 Cependant, son soulagement est de courte durée lorsque son regard croise celui de son patron, dont le visage exprime une colère contenue. Les mots sévères du supérieur s'abattent sur ellui comme un coup de fouet, le stress montant en flèche alors qu'iel envisage les conséquences potentielles de cet énième retard. Iel tente de sortir les meilleures excuses, trop gené·e de parler de son diabète, trop fatigué·e, aussi, des potentielles explications approfondies qu'iel devra donner sur celui-ci si iel s'aventure à le mentionner.
- 
-     Comment Zucchi devrait-iel se justifier à son patron ?
-    ** {velo == false}[Dire que le bus était en retard] -> exc_bus
-    ** [Parler de son diabète] -> exc_diabete
-    ** [Dire qu'iel ne se sentait pas bien, sans précision] -> exc_malade
-    ** [Ne rien dire] -> exc_rien
+
+    <subchapter> Comment Zucchi devrait-iel se justifier à son patron ? </subchapter>
+    *** {velo == false}[Dire que le bus était en retard] -> exc_bus
+    *** [Parler de son diabète] -> exc_diabete
+    *** [Dire qu'iel ne se sentait pas bien, sans précision] -> exc_malade
+    *** [Ne rien dire] -> exc_rien
 
         =exc_bus
             Zucchi tente de se justifier auprès de son patron en expliquant que le bus était en retard, une excuse classique mais qui semble peu convaincante dans ce contexte. Malgré ses efforts pour paraître crédible, iel sent le regard sceptique de son supérieur peser sur ellui, augmentant son malaise et sa nervosité. Iel se demande si cette explication sera suffisante pour éviter des réprimandes plus sévères. Le patron, bien qu'agacé par cette justification peu convaincante, décide finalement de ne pas approfondir la question pour cette fois-ci. Cependant, il met Zucchi en garde contre de futures excuses similaires et lui rappelle l'importance de la ponctualité et de la fiabilité au travail.
@@ -354,6 +355,7 @@ Cependant, son soulagement est de courte durée lorsque son regard croise celui 
             ->retard_fin
  
 = retard_fin
+*[Umpf]
 Iel se sent déçu·e de ellui-même car la ponctualité ne semble pas être quelque chose de compliqué, du moins aux yeux des autres. Ces perceptions se rabatent sur ellui, et avec elles la culpabilité de ne pas en faire assez, de ne pas assez bien gérer sa vie, ses devoirs, sa santé. Pourtant, iel fait de son mieux, et cela constamment : le poids d'une maladie toujours présente est parfois trop difficile à gérer tout en gardant un rythme de vie aussi intense que les personnes qui n'ont pas cette charge mentale. 
 
 -> midi
@@ -364,14 +366,16 @@ Iel se faufile discrètement entre ses collègues, son cœur battant la chamade 
 
 Une fois installé·e à son bureau, iel préfère rester discret·e en sortant ses dossiers et en démarrant son ordinateur. Après avoir pris place, iel inspire profondément : malgré les péripéties du matin, le·a voilà enfin prêt·e à travailler !
 
+**[Se mettre au travail]
 En commençant à lire ses mails, iel ressent sur lui le jugement de ses collègues. En vrai, iel peut les comprendre : ses difficultés quotidiennes sont principalement invisibles, et les autres doivent ressentir un sentiment d'injustice à le·a voir souvent arriver en retard. Pour les autres, être ponctuel·le semble être une évidence, mais pour ellui, c'est tout le contraire. Iel se sent accablé·e par le regard des autres et la culpabilité l'envahit, car iel se sent incapable de gérer correctement sa vie, ses responsabilités et sa santé. Malgré ses efforts constants, iel se heurte au poids persistant de sa maladie, qui rend parfois les choses insurmontables, surtout lorsqu'iel tente de suivre le rythme trépidant de celleux qui n'ont pas à porter ce fardeau mental.
 
 -> midi
 
 ===retard_sans===
 *[Entrer]
-Iel entre dans le bâtiment avec discrétion, espérant passer inaperçu·e pendant qu'iel se dirige vers son bureau. Le soulagement initial d'être arrivé·e à l'heure se mélange rapidement à une légère appréhension à l'idée d'expliquer à son patron sa distraction matinale.
+Iel entre dans le bâtiment avec discrétion, espérant passer inaperçu·e pendant qu'iel se dirige vers son bureau. Le soulagement initial d'être arrivé·e à l'heure se mélange rapidement à une légère appréhension à l'idée d'expliquer à son patron sa distraction.
 
+**[Se mettre au travail]
 Installé·e à son bureau, Zucchi adresse un sourire tendu à ses collègues, tentant de dissimuler le stress persistant. Son esprit reste embrouillé par les événements du matin, tandis que les bruits du bureau semblent lointains alors qu'iel tente de reprendre ses esprits. Le regard scrutateur de son patron accroît la pression, poussant Zucchi à se concentrer davantage. Chaque geste, chaque mot est soigneusement pesé pour éviter de révéler le trouble intérieur. Les minutes s'étirent alors que l'ambiance se charge d'une légère tension.
 
 Malgré tout, Zucchi se sent comme un funambule sur un fil, jonglant entre les exigences du travail et la gestion discrète du diabète. Chaque battement de cœur lui rappelle la nécessité de rester vigilant·e. La réalité d'une gestion souvent invisible ajoute une touche de complexité à la journée. Comment rendre visible sans en avoir honte le fait que d'arriver à l'heure constitue non seulement un exploit pour lui aujourd'hui, mais s'accompagne également de son lot de conséquences sur sa santé ?
@@ -381,7 +385,7 @@ Malgré tout, Zucchi se sent comme un funambule sur un fil, jonglant entre les e
 /* **********************Sous-chapitre 3: Glycemie et midi ************************* */
 
 ===midi===
-
+**[Se mettre au travail]
 {capteur==false: ->midi_glucometre | ->midi_check_cgm}
 
 =midi_check_cgm
@@ -406,7 +410,7 @@ Zucchi ouvre la trousse de son glucomètre, installe les outils, et prends une p
 
 ===situ_hypo_midi===
 
--trop basse, plongeant son esprit dans une urgence silencieuse. Une vague de vertige menace de le·a submerger alors qu'iel prend conscience de la gravité de la situation. Les pensées se bousculent dans sa tête, cherchant frénétiquement la meilleure façon de rétablir son équilibre glycémique. Iel sait qu'iel doit agir rapidement pour éviter les complications de l'hypoglycémie, son pouls s'accélérant à mesure que l'urgence de la situation se fait sentir.
+<>trop basse, plongeant son esprit dans une urgence silencieuse. Une vague de vertige menace de le·a submerger alors qu'iel prend conscience de la gravité de la situation. Les pensées se bousculent dans sa tête, cherchant frénétiquement la meilleure façon de rétablir son équilibre glycémique. Iel sait qu'iel doit agir rapidement pour éviter les complications de l'hypoglycémie, son pouls s'accélérant à mesure que l'urgence de la situation se fait sentir.
 
 {not situ_hypo_trajet:<expl> L'hypoglycémie survient lorsque le taux de glucose dans le sang d'une personne atteinte de diabète de type 1 devient anormalement bas. Cela peut se produire si trop d'insuline est injectée par rapport à la quantité de glucose consommée ou si le repas est retardé ou manqué. Les symptômes de l'hypoglycémie peuvent inclure la faim, la transpiration, les tremblements, les étourdissements et la confusion. Pour traiter l'hypoglycémie, il est recommandé de consommer rapidement des aliments ou des boissons contenant du sucre, comme du soda, des comprimés de glucose ou des bonbons. Il est également important de surveiller de près son taux de glucose sanguin pour éviter que l'hypoglycémie ne devienne grave, ainsi que d'éviter toute activité physique. En cas d'hypoglycémie sévère, les conséquences peuvent être graves, avec un risque de déséquilibre important du taux de sucre dans le cerveau, pouvant conduire à des dissociations, une perte de conscience, voire, dans les cas extrêmes, au décès. </expl>|}
 
@@ -422,11 +426,11 @@ Peu après, ses collègues se retrouvent pour partager un repas ensemble, riant 
 
 ===situ_hyper_midi===
 
-- trop élevée, laissant planer sur Zucchi une ombre d'inquiétude. Un poids invisible s'installe sur ses épaules alors qu'iel réalise les implications de cette lecture. Des souvenirs de journées passées à jongler avec les fluctuations de sa glycémie affluent dans son esprit, lui rappelant l'importance cruciale de maintenir un contrôle rigoureux sur son taux de sucre sanguin. Iel prend conscience que cette hyperglycémie est attribuable à son repas sucré du matin. Déterminé à ne pas laisser cette condition perturber davantage son travail et sa vie quotidienne, iel réalise qu'iel devra surveiller de près sa glycémie tout au long de la journée pour éviter les complications de l'hyperglycémie.
+<> trop élevée, laissant planer sur Zucchi une ombre d'inquiétude. Un poids invisible s'installe sur ses épaules alors qu'iel réalise les implications de cette lecture. Des souvenirs de journées passées à jongler avec les fluctuations de sa glycémie affluent dans son esprit, lui rappelant l'importance cruciale de maintenir un contrôle rigoureux sur son taux de sucre sanguin. Iel prend conscience que cette hyperglycémie est attribuable à son repas sucré du matin. Déterminé à ne pas laisser cette condition perturber davantage son travail et sa vie quotidienne, iel réalise qu'iel devra surveiller de près sa glycémie tout au long de la journée pour éviter les complications de l'hyperglycémie.
 
 {not situ_hyper_trajet:<expl> L'hyperglycémie se produit lorsque le taux de glucose dans le sang d'une personne atteinte de diabète de type 1 devient anormalement élevé. Cela peut se produire si l'insuline n'est pas administrée en quantité suffisante par rapport à la quantité de glucose consommée, si les injections sont manquées ou si les réserves d'insuline deviennent inefficaces. Les symptômes de l'hyperglycémie comprennent la soif excessive, l'envie fréquente d'uriner, la fatigue, la vision floue et une sensation générale de malaise. Pour traiter l'hyperglycémie, il est recommandé de boire beaucoup d'eau pour aider à éliminer le glucose en excès dans le sang. En outre, l'administration d'insuline supplémentaire peut être nécessaire pour ramener le taux de glucose sanguin à des niveaux normaux. Il est important de surveiller de près son taux de glucose sanguin et de consulter un professionnel de la santé si les symptômes persistent ou s'aggravent. Une hyperglycémie non traitée peut entraîner des complications à long terme telles que des dommages aux vaisseaux sanguins, aux nerfs et aux organes, et nécessite une attention médicale immédiate pour éviter toute complication grave.</expl>|}
 
-Midi approche, que va faire Zucchi ?
+<subchapter>Midi approche, que va faire Zucchi ?</subchapter>
 *[Aller manger avec ses collègues]-> midi_manger
 *[Attendre que sa glycémie baisse avant de manger]-> midi_plus_tard
 *[Accompagner ses collègues à la pause, sans manger]-> midi_sans
@@ -460,7 +464,7 @@ Midi approche, que va faire Zucchi ?
 
 ===situ_normale_midi===
 
-- est dans la normale. Un léger sourire se dessine sur son visage, dissipant les nuages d'inquiétude qui planaient précédemment. Pour un moment, iel savoure le soulagement temporaire que lui procure cette lecture rassurante, lui permettant de commencer sa journée de travail avec un poids en moins sur les épaules. Cependant, même dans ce moment de répit, iel reste conscient des défis constants posés par sa condition et de la vigilance nécessaire pour maintenir cette stabilité glycémique.
+<> est dans la normale. Un léger sourire se dessine sur son visage, dissipant les nuages d'inquiétude qui planaient précédemment. Pour un moment, iel savoure le soulagement temporaire que lui procure cette lecture rassurante, lui permettant de commencer sa journée de travail avec un poids en moins sur les épaules. Cependant, même dans ce moment de répit, iel reste conscient des défis constants posés par sa condition et de la vigilance nécessaire pour maintenir cette stabilité glycémique.
 
 Midi arrive, et Zucchi part en pause avec ses collègues afin de se restaurer. Iel regarde le buffet du déjeuner, essayant de trouver quelque chose qui lui conviendra sur le plan glycémique. Iel se rend compte que la plupart des options ne sont pas adaptées pour que sa glycémie soit parfaite. Il lui faudrait un bon équilibre entre féculents, légumes et protéines, avec le moins de sucres rapides possible, et de préférence pas trop gras, car le gras à pour effet de déregler l'ingestion du sucre et de conduire à une glycémie instable pendant plusieurs heures.
 
