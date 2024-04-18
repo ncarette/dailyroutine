@@ -451,35 +451,41 @@ Peu après, ses collègues se retrouvent pour partager un repas ensemble, riant 
     
     Zucchi sait qu'iel doit attendre un peu avant de manger pour laisser l'insuline agir et faire baisser sa glycémie. Cependant, voir ses collègues partir manger alors qu'iel a faim est difficile à supporter. Iel se sent isolé·e et impatient·e.
     
+    *[Travailler]
     La sensation de faim persiste, faisant ressentir à Zucchi une frustration croissante. Alors que ses collègues se dirigent vers la salle de pause, une vague de solitude envahit Zucchi. Iel se retrouve seul·e à son poste de travail, observant les regards complices et les conversations animées qui s'éloignent au fur et à mesure que ses collègues s'éloignent. Le sentiment d'exclusion grandit alors qu'iel se rend compte que sa condition de santé le prive d'un moment de sociabilité banal pour les autres. Les minutes semblent s'étirer alors qu'iel attend que sa glycémie baisse suffisamment pour lui permettre de manger en toute sécurité.
     
     La solitude s'installe davantage lorsque l'une de ses collègues apporte un gâteau qu'elle a préparé, et tout le monde se réunit autour pour le déguster ensemble. Zucchi se sent exclu·e de ce moment de camaraderie, conscient·e que la consommation de gâteau n'est pas une option pour ellui dans cet état. Cette exclusion involontaire renforce le sentiment de solitude et d'incompréhension de Zucchi face à sa condition de santé.
-     
+    
+    **[Aller manger] 
     Finalement, la glycémie de Zucchi finit par descendre, lui permettant d'enfin se rendre au réfectoire afin de manger. Iel regarde le buffet du déjeuner, essayant de trouver quelque chose qui lui conviendra sur le plan glycémique. Iel se rend compte que la plupart des options ne sont pas adaptées pour que sa glycémie soit parfaite. Il lui faudrait un bon équilibre entre féculents, légumes et protéines, avec le moins de sucres rapides possible, et de préférence pas trop gras, car le gras a pour effet de dérégler l'ingestion du sucre et de conduire à une glycémie instable pendant plusieurs heures. Ces difficultés s'ajoutent à celles déjà rencontrées pendant ce repas, augmentant davantage la solitude et le stress de Zucchi. Iel finit par choisir un repas qui n'est pas son préféré, mais qui lui permettra de stabiliser sa glycémie pour les prochaines heures.
-        -> aprem
+        ***[Retourner travailler]-> aprem
         
     =midi_sans
-    Zucchi décide d'accompagner ses collègues à la pause déjeuner, même si iel ne prévoit pas de manger. Iel veut garder un lien social avec ses collègues malgré sa situation, mais cette décision n'est pas sans conséquence sur son état émotionnel et physique, d'abord parce que effectuant sa pause sans manger, iel ne pourra a priori pas manger ensuite. En se rendant à la salle de pause, iel ressent une vague de faim qui s'intensifie à mesure que ses collègues dégustent leurs repas. Iel observe en silence, se sentant exclu·e de ce moment de partage, même si iel sait que c'est la meilleure décision pour sa santé.
-
+    Zucchi décide d'accompagner ses collègues à la pause déjeuner, même si iel ne prévoit pas de manger. Iel veut garder un lien social avec ses collègues malgré sa situation, mais cette décision n'est pas sans conséquence sur son état émotionnel et physique, d'abord parce qu'effectuant sa pause sans manger, iel ne pourra a priori pas manger ensuite. En se rendant à la salle de pause, iel ressent une vague de faim qui s'intensifie à mesure que ses collègues dégustent leurs repas. Iel observe en silence, se sentant exclu·e de ce moment de partage, même si iel sait que c'est la meilleure décision pour sa santé.
+    
+    *[suite]
     La pause se poursuit et l'ambiance se détend alors qu'une collègue apporte un délicieux gâteau fait maison pour partager avec l'équipe. Zucchi sent son estomac se tordre de faim à la vue de cette tentation sucrée, mais iel sait qu'iel ne peut pas se permettre de céder à la gourmandise. Iel envie ses collègues alors que'iels se régalent du gâteau, conscient·e que sa condition de santé lea prive une fois de plus de participer à un moment de convivialité.
     
     Finalement, iel décide d'acheter un pauvre sandwich qu'iel mangera à son bureau une fois que sa glycémie sera redescendue, afin de ne pas trop subir la faim pendant l'après-midi.
-        -> aprem
+        **[Retourner travailler]-> aprem
 
 ===situ_normale_midi===
 
 <> est dans la normale. Un léger sourire se dessine sur son visage, dissipant les nuages d'inquiétude qui planaient précédemment. Pour un moment, iel savoure le soulagement temporaire que lui procure cette lecture rassurante, lui permettant de commencer sa journée de travail avec un poids en moins sur les épaules. Cependant, même dans ce moment de répit, iel reste conscient des défis constants posés par sa condition et de la vigilance nécessaire pour maintenir cette stabilité glycémique.
 
+*[Aller en pause]
 Midi arrive, et Zucchi part en pause avec ses collègues afin de se restaurer. Iel regarde le buffet du déjeuner, essayant de trouver quelque chose qui lui conviendra sur le plan glycémique. Iel se rend compte que la plupart des options ne sont pas adaptées pour que sa glycémie soit parfaite. Il lui faudrait un bon équilibre entre féculents, légumes et protéines, avec le moins de sucres rapides possible, et de préférence pas trop gras, car le gras à pour effet de déregler l'ingestion du sucre et de conduire à une glycémie instable pendant plusieurs heures.
 
+**[Choisir à manger]
 Malgré la variété des plats proposés, Zucchi se trouve confronté·e à un dilemme délicat : choisir des aliments qui lui permettront de maintenir sa glycémie stable sans pour autant risquer l'hypoglycémie ou l'hyperglycémie. C'est un équilibre délicat à trouver, et Zucchi sait que le moindre écart peut avoir des conséquences importantes sur sa santé. Parfois, cette préoccupation constante le pousse à limiter sa consommation alimentaire, craignant de perturber son équilibre glycémique. Cette tendance à restreindre son alimentation, même dans des situations sociales comme celle-ci, reflète les défis particuliers auxquels les personnes atteintes de diabète de type 1 sont confrontées.
 
 <expl>Le diabète de type 1 est souvent associé à des troubles du comportement alimentaire, tels que l'orthorexie et l'hypercontrôle alimentaire, où la personne surveille de manière excessive ce qu'elle mange pour maintenir une glycémie stable. Ces comportements peuvent parfois interférer avec une alimentation équilibrée et nuire à la qualité de vie de la personne. Pour Zucchi, cette conscience aiguë de chaque bouchée qu'iel prend et de son impact sur sa glycémie peut parfois créer un sentiment de stress et d'isolement lors des repas en groupe.</expl>
 
+***[Ok]
 Alors qu'iel s'apprête à s'injecter de l'insuline avant de commencer son repas, une collègue curieuse, l'ayant vu sortir ses aiguilles, arrive avec un flot de questions envahissantes sur le diabète. Zucchi répond poliment, mais intérieurement, iel se sent agacé·e par l'attention non sollicitée de son interlocutrice, qui pas une fois ne lui demande si iel est d'accord de répondre à toutes ces questions. Puis, un autre collègue se joint à la conversation, prétendant détenir une expertise sur la gestion du diabète en raison de l'expérience d'un membre de sa famille. Malgré ses bonnes intentions, ses explications simplistes et son ton condescendant agacent Zucchi, qui préfère éviter les conseils non sollicités sur sa condition médicale.
 
 La pause se poursuit et l'ambiance se détend alors qu'une collègue apporte un délicieux gâteau fait maison pour partager avec l'équipe. Zucchi sent son estomac se tordre de faim à la vue de cette tentation sucrée et décide d'accepter une petite part, dans le but de ne pas trop se priver des plaisirs, d'autant plus lorsque sa glycémie est correcte. Ce gâteau le·a régale et contribue à lui redonner un peu d'énergie pour l'après-midi à venir, après toutes les complications matinales.
--> aprem
+****[Retourner travailler]-> aprem
 
 
 /* Partie B : Une journée à la maison */
