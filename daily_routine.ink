@@ -660,6 +660,8 @@ D'un côté, ses amis l'attendent dans un café animé en ville, prêts à parta
 
 Pressé par l'excitation de retrouver ses amis après une journée mouvementée, Zucchi quitte précipitamment son domicile, laissant derrière ellui les tracas de la journée sans prendre le temps de s'occuper de sa santé. La promesse d'une soirée agréable en compagnie de ses proches l'emplit d'une énergie nouvelle alors qu'iel se dirige vers le bar où ses amis l'attendent déjà.
 
+*[Se rendre au bar]
+
 À son arrivée, Zucchi est accueilli par une cacophonie joyeuse de musique et de rires. Le bar est illuminé par une douce lumière tamisée et l'ambiance est électrique, chargée d'anticipation et de camaraderie. Un sourire se dessine sur le visage fatigué de Zucchi alors qu'iel s'approche du groupe, ressentant un profond soulagement d'être enfin parmi les siens.
 
 Cependant, au moment de commander une boisson, la réalité lea rattrape. Zucchi réalise qu'iel n'a pas pris le temps de vérifier sa glycémie avant de quitter la maison. Un frisson d'anxiété parcourt son corps alors qu'iel {capteur==true:sort son téléphone, redoutant ce qui s'affichera et qui pourrait compromettre sa soirée tant attendue.|sort son glucomètre, redoutant le résultat qui pourrait compromettre sa soirée tant attendue.}
@@ -667,18 +669,28 @@ Cependant, au moment de commander une boisson, la réalité lea rattrape. Zucchi
 {glycemie < 7 : ->situ_hypo_bar| ->situ_hyper_bar} 
     
  ===situ_hypo_bar===
+ 
+ *[Checker sa glycémie]
+ 
     Le visage de Zucchi se crispe alors qu'iel découvre avec inquiétude que sa glycémie est trop basse, une sensation de désarroi l'envahissant face à cette situation imprévue. Regrettant de ne pas avoir pris de sucre avec ellui dans sa hâte de rejoindre ses amis, Zucchi se tourne rapidement vers le barman pour demander un sirop sucré, espérant élever ses niveaux de glucose au plus vite. Un sentiment de maladresse l'envahit alors qu'iel réalise que son hypo est probablement due à l'heure du repas, regrettant de ne pas avoir anticipé cette situation. Commandant également quelque chose à manger au bar pour stabiliser sa glycémie, Zucchi sait que cette option sera coûteuse et peu nutritive.
     
     {not situ_hypo_trajet && not situ_hypo_midi:<expl> L'hypoglycémie survient lorsque le taux de glucose dans le sang d'une personne atteinte de diabète de type 1 devient anormalement bas. Cela peut se produire si trop d'insuline est injectée par rapport à la quantité de glucose consommée ou si le repas est retardé ou manqué. Les symptômes de l'hypoglycémie peuvent inclure la faim, la transpiration, les tremblements, les étourdissements et la confusion. Pour traiter l'hypoglycémie, il est recommandé de consommer rapidement des aliments ou des boissons contenant du sucre, comme du soda, des comprimés de glucose ou des bonbons. Il est également important de surveiller de près son taux de glucose sanguin pour éviter que l'hypoglycémie ne devienne grave, ainsi que d'éviter toute activité physique. En cas d'hypoglycémie sévère, les conséquences peuvent être graves, avec un risque de déséquilibre important du taux de sucre dans le cerveau, pouvant conduire à des dissociations, une perte de conscience, voire, dans les cas extrêmes, au décès. </expl>|}
     
+        **{not situ_hypo_trajet && not situ_hypo_midi}[Manger]
+     
     Après avoir avalé le petit encas et s'être rétabli de son hypoglycémie, la soirée du Zucchi peut enfin commencer. Ses amis sont déjà dans l'extase de la soirée, et bientôt, iel se retrouve entraîné dans une série de conversations animées, ponctuées par des éclats de rire et des gestes théâtraux. Les verres s'entrechoquent, la musique vibre dans l'air, et Zucchi se sent vivant, libéré des soucis de la journée.
  ->bar
  
  ===situ_hyper_bar===
+ 
+  *[Checker sa glycémie]
+  
     Un soupir de déception s'échappe des lèvres de Zucchi alors qu'iel prend conscience qu'iel ne peut pas se permettre de prendre une bière comme iel l'aurait souhaité. Une pointe de frustration s'installe alors qu'iel opte plutôt pour un cola zéro, la seule option non sucrée disponible au bar. Le choix est amer, mais Zucchi sait que c'est la décision la plus sage pour sa santé. Pourtant, l'idée de devoir s'injecter de l'insuline dans un environnement aussi festif lui semble inconfortable et inopportun.
     
     <expl>La consommation d'alcool présente des défis supplémentaires pour les personnes atteintes de diabète de type 1, nécessitant une vigilance accrue et une gestion rigoureuse de leur santé glycémique. En plus de son impact sur la glycémie, l'alcool peut altérer la capacité du corps à réguler le glucose dans le sang, ce qui nécessite une surveillance étroite de la glycémie. Les boissons alcoolisées, souvent riches en sucre, peuvent entraîner des fluctuations importantes de la glycémie, conduisant à des hyperglycémies mais aussi des hypoglycémies. De plus, l'effet de l'alcool sur le corps peut masquer les symptômes d'une glycémie basse, augmentant le risque d'hypoglycémie non détectée. En état d'ivresse, il est fréquent que les personnes oublient de surveiller leur taux de sucre sanguin, ce qui peut engendrer des complications graves liées au diabète. </expl>
-    
+        
+        **[S'injecter de l'insuline]
+        
     Iel s'isole pour s'injecter calmement l'insuline, et rejoint vite ses amis déjà pris dans l'extase de la soirée. Bientôt, iel se retrouve entraîné dans une série de conversations animées, ponctuées par des éclats de rire et des gestes théâtraux. Les verres s'entrechoquent, la musique vibre dans l'air, et Zucchi se sent vivant, libéré des soucis de la journée. Cependant, peu à peu, un mal de tête fait son apparition et vient bousculer ses plans d'amusement. L'hyperglycémie l'atteint et s'accumulant au poids de la journée déjà passée, Zucchi se sent exténué. Que devrait-il faire ? 
     ->bar_choix
 
@@ -689,25 +701,32 @@ Cependant, au moment de commander une boisson, la réalité lea rattrape. Zucchi
 
 Pressé par l'excitation de retrouver ses amis après une journée mouvementée, Zucchi décide d'avaler rapidement un repas avant de se diriger vers le bar en ville. Iel sait que ce n'est pas l'idéal pour son diabète, mais dans l'urgence, c'est mieux que rien. Alors, iel avale rapidement un repas peu appétissant mais nourrissant, s'assurant ainsi d'avoir mangé quelque chose pour stabiliser sa glycémie. Une fois son estomac sommairement rempli, iel se rue vers le bar, impatient de retrouver ses amis et de profiter de l'atmosphère festive qui l'attend.
 
+*[Se rendre au bar]
+
 À son arrivée, Zucchi est enveloppé par le tourbillon d'excitation et de rires qui règne dans le bar. Ses amis l'accueillent chaleureusement, et bientôt, iel se retrouve entraîné dans une série de conversations animées, ponctuées par des éclats de rire et des gestes théâtraux. Les verres s'entrechoquent, la musique vibre dans l'air, et Zucchi se sent vivant, libéré des soucis de la journée.
 ->bar
 
 ===bar===
+
+*[Profiter de la soirée]
+
 Cependant, au fil des heures et des verres, l'euphorie de la soirée commence à prendre le pas sur la prudence. Zucchi se laisse emporter par l'ambiance festive, oubliant momentanément les exigences de son diabète. Les bières coulent à flots, et dans l'ivresse de l'instant, il perd le compte de sa consommation. Mais alors que la nuit avance, une sensation de malaise sourd commence à émerger.
 
 <expl>La consommation d'alcool présente des défis supplémentaires pour les personnes atteintes de diabète de type 1, nécessitant une vigilance accrue et une gestion rigoureuse de leur santé glycémique. En plus de son impact sur la glycémie, l'alcool peut altérer la capacité du corps à réguler le glucose dans le sang, ce qui nécessite une surveillance étroite de la glycémie. Les boissons alcoolisées, souvent riches en sucre, peuvent entraîner des fluctuations importantes de la glycémie, conduisant à des hyperglycémies mais aussi des hypoglycémies. De plus, l'effet de l'alcool sur le corps peut masquer les symptômes d'une glycémie basse, augmentant le risque d'hypoglycémie non détectée. En état d'ivresse, il est fréquent que les personnes oublient de surveiller leur taux de sucre sanguin, ce qui peut engendrer des complications graves liées au diabète. </expl>
 
-  *[Vérifier sa glycémie rapidement] -> bar_glycemie
-  *[Continuer à profiter de la soirée sans vérifier sa glycémie] -> bar_sans_glycemie
+<subchapter> Que devrait-faire Zucchi ? </subchapter>
+  **[Vérifier sa glycémie rapidement] -> bar_glycemie
+  **[Continuer à profiter de la soirée sans vérifier sa glycémie] -> bar_sans_glycemie
 
 ===bar_glycemie===
-Zucchi respire un soupir de soulagement en découvrant que sa glycémie est dans la plage cible. Iel continue alors à profiter de la soirée en toute tranquillité d'esprit, sachant qu'iel a pris soin de sa santé.
+Zucchi vérifie sa glycémie et respire un soupir de soulagement en découvrant qu'elle est dans la plage cible. Iel continue alors à profiter de la soirée en toute tranquillité d'esprit, sachant qu'iel a pris soin de sa santé.
 -> bar_choix
 ===bar_sans_glycemie===
 Zucchi décide d'ignorer momentanément sa glycémie afin de continuer à profiter de la soirée. 
 -> bar_choix
 
 ===bar_choix===
+<subchapter>Où aller maintenant ?</subchapter>
   *[Rejoindre ses amis pour danser] -> bar_danser
   *(crush){bar_sans_glycemie}[Engager une conversation avec une personne inconnue] -> bar_rencontre
   *[Prendre un moment pour se reposer seul] -> bar_repos
@@ -725,6 +744,7 @@ Zucchi trouve un coin calme dans le bar où iel peut s'asseoir et se reposer un 
 
 {situ_hyper_bar: Cette brève pause lui fait réaliser à quel point il est temps de rentrer pour ellui. Cette soirée n'était peut-être pas aussi longue qu'iel l'aurait voulu, mais le volume de la musique et ces flashs lumineux ont eu raison d'ellui.|Un picotement familier le tire brutalement de son état d'ivresse. Zucchi réalise avec inquiétude qu'iel doit agir rapidement pour contrôler sa glycémie, qui monte en flèche. Malgré le brouhaha du bar bondé, iel ouvre son sac pour prendre son stylo à insuline et s'injecter. C'est un geste délicat, lui donnant un air presque clandestin dans cet environnement où iel attire de nombreux regards, mais Zucchi sait que c'est crucial pour sa santé à long terme.}
 
+<subchapter> Que devrait-faire Zucchi ? </subchapter>
   *{not situ_hyper_bar}[Retourner auprès de ses amis] -> bar_amis
   *[Rentrer chez ellui pour se reposer] -> bar_rentrer_tot
 
@@ -735,10 +755,15 @@ Fatigué·e mais soulagé·e, Zucchi rentre chez lui après une soirée mouvemen
 =bar_amis
 Zucchi retourne auprès de ses amis, leur expliquant brièvement la situation. Iels comprennent et lui apportent leur soutien, promettant de passer le reste de la soirée ensemble dans une atmosphère de camaraderie et de solidarité. 
 
+*[Continuer la soirée]
+
 Au fil de la soirée, Zucchi s'amuse tout en tentant de dépasser le sentiment de fatigue et de soif causé par l'hyperglycémie, qui tarde à se dissiper. Sur la piste de danse, Zucchi se laisse emporter par la musique, retrouvant une énergie insoupçonnée. {crush:C'est alors qu'iel distingue Eros au loin, toujours aussi captivant·e. Zucchi décide de se rapprocher subtilement d'ellui, avec la complicité de ses amis. Eros l'aperçoit, et iels s'approchent lentement l'un·e de l'autre, au rythme envoûtant de la musique. Eros s'avance et glisse à l'oreille de Zucchi : "tu es très belleau". Alors qu'iel revient en face de Zucchi, leurs regards se croisent et sont si proches que Zucchi peut admirer la profondeur de ses magnifiques yeux bruns, mystérieux et enivrants. Leurs souffles qui se mêlent et le jeu de lumière crée une atmosphère envoutante, les secondes semblant s'étirer indéfiniment. Lorsque les basses de la musique ralentissent, la tension entre elleux se transforme en un aimant et leurs lèvres se rapprochent jusqu'à ne faire plus qu'une. |Au loin, une figure attire son attention, une présence qui semble rayonner d'une aura captivante. Intrigué·e, Zucchi décide de s'approcher avec discrétion, curieux·se de découvrir qui se cache derrière ce visage mystérieux. Lentement, iels se rapprochent l'un·e de l'autre, guidé·es par la complicité tacite de la piste de danse. Leurs regards se croisent brièvement, déclenchant une étincelle de curiosité dans les yeux de Zucchi. Dans cette atmosphère festive, le temps semble ralentir, offrant à Zucchi l'occasion de savourer chaque instant de cette rencontre inattendue. Au rythme entraînant de la musique, iels dansent ensemble, échangeant des gestes timides et des rires complices. Et tandis que la soirée avance, la tension entre elleux se transforme en une promesse silencieuse d'aventure et de nouvelles rencontres.} 
 ->bar_rentrer_tard
 
 =bar_rentrer_tard
+
+*[Rentrer à la maison]
+
 Zucchi rentre tard chez ellui après une soirée bien remplie. Les émotions de la nuit tourbillonnent encore dans son esprit alors qu'iel s'endort, reconnaissant pour les moments précieux partagés avec ses amis et cette nouvelle rencontre.
 
 -> fin
@@ -749,18 +774,25 @@ Zucchi rentre tard chez ellui après une soirée bien remplie. Les émotions de 
 
 <chapter>Chapitre 3: Quelle soirée !</chapter>
 
-Dans un moment de lucidité après une journée éreintante, Zucchi décide finalement de rester chez lui pour se reposer. Une soirée tranquille semble être exactement ce dont iel a besoin pour recharger ses batteries. Après tout, ses amis comprendront sûrement, même si une pointe de regret persiste dans un coin de son esprit.
+Dans un moment de lucidité après une journée éreintante, Zucchi décide finalement de rester chez lui pour se reposer. Une soirée tranquille semble être exactement ce dont iel a besoin pour recharger ses batteries. Après tout, ses amis comprendront sûrement, même si une pointe de regret persiste dans un coin de son esprit. Zucchi se sent enveloppé par le calme réconfortant de son chez-soi. 
 
-Zucchi se sent enveloppé par le calme réconfortant de son chez-soi. Iel prend le temps de préparer un repas nourrissant, choisi avec soin pour répondre aux besoins de son corps et apaiser son esprit fatigué. Pendant que les saveurs se mélangent dans la cuisine, Zucchi se permet un moment de pause, écoutant le silence paisible qui règne autour de lui.
+*[Cuisiner un bon repas]
+
+Iel prend le temps de préparer un repas nourrissant, choisi avec soin pour répondre aux besoins de son corps et apaiser son esprit fatigué. Pendant que les saveurs se mélangent dans la cuisine, Zucchi se permet un moment de pause, écoutant le silence paisible qui règne autour de lui.
 
 Avec un plat fumant devant lui, Zucchi se blottit dans son canapé, enveloppé dans une couverture douce. Iel choisit un film apaisant, laissant les images douces et les dialogues calmes l'emporter dans un monde de fiction momentané. Entre deux scènes, iel prend le temps de faire un peu d'administration pour son diabète, vérifiant sa glycémie et ajustant son traitement si nécessaire. C'est un rituel rassurant, un moment où iel peut prendre soin d'ellui-même en toute tranquillité.
 
-La soirée s'étire lentement, et Zucchi se sent de plus en plus détendu à mesure que les heures passent. L'odeur réconfortante de la nourriture, le murmure apaisant du film, tout contribue à créer une atmosphère de sérénité. Bientôt, la fatigue se fait sentir, et Zucchi se glisse sous les draps, accueillant le sommeil qui l'attend avec impatience. Dans le silence paisible de sa chambre, Zucchi s'endort rapidement, son corps reposé et son esprit apaisé. 
+La soirée s'étire lentement, et Zucchi se sent de plus en plus détendu à mesure que les heures passent. L'odeur réconfortante de la nourriture, le murmure apaisant du film, tout contribue à créer une atmosphère de sérénité. 
+
+**[S'endormir paisiblement]
+
+Bientôt, la fatigue se fait sentir, et Zucchi se glisse sous les draps, accueillant le sommeil qui l'attend avec impatience. Dans le silence paisible de sa chambre, Zucchi s'endort rapidement, son corps reposé et son esprit apaisé. 
 -> fin
 
 /* **********************FIN ************************* */
 
 === fin ===
+*[Fin]
 TODO: ajouter un lien incorporé dans "continue" pour accéder à la fin
 TODO: formatter en boucle
 <strong><i>Merci d'avoir consacré du temps à 'Équilibre au Quotidien'. Vous avez maintenant une compréhension approfondie des défis quotidiens auxquels sont confrontées les personnes atteintes de diabète de type 1, et de la nature continue de cette gestion. Nous espérons que cette histoire vous a démontré l'importance du soutien envers celleux qui vivent avec le diabète. Envisagez de sensibiliser et d'éduquer les autres sur cette condition. C'est ainsi que nous pouvons tous contribuer à faire la différence. Sur le diabète – mais pas seulement.</i></strong> -> END
