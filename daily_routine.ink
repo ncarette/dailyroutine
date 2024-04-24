@@ -9,7 +9,7 @@
 
 # variables
 VAR temps=0
-VAR glycemie=0
+VAR glycemie=5
 
 # vérificateurs
 VAR petitdejsucre = false
@@ -31,7 +31,6 @@ Zucchi attrape son téléphone sur la table de nuit et consulte ses niveaux de g
 
 <expl> Un <a href="https:\/\/www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes/continuous-glucose-monitoring" target="_blank">CGM</a> est un Moniteur de Glucose en Continu, un petit capteur inséré sous la peau qui émet toutes les quelques minutes les niveaux de glucose sanguin, également appelé glycémie, grâce à un transmetteur. Cette glycémie est ensuite affichée sur un moniteur qui est souvent le téléphone de l'utilisateur. Le coût d'un CGM est élevé et les compagnies d'assurance suisses ne remboursent les CGM que dans certaines conditions restrictives, pas pour tous les diabétiques. </expl> 
 
-~ glycemie = 5
 La glycémie est un peu basse, iel sait qu'iel a besoin de manger quelque chose, mais iel est en retard pour le travail et n'a pas beaucoup de temps. Iel se sent stressé·e et frustré·e.
     ***[Alors, que faire pour le petit-déjeuner ?] -> petitdej
 
@@ -51,12 +50,12 @@ Zucchi envisage ses options pour le petit-déjeuner. Un bol de céréales semble
 =petitdej_sain
 Zucchi prend le temps de préparer un petit-déjeuner sain, optant pour des œufs brouillés et des épinards. L'arôme savoureux des œufs flotte dans la cuisine, faisant gronder l'estomac de Zucchi. En mangeant, iel ressent un sentiment de satisfaction en sachant qu'iel fait un bon choix pour sa santé. Cependant, en regardant l'heure, iel réalise qu'iel est en retard pour le travail. Son cœur bat la chamade d'anxiété et de frustration, sachant qu'iel doit choisir entre sa santé et sa ponctualité. Iel ressent un sentiment de culpabilité en continuant à se préparer pour cette journée, déterminé à arriver au travail à l'heure.
 ~ temps += 3
-~ glycemie = 7
+~ glycemie += 2
     -> petitdej_fin
 
 =petitdej_sucre
 ~ temps += 1
-~ glycemie = 15
+~ glycemie += 10
 ~ petitdejsucre = true
 Zucchi se sert un bol de céréales, attiré par les morceaux colorés et croquants. Alors qu'iel verse le lait, l'arôme sucré des céréales embaume la pièce. À la première bouchée, la douceur et la texture croquante des céréales le satisfont pleinement. Cependant, en terminant son bol, iel commence à ressentir de la lourdeur. Iel vérifie sa glycémie, qui est élevée. Iel réalise que les céréales ont rapidement fait grimper sa glycémie. Iel doit prendre plus d'insuline que prévu et surveiller sa glycémie de près. Iel se sent coupable et frustré·e de ne pas avoir fait des choix plus sains. Maintenant en retard pour le travail, iel se sent stressé·e.
 
@@ -65,7 +64,7 @@ Zucchi se sert un bol de céréales, attiré par les morceaux colorés et croqua
 
 =petitdej_sans
 ~ petitdejsans = true
-~ glycemie = 3
+~ glycemie -= 2
 Zucchi saute complètement le petit-déjeuner, ressentant la pression du temps et le stress d'être en retard pour le travail. Peu de temps après, iel vérifie rapidement sa glycémie et elle a continué à baisser dangereusement. Iel se sent étourdi, anxieux et incertain sur la marche à suivre. Son estomac gargouille de faim et iel se sent faible. La pensée de faire face à l'hypoglycémie pendant le travail le remplit de crainte et de culpabilité. Iel sait que sauter le petit-déjeuner a des conséquences sur son taux de sucre dans le sang et iel doit donc prendre une décision sur la façon de le gérer.
 
 <subchapter>Comment Zucchi va-t-il gérer sa faible glycémie?</subchapter>
@@ -76,14 +75,14 @@ Zucchi saute complètement le petit-déjeuner, ressentant la pression du temps e
             =petitdej_hypo_glucometre
             ~ temps += 2
             Zucchi prend le temps de vérifier sa glycémie avec le glucomètre et calcule soigneusement la bonne quantité de sucre dont iel a besoin. Iel ressent un soulagement en prenant le sucre, sachant qu'iel a traité son faible taux de sucre dans le sang. Cependant, en regardant l'heure, iel réalise que le temps a pas mal passé. En sentant toujours la faim dans son ventre, iel pense au stress et à la frustration d'avoir constamment à choisir entre sa santé et sa ponctualité.
-            ~ glycemie = 6
+            ~ glycemie += 3
             <expl> Un <a href="https:\/\/www.verywellhealth.com/how-to-use-a-glucometer-1087304" target="_blank">glucomètre</a> est un petit appareil médical utilisé pour déterminer la concentration de glucose dans le sang. Le diabétique doit se piquer le doigt pour extraire une goutte de sang, qui sera ensuite analysée par l'appareil. Le glucomètre est l'appareil le plus fiable pour mesurer la concentration de glucose dans le sang. Par conséquent, lorsque les valeurs de glycémie semblent critiques, il est important d'utiliser un glucomètre pour vérifier ce que votre corps ressent et ce que le CGM, beaucoup moins fiable, nous dit.</expl>
         
                 *[Ok.]->petitdej_fin
     
             =petitdej_hypo_sucre
             Zucchi prend rapidement un peu de sucre. Iel ressent un sentiment d'urgence mais est aussi inquiet de prendre trop ou trop peu de sucre. Iel se sent toujours étourdis et un peu incertain de son taux de sucre dans le sang, car iel ne l'a pas vérifié avec un glucomètre. Peut-être que le sucre pris suffira, mais peut-être aussi qu'il en a mis trop, ou pas assez. L'angoisse de comment il devra passer les prochaines heures s'installe en lui alors que son ventre continue de gargouiller.
-            ~ glycemie = 5
+            ~ glycemie += 2
             <expl> Un <a href="https:\/\/www.verywellhealth.com/how-to-use-a-glucometer-1087304" target="_blank">glucomètre</a> est un petit appareil médical utilisé pour déterminer la concentration de glucose dans le sang. Le diabétique doit se piquer le doigt pour extraire une goutte de sang, qui sera ensuite analysée par l'appareil. Le glucomètre est l'appareil le plus fiable pour mesurer la concentration de glucose dans le sang. Par conséquent, lorsque les valeurs de glycémie semblent critiques, il est important d'utiliser un glucomètre pour vérifier ce que votre corps ressent et ce que le CGM, beaucoup moins fiable, vous dit.</expl>
 
                 *[Ok.]->petitdej_fin
