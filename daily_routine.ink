@@ -517,6 +517,8 @@ Après un matin difficile marqué par des retards et des fluctuations de sa glyc
     
     {not situ_hypo_trajet && not situ_hypo_midi:<expl> L'hypoglycémie survient lorsque le taux de glucose dans le sang d'une personne atteinte de diabète de type 1 devient anormalement bas. Cela peut se produire si trop d'insuline est injectée par rapport à la quantité de glucose consommée ou si le repas est retardé ou manqué. Les symptômes de l'hypoglycémie peuvent inclure la faim, la transpiration, les tremblements, les étourdissements et la confusion. Pour traiter l'hypoglycémie, il est recommandé de consommer rapidement des aliments ou des boissons contenant du sucre, comme du soda, des comprimés de glucose ou des bonbons. Il est également important de surveiller de près son taux de glucose sanguin pour éviter que l'hypoglycémie ne devienne grave, ainsi que d'éviter toute activité physique. En cas d'hypoglycémie sévère, les conséquences peuvent être graves, avec un risque de déséquilibre important du taux de sucre dans le cerveau, pouvant conduire à des dissociations, une perte de conscience, voire, dans les cas extrêmes, au décès. </expl>|}
     
+    *{not situ_hypo_trajet && not situ_hypo_midi}[Ok]
+    
     La priorité absolue est de rétablir son équilibre glycémique pour éviter les complications d'une hypoglycémie sévère. Dans le confort de chez-soi, iel a néanmoins le temps de calculer exactement la quantité de sucre qu'iel a besoin afin de guérir cette hypoglycémie sans finir par la suite en hyperglycémie. Iel se sent rassuré, même si la fragilité liée à cette glycémie se fait sentir pendant quelques minutes{not maison_cuisiner:, accompagnée de la faim qui annonce bientôt l'heure de midi.|.}
     ->maison_quoi
     
@@ -524,6 +526,8 @@ Après un matin difficile marqué par des retards et des fluctuations de sa glyc
     - La glycémie de Zucchi est trop élevée. Un sentiment d'angoisse monte en ellui alors qu'iel réalise les implications de cette lecture. Les souvenirs de journées passées à jongler avec les fluctuations de sa glycémie affluent dans son esprit, lui rappelant l'importance cruciale de maintenir un contrôle rigoureux sur son taux de sucre sanguin. Iel sait qu'iel devra prendre des mesures immédiates pour abaisser sa glycémie et éviter les complications à long terme associées à l'hyperglycémie. 
     
     {not situ_hyper_trajet && not situ_hyper_midi:<expl> L'hyperglycémie se produit lorsque le taux de glucose dans le sang d'une personne atteinte de diabète de type 1 devient anormalement élevé. Cela peut se produire si l'insuline n'est pas administrée en quantité suffisante par rapport à la quantité de glucose consommée, si les injections sont manquées ou si les réserves d'insuline deviennent inefficaces. Les symptômes de l'hyperglycémie comprennent la soif excessive, l'envie fréquente d'uriner, la fatigue, la vision floue et une sensation générale de malaise. Pour traiter l'hyperglycémie, il est recommandé de boire beaucoup d'eau pour aider à éliminer le glucose en excès dans le sang. En outre, l'administration d'insuline supplémentaire peut être nécessaire pour ramener le taux de glucose sanguin à des niveaux normaux. Il est important de surveiller de près son taux de glucose sanguin et de consulter un professionnel de la santé si les symptômes persistent ou s'aggravent. Une hyperglycémie non traitée peut entraîner des complications à long terme telles que des dommages aux vaisseaux sanguins, aux nerfs et aux organes, et nécessite une attention médicale immédiate pour éviter toute complication grave.</expl>|}
+
+    *{not situ_hyper_trajet && not situ_hyper_midi}[Ok]
     
     Zucchi sort son stylo à insuline et s'injecte l'insuline après avoir pris le temps de calculer la dose nécessaire pour ramener sa glycémie à la normale. Iel ressent ensuite un mélange de soulagement et de frustration, sachant que la soif et la fatigue provoquées par cette hyperglycémie ne disparaîtront pas immédiatement. Iel prend alors une grande inspiration, se rappelant qu'iel doit rester patient·e et persévérant·e dans sa gestion quotidienne du diabète.
     ->maison_quoi
@@ -533,14 +537,16 @@ Après un matin difficile marqué par des retards et des fluctuations de sa glyc
     -> maison_quoi
 
     =maison_admin
-    Zucchi se penche sur ses tâches administratives médicales. Iel paie ses factures médicales en attente, vérifie ses rendez-vous médicaux à venir et renouvelle ses ordonnances échues. Iel vérifie également qu'iel a suffisament d'aiguilles et d'autres éléments qu'iel a besoin au quotidien pour gérer son diabète. Bien que ces tâches puissent sembler fastidieuses, elles sont essentielles pour assurer une gestion efficace de son diabète et maintenir sa santé à long terme.
+    Zucchi se penche sur ses tâches administratives médicales. Assis à son bureau, iel consulte son agenda pour vérifier les rendez-vous médicaux à venir. Puis, iel se tourne vers le côté plus administratif de sa gestion du diabète. Iel prend le temps de payer les factures médicales en attente, conscient de l'importance de maintenir ses traitements réguliers malgré les tracas financiers parfois associés aux soins de santé. Iel s'assure également de vérifier ses ordonnances pour renouveler ses médicaments essentiels. Un sentiment de satisfaction l'envahit lorsqu'iel constate que tout est en ordre et que ses traitements seront bien pris en charge dans les jours à venir. 
     
-    Après avoir pris soin de sa glycémie, Zucchi se penche sur ses tâches administratives médicales. Assis à son bureau, iel consulte son agenda pour vérifier les rendez-vous médicaux à venir. Puis, iel se tourne vers le côté plus administratif de sa gestion du diabète. Iel prend le temps de payer les factures médicales en attente, conscient de l'importance de maintenir ses traitements réguliers malgré les tracas financiers parfois associés aux soins de santé. Iel s'assure également de vérifier ses ordonnances pour renouveler ses médicaments essentiels. Un sentiment de satisfaction l'envahit lorsqu'iel constate que tout est en ordre et que ses traitements seront bien pris en charge dans les jours à venir. Zucchi ne néglige aucun détail, vérifiant méticuleusement qu'iel dispose de suffisamment d'aiguilles, de bandelettes de test et d'autres fournitures nécessaires pour gérer son diabète au quotidien. Il prend même le temps de faire un inventaire de son stock, notant ce qui doit être acheté lors de sa prochaine visite à la pharmacie. Chaque petit geste contribue à maintenir une routine bien établie et à assurer une gestion efficace de son diabète. Bien que ces tâches puissent sembler fastidieuses, elles sont essentielles pour assurer une gestion efficace de son diabète et maintenir sa santé à long terme. Zucchi se sent reconnaissant d'avoir pris le temps de s'occuper de ces aspects administratifs, sachant qu'ils sont la clé d'une gestion proactive de sa santé et de son bien-être.
+    Zucchi ne néglige aucun détail, vérifiant méticuleusement qu'iel dispose de suffisamment d'aiguilles, de bandelettes de test et d'autres fournitures nécessaires pour gérer son diabète au quotidien. Iel prend même le temps de faire un inventaire de son stock, notant ce qui doit être acheté lors de sa prochaine visite à la pharmacie. Chaque petit geste contribue à maintenir une routine bien établie et à assurer une gestion efficace de son diabète. Bien que ces tâches puissent sembler fastidieuses, elles sont essentielles pour assurer une gestion efficace de son diabète et maintenir sa santé à long terme. Zucchi se sent reconnaissant d'avoir pris le temps de s'occuper de ces aspects administratifs, sachant qu'ils sont la clé d'une gestion proactive de sa santé et de son bien-être.
     ->maison_quoi
     
     =maison_cuisiner
     Zucchi décide de profiter de sa journée à la maison pour préparer un repas équilibré. Alors qu'iel se dirige vers la cuisine, une vague de motivation l'envahit, alimentée par le désir de créer quelque chose de délicieux et de nourrissant. Iel ouvre les placards et le réfrigérateur, examinant les ingrédients à sa disposition avec un œil critique. Son objectif est clair : préparer un plat qui non seulement sera délicieux, mais aussi adapté à ses besoins nutritionnels spécifiques en tant que personne diabétique.
 
+    *[Cuisiner]
+    
     En puisant dans sa créativité culinaire, Zucchi commence à assembler les ingrédients avec soin. Iel coupe les légumes avec précision, mélange les épices avec attention et surveille de près la cuisson pour s'assurer que chaque élément du plat est préparé à la perfection. La cuisine se remplit bientôt des arômes alléchants du plat en préparation, apportant une touche de réconfort à la journée de Zucchi. Alors que les saveurs se mélangent et que le plat prend forme, Zucchi ressent un sentiment de satisfaction profonde. Non seulement iel prend soin de sa santé en préparant un repas équilibré, mais iel trouve également du plaisir dans le processus de création culinaire. La cuisine devient un espace de méditation active, où Zucchi peut se perdre dans les gestes répétitifs et apaisants de la préparation des aliments.
 
     Finalement, le plat est prêt, présenté avec soin sur une assiette. Zucchi prend une bouchée avec anticipation, savourant chaque instant du repas qu'iel a préparé avec amour et attention. C'est bien plus qu'un simple repas ; c'est un acte d'autonomisation et de soin de soi, une démonstration de la capacité de Zucchi à prendre en main sa santé et son bien-être, même dans les moments les plus difficiles.
@@ -549,7 +555,13 @@ Après un matin difficile marqué par des retards et des fluctuations de sa glyc
     =maison_sieste
     Zucchi prend conscience de l'épuisement qui l'accable après une matinée tumultueuse.{maison_glycemie: Après avoir pris soin de sa glycémie| {maison_admin: Après avoir accompli ses tâches administratives|}}{maison_cuisiner: et avoir avalé un en-cas réparateur|{maison_appel: et avoir réparé son capteur|}}, iel se décide finalement à s'accorder une pause bien méritée. Guidé par un besoin urgent de repos, iel se dirige vers le canapé, qui devient aussitôt son sanctuaire. La fatigue se fait sentir dans chaque fibre de son être, et iel se laisse aller à une sieste réparatrice, espérant que quelques instants de sommeil suffiront à recharger ses batteries épuisées.
     
-    Cependant, le sommeil de Zucchi est interrompu par le son strident de son téléphone portable. Son patron a laissé un message vocal, exprimant sa préoccupation quant à son absence et insistant sur son importance pour une réunion importante cet après-midi. Le cœur battant la chamade, Zucchi écoute le message, sentant le poids des responsabilités professionnelles peser sur ses épaules. Les pensées s'entrechoquent dans son esprit alors qu'iel tente de peser le pour et le contre. Malgré le désir ardent de se reposer, iel sait qu'iel doit répondre à l'appel du devoir. Sous pression, iel prend une décision rapide : iel se rendra au travail pour l'après-midi, même si cela signifie sacrifier son repos bien mérité.
+    Cependant, le sommeil de Zucchi est interrompu par le son strident de son téléphone portable. Son patron a laissé un message vocal, exprimant sa préoccupation quant à son absence et insistant sur son importance pour une réunion importante cet après-midi. Le cœur battant la chamade, Zucchi écoute le message, sentant le poids des responsabilités professionnelles peser sur ses épaules. Les pensées s'entrechoquent dans son esprit alors qu'iel tente de peser le pour et le contre. 
+    
+    *[Se rendre au travail]
+    
+    Malgré le désir ardent de se reposer, iel sait qu'iel doit répondre à l'appel du devoir. Sous pression, iel prend une décision rapide : iel se rendra au travail pour l'après-midi, même si cela signifie sacrifier son repos bien mérité. Zucchi part assez vite et arrive au travail malgré sa volonté de se reposer. Iel s'installe à son bureau et tente tant bien que mal de se concentrer et d'avancer sur ses tâches.
+    
+    **[Travailler]
     -> aprem
 
 
@@ -559,21 +571,26 @@ Après un matin difficile marqué par des retards et des fluctuations de sa glyc
 
 Après une matinée chaotique, Zucchi décide qu'il est préférable de prendre une pause loin du stress du bureau. Au lieu de se rendre au travail, iel opte pour une journée à l'extérieur, en compagnie de ses amis, dans l'espoir de trouver un peu de réconfort et de détente. Zucchi retrouve ses amis dans un café pittoresque en ville, où les rires et les conversations animées remplacent temporairement les soucis du quotidien. Autour d'une tasse de café fumante, iel partage ses frustrations du matin tout en écoutant les récits des autres. L'atmosphère chaleureuse et le soutien des amis contribuent à apaiser les tensions accumulées.
 
+*[Midi arrive]
 Après un moment de détente au café, Zucchi et l'une de ses amies décident de poursuivre leur journée ensemble en allant déjeuner dans un restaurant voisin. Sur le chemin, ils traversent un parc animé où les enfants jouent et les chiens se promènent. Le soleil brille au-dessus d'eux, dissipant peu à peu les nuages de souci qui planaient sur Zucchi ce matin-là. Les rires et les sourires des passants ajoutent à l'atmosphère de légèreté et de joie qui règne autour d'eux.
 
 Au restaurant, Zucchi et son amie sont accueillis par l'odeur alléchante des plats qui s'échappent de la cuisine. Iels s'installent à une table près de la fenêtre, d'où iels peuvent observer les passants et profiter de la lumière naturelle qui baigne la pièce. Ensemble, iels parcourent le menu varié, discutant des différentes options et partageant des souvenirs de leurs précédents déjeuners ensemble. Cependant, le menu varié présente un défi pour Zucchi, qui doit naviguer avec précaution pour choisir des plats adaptés à son régime alimentaire et à son diabète. La discussion avec son amie sur les choix alimentaires devient un exercice d'équilibre entre les envies et les besoins de santé de Zucchi.
 
+**[Examiner encore le menu]
 Alors que Zucchi examine le menu, l'ombre du diabète plane sur ses décisions. Iel doit non seulement choisir des plats savoureux mais aussi prendre en compte leur impact sur sa glycémie. Choisir la bonne dose d'insuline pour accompagner son repas devient un exercice délicat. Les glucides, les graisses et les protéines de chaque plat doivent être pris en compte, et Zucchi se retrouve à faire des calculs mentaux complexes pour ajuster sa dose d'insuline en conséquence.
 
 Après de longues délibérations, Zucchi fait son choix et commande son repas, espérant avoir fait les bons calculs pour maintenir sa glycémie dans la plage cible. Iel sait que même avec ses meilleures estimations, il y a toujours une part d'incertitude. La gestion du diabète demande une attention constante et une adaptabilité face aux situations imprévues.
 
+***[Vérifier sa glycémie]
 {capteur==false:Une fois les plats choisis, Zucchi doit faire face à un autre défi : vérifier sa glycémie en l'absence de son capteur de glycémie en continu (CGM). Avec un sentiment d'appréhension, iel sort son glucomètre et effectue le test, espérant que ses choix alimentaires n'auront pas d'impact négatif sur sa glycémie. Le soulagement envahit Zucchi lorsqu'iel découvre que sa glycémie est dans la plage cible, malgré les incertitudes de la matinée.| Une fois les plats choisis, Zucchi regarde son téléphone afin de vérifier où en est sa glycémie. Le soulagement envahit Zucchi lorsqu'iel découvre que sa glycémie est dans la plage cible, malgré les incertitudes de la matinée.}
 
+<> Iel peut alors savourer tranquilement son repas tout en continuant à parler de tout et de rien avec son amie. Cette journée renégociée ne pourrait être meilleure, et lui permet l'espace de quelque temps d'oublier toutes les charges qui lui pèsent dessus.
+
+****[Aller se promener]
 Après avoir passé du temps à savourer leur repas, Zucchi et son amie décident de se promener dans le quartier, explorant les rues et les boutiques locales. Iels s'arrêtent devant une librairie indépendante, où Zucchi prend le temps de feuilleter les derniers titres et de choisir un livre qui l'intéresse. Son amie l'encourage à prendre soin d'ellui et à profiter de ce moment de détente loin des soucis du quotidien.
 
 Cependant, la tranquillité de l'après-midi est brusquement interrompue par un appel inattendu de son patron. L'urgence dans la voix de son supérieur et l'insistance pour qu'iel se présente au travail pour l'après-midi plongent Zucchi dans un dilemme. Sous la pression de ses responsabilités professionnelles, iel prend une décision rapide : iel se rendra au travail, mettant ainsi fin à cette journée d'évasion et de répit.
-
--> aprem
+*****[Se rendre au travail]-> aprem
 
 /* **********************Sous-chapitre 4: Fatigue de l'aprèm ************************* */
 
@@ -582,7 +599,10 @@ Alors que l'après-midi s'étire devant ellui, Zucchi s'enfonce confortablement 
 {capteur==false: Chaque pause est l'occasion de vérifier sa glycémie, même si cela signifie devoir recourir à des méthodes manuelles plus laborieuses. ->aprem_glucometre|{maison: ->aprem_capteur|->aprem_capteur_fail}}
 
 =aprem_capteur_fail
-Alors que Zucchi se plonge dans les tâches de l'après-midi, une alerte discrète sur son téléphone attire son attention. Le capteur de glycémie, un élément crucial de sa routine de gestion du diabète, semble rencontrer des problèmes. Une vague de préoccupation s'empare de Zucchi, qui réalise l'importance de cette technologie pour maintenir un contrôle efficace de sa glycémie. Les fluctuations imprévisibles rendent difficile l'interprétation des données, et Zucchi se retrouve à jongler avec l'anxiété croissante que cela génère. Sans ces informations précieuses, iel se sent vulnérable, comme privé·e d'un outil essentiel pour naviguer en toute sécurité dans sa journée. Une vérification avec son glucomètre est donc nécessaire pour s'assurer que tout est sous contrôle.->aprem_glucometre
+Alors que Zucchi se plonge dans les tâches de l'après-midi, une alerte discrète sur son téléphone attire son attention. Le capteur de glycémie, un élément crucial de sa routine de gestion du diabète, semble rencontrer des problèmes. Une vague de préoccupation s'empare de Zucchi, qui réalise l'importance de cette technologie pour maintenir un contrôle efficace de sa glycémie. Les fluctuations imprévisibles rendent difficile l'interprétation des données, et Zucchi se retrouve à jongler avec l'anxiété croissante que cela génère. Sans ces informations précieuses, iel se sent vulnérable, comme privé·e d'un outil essentiel pour naviguer en toute sécurité dans sa journée. Une vérification avec son glucomètre est donc nécessaire pour s'assurer que tout est sous contrôle.
+
+->aprem_glucometre
+
 =aprem_capteur
 Zucchi décide de vérifier son capteur de glycémie en continu (CGM) pour s'assurer que tout fonctionne correctement. 
 
@@ -600,6 +620,7 @@ Dans un monde où chaque décision peut avoir un impact sur sa santé, chaque in
 Zucchi trouve un coin tranquille pour effectuer cette tâche, mais le stress persiste. Chaque chiffre affiché sur le glucomètre est scruté avec attention, chaque variation de quelques points est ressentie comme une montagne russe émotionnelle. Sa glycémie est normale, mais le non-fonctionnement de son CGM ne lea rassure pas, car il lui est impossible de suivre l'évolution de sa glycémie autrement qu'en prenant régulièrement le temps de faire des mesures. ->aprem_fin
 
 =aprem_fin
+*[se remettre à ses tâches]
 Entre les moments de check-up glycémique, Zucchi se concentre sur ses tâches professionnelles, mais la présence constante du diabète dans son esprit ne s'estompe jamais vraiment. Les collègues vont et viennent, absorbés par leurs propres préoccupations, tandis que Zucchi jongle avec une réalité invisible pour la plupart.
 
 Le stress monte en flèche lorsque les responsabilités professionnelles s'accumulent, accompagnées du poids constant de la gestion du diabète. Dans ce tourbillon d'obligations et d'émotions, Zucchi trouve néanmoins une force intérieure pour continuer à avancer. Chaque journée est une lutte, mais aussi une victoire. La persévérance et la détermination deviennent les alliées indispensables de Zucchi dans son combat quotidien pour une vie équilibrée malgré les défis du diabète.
@@ -607,20 +628,27 @@ Le stress monte en flèche lorsque les responsabilités professionnelles s'accum
 -> soiree
 /* **********************Sous-chapitre 4: Fin de la journée ************************* */
 ===soiree===
+
+*[Finir la journée]
+
 Après une journée mouvementée et parsemée de défis, Zucchi se retrouve enfin face à la fin de sa journée de travail. Les dernières heures se sont écoulées lentement, chaque minute marquée par une lutte constante contre la fatigue et les exigences professionnelles. Malgré les obstacles, Zucchi a persévéré, faisant preuve d'une résilience impressionnante face aux défis du diabète et du quotidien.
 
 Alors que Zucchi éteint son ordinateur et rassemble ses affaires, un sentiment de soulagement l'envahit. La perspective de rentrer chez lui apporte un réconfort bienvenu après une journée éprouvante. Les lumières du bureau s'estompent lentement, et Zucchi prend une profonde inspiration, laissant échapper le poids du stress accumulé.
 
+**[Quitter le bureau]
+
 En quittant le bureau, Zucchi est accueilli par la douce lueur du crépuscule qui enveloppe la ville. Les rues animées semblent moins chaotiques maintenant, offrant un contraste apaisant avec l'agitation de la journée. Le trajet de retour à la maison est ponctué par le bourdonnement régulier des voitures et le brouhaha lointain des passants, créant une toile de fond familière pour la routine quotidienne.
 
-Arrivé chez ellui, Zucchi laisse échapper un soupir de soulagement en franchissant le seuil de sa porte. Le foyer chaleureux offre un havre de paix après les turbulences de la journée. Dans la tranquillité de son sanctuaire personnel, Zucchi trouve enfin un moment de répit, loin du tumulte du monde extérieur.
+Arrivé chez ellui, Zucchi laisse échapper un soupir de soulagement en franchissant le seuil de sa porte. Le foyer chaleureux offre un havre de paix après les turbulences de la journée. Dans la tranquillité de son sanctuaire personnel, Zucchi trouve enfin un moment de répit, loin du tumulte du monde extérieur. Très vite, après avoir reçu un message d'une amie, Zucchi se retrouve confronté à un choix délicat, une décision qui influencera le reste de sa soirée. 
 
-Très vite, après avoir reçu un message d'une amie, Zucchi se retrouve confronté à un choix délicat, une décision qui influencera le reste de sa soirée. D'un côté, ses amis l'attendent dans un café animé en ville, prêts à partager un verre et à décompresser après une longue journée. D'un autre côté, Zucchi ressent le besoin impérieux de se remettre de ses émotions, de prendre du temps pour lui-même et de se ressourcer. De plus, iel doit songer au diner, n'ayant probablement pas le temps de cuisiner un repas de qualité si iel va au ville.
+***[Faire un choix]
+
+D'un côté, ses amis l'attendent dans un café animé en ville, prêts à partager un verre et à décompresser après une longue journée. D'un autre côté, Zucchi ressent le besoin impérieux de se remettre de ses émotions, de prendre du temps pour lui-même et de se ressourcer. De plus, iel doit songer au diner, n'ayant probablement pas le temps de cuisiner un repas de qualité si iel va en ville.
 
 <subchapitre>Alors, que devrait faire Zucchi de sa soirée?</subchapitre>
-*[Aller vite rejoindre ses amis] -> soiree_vite
-*[Avaler un truc rapide avant de rejoindre ses amis] -> soiree_manger
-*[Rester à la maison et se reposer] -> soiree_repos
+****[Aller vite rejoindre ses amis] -> soiree_vite
+****[Avaler un truc rapide avant de rejoindre ses amis] -> soiree_manger
+****[Rester à la maison et se reposer] -> soiree_repos
 
 <chapter>Chapitre 3: Quelle soirée !</chapter>
 
