@@ -230,12 +230,12 @@ Zucchi est maintenant face à la décision de comment poursuivre sa journée. M�
 *[Aller ailleurs] -> dehors
 
 
-<chapter>Chapitre 2: Une journée comme les autres</chapter>
-
 /* Partie A : Une journée au travail */
 /* **********************Sous-chapitre 1: Le trajet ************************* */
  
  ===trajet===
+
+<chapter>Chapitre 2: Une journée comme les autres</chapter>
 
 Zucchi décide d'aller tout de même au travail et se prépare à partir, conscient·e que le choix entre le vélo et le bus dépendra de sa glycémie. Le vélo le·a fera arriver le plus rapidement au travail, mais chacune de ces options présente ses propres défis et conséquences :
 
@@ -491,6 +491,9 @@ La pause se poursuit et l'ambiance se détend alors qu'une collègue apporte un 
 /* **********************Sous-chapitre 1B: Repos mérité ************************* */
 
 ===maison===
+
+<chapter>Chapitre 2: Une journée comme les autres</chapter>
+
 Après un matin difficile marqué par des retards et des fluctuations de sa glycémie, Zucchi décide qu'il est préférable de ne pas se rendre au travail aujourd'hui. La fatigue accumulée et le stress persistant l'incitent à prendre soin de ellui-même avant de penser à affronter une journée complète au bureau. D'un geste décidé, iel envoie un message à son supérieur, expliquant qu'iel est malheureusement incapable de se présenter aujourd'hui en raison de problèmes de santé. Cette décision lui pèse, mais iel sait que c'est la meilleure option pour l'instant.
 
 <subchapter>Une fois la décision prise, Zucchi se concentre sur les tâches à accomplir à la maison:</subchapter>
@@ -560,13 +563,14 @@ Après un matin difficile marqué par des retards et des fluctuations de sa glyc
     
     Malgré le désir ardent de se reposer, iel sait qu'iel doit répondre à l'appel du devoir. Sous pression, iel prend une décision rapide : iel se rendra au travail pour l'après-midi, même si cela signifie sacrifier son repos bien mérité. Zucchi part assez vite et arrive au travail malgré sa volonté de se reposer. Iel s'installe à son bureau et tente tant bien que mal de se concentrer et d'avancer sur ses tâches.
     
-    **[Travailler]
     -> aprem
 
 
 /* Partie C : Une journée dehors */
 /* **********************Sous-chapitre 1C: Repos mérité ************************* */
 ===dehors===
+
+<chapter>Chapitre 2: Une journée comme les autres</chapter>
 
 Après une matinée chaotique, Zucchi décide qu'il est préférable de prendre une pause loin du stress du bureau. Au lieu de se rendre au travail, iel opte pour une journée à l'extérieur, en compagnie de ses amis, dans l'espoir de trouver un peu de réconfort et de détente. Zucchi retrouve ses amis dans un café pittoresque en ville, où les rires et les conversations animées remplacent temporairement les soucis du quotidien. Autour d'une tasse de café fumante, iel partage ses frustrations du matin tout en écoutant les récits des autres. L'atmosphère chaleureuse et le soutien des amis contribuent à apaiser les tensions accumulées.
 
@@ -649,10 +653,10 @@ D'un côté, ses amis l'attendent dans un café animé en ville, prêts à parta
 ****[Avaler un truc rapide avant de rejoindre ses amis] -> soiree_manger
 ****[Rester à la maison et se reposer] -> soiree_repos
 
-<chapter>Chapitre 3: Quelle soirée !</chapter>
-
 /* Partie A : Manger plus tard */
 ===soiree_vite===
+
+<chapter>Chapitre 3: Quelle soirée !</chapter>
 
 Pressé par l'excitation de retrouver ses amis après une journée mouvementée, Zucchi quitte précipitamment son domicile, laissant derrière ellui les tracas de la journée sans prendre le temps de s'occuper de sa santé. La promesse d'une soirée agréable en compagnie de ses proches l'emplit d'une énergie nouvelle alors qu'iel se dirige vers le bar où ses amis l'attendent déjà.
 
@@ -680,6 +684,9 @@ Cependant, au moment de commander une boisson, la réalité lea rattrape. Zucchi
 
 /* Partie B : Manger vite */
 ===soiree_manger===
+
+<chapter>Chapitre 3: Quelle soirée !</chapter>
+
 Pressé par l'excitation de retrouver ses amis après une journée mouvementée, Zucchi décide d'avaler rapidement un repas avant de se diriger vers le bar en ville. Iel sait que ce n'est pas l'idéal pour son diabète, mais dans l'urgence, c'est mieux que rien. Alors, iel avale rapidement un repas peu appétissant mais nourrissant, s'assurant ainsi d'avoir mangé quelque chose pour stabiliser sa glycémie. Une fois son estomac sommairement rempli, iel se rue vers le bar, impatient de retrouver ses amis et de profiter de l'atmosphère festive qui l'attend.
 
 À son arrivée, Zucchi est enveloppé par le tourbillon d'excitation et de rires qui règne dans le bar. Ses amis l'accueillent chaleureusement, et bientôt, iel se retrouve entraîné dans une série de conversations animées, ponctuées par des éclats de rire et des gestes théâtraux. Les verres s'entrechoquent, la musique vibre dans l'air, et Zucchi se sent vivant, libéré des soucis de la journée.
@@ -739,6 +746,9 @@ Zucchi rentre tard chez ellui après une soirée bien remplie. Les émotions de 
 
 /* Partie C : se reposer */
 ===soiree_repos===
+
+<chapter>Chapitre 3: Quelle soirée !</chapter>
+
 Dans un moment de lucidité après une journée éreintante, Zucchi décide finalement de rester chez lui pour se reposer. Une soirée tranquille semble être exactement ce dont iel a besoin pour recharger ses batteries. Après tout, ses amis comprendront sûrement, même si une pointe de regret persiste dans un coin de son esprit.
 
 Zucchi se sent enveloppé par le calme réconfortant de son chez-soi. Iel prend le temps de préparer un repas nourrissant, choisi avec soin pour répondre aux besoins de son corps et apaiser son esprit fatigué. Pendant que les saveurs se mélangent dans la cuisine, Zucchi se permet un moment de pause, écoutant le silence paisible qui règne autour de lui.
@@ -753,4 +763,4 @@ La soirée s'étire lentement, et Zucchi se sent de plus en plus détendu à mes
 === fin ===
 TODO: ajouter un lien incorporé dans "continue" pour accéder à la fin
 TODO: formatter en boucle
-<strong><i>Merci d'avoir consacré du temps à 'Équilibre au Quotidien'. Vous avez maintenant une compréhension plus profonde des défis quotidiens auxquels sont confrontées les personnes atteintes de diabète de type 1, et de la nature continue de cette gestion. Nous espérons que cette histoire vous a démontré l'importance du soutien envers ceux qui vivent avec le diabète. Envisagez de sensibiliser et d'éduquer les autres sur cette condition. C'est ainsi que nous pouvons tous contribuer à faire la différence. Sur le diabète – mais pas seulement.</i></strong> -> END
+<strong><i>Merci d'avoir consacré du temps à 'Équilibre au Quotidien'. Vous avez maintenant une compréhension approfondie des défis quotidiens auxquels sont confrontées les personnes atteintes de diabète de type 1, et de la nature continue de cette gestion. Nous espérons que cette histoire vous a démontré l'importance du soutien envers celleux qui vivent avec le diabète. Envisagez de sensibiliser et d'éduquer les autres sur cette condition. C'est ainsi que nous pouvons tous contribuer à faire la différence. Sur le diabète – mais pas seulement.</i></strong> -> END
