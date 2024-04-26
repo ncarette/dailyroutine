@@ -57,7 +57,7 @@ Zucchi prend le temps de préparer un petit-déjeuner sain, optant pour des œuf
 ~ temps += 1
 ~ glycemie += 10
 ~ petitdejsucre = true
-Zucchi se sert un bol de céréales, attiré par les morceaux colorés et croquants. Alors qu'iel verse le lait, l'arôme sucré des céréales embaume la pièce. À la première bouchée, la douceur et la texture croquante des céréales le satisfont pleinement. Cependant, en terminant son bol, iel commence à ressentir de la lourdeur. Iel vérifie sa glycémie, qui est élevée. Iel réalise que les céréales ont rapidement fait grimper sa glycémie. Iel doit prendre plus d'insuline que prévu et surveiller sa glycémie de près. Iel se sent coupable et frustré·e de ne pas avoir fait des choix plus sains. Maintenant en retard pour le travail, iel se sent stressé·e.
+Zucchi se sert un bol de céréales, attiré·e par les morceaux colorés et croquants. Alors qu'iel verse le lait, l'arôme sucré des céréales embaume la pièce. À la première bouchée, la douceur et la texture croquante des céréales le·a satisfont pleinement. Cependant, en terminant son bol, iel commence à ressentir de la lourdeur. Iel vérifie sa glycémie, qui est élevée. Iel réalise que les céréales ont rapidement fait grimper sa glycémie. Iel doit prendre plus d'insuline que prévu et surveiller sa glycémie de près. Iel se sent coupable et frustré·e de ne pas avoir fait des choix plus sains. Maintenant en retard pour le travail, iel se sent stressé·e.
 
 <expl> Les diabétiques de type 1 doivent prendre de l'<a href="https:\/\/www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments" target="_blank">insuline</a> car leur pancréas ne le produit pas par lui-même. Iels doivent prendre de l'insuline plusieurs fois par jour, notamment lorsqu'iels mangent et boivent, pour contrôler leur taux de glucose sanguin. Il existe différentes façons de prendre de l'insuline. Iels peuvent utiliser une seringue et une aiguille, un stylo à insuline ou une pompe à insuline. Les pompes et les stylos sont plus pratiques mais plus chers, quoique remboursés par les compagnies d'assurance suisses.</expl>
     *[D'accord.] -> petitdej_fin
@@ -65,9 +65,9 @@ Zucchi se sert un bol de céréales, attiré par les morceaux colorés et croqua
 =petitdej_sans
 ~ petitdejsans = true
 ~ glycemie -= 2
-Zucchi saute complètement le petit-déjeuner, ressentant la pression du temps et le stress d'être en retard pour le travail. Peu de temps après, iel vérifie rapidement sa glycémie et elle a continué à baisser dangereusement. Iel se sent étourdi, anxieux et incertain sur la marche à suivre. Son estomac gargouille de faim et iel se sent faible. La pensée de faire face à l'hypoglycémie pendant le travail le remplit de crainte et de culpabilité. Iel sait que sauter le petit-déjeuner a des conséquences sur son taux de sucre dans le sang et iel doit donc prendre une décision sur la façon de le gérer.
+Zucchi saute complètement le petit-déjeuner, ressentant la pression du temps et le stress d'être en retard pour le travail. Peu de temps après, iel vérifie rapidement sa glycémie et elle a continué à baisser dangereusement. Iel se sent étourdi·e, anxieux·se et incertain·e sur la marche à suivre. Son estomac gargouille de faim et iel se sent faible. La pensée de faire face à l'hypoglycémie pendant le travail le·a remplit de crainte et de culpabilité. Iel sait que sauter le petit-déjeuner a des conséquences sur son taux de sucre dans le sang et iel doit donc prendre une décision sur la façon de le gérer.
 
-<subchapter>Comment Zucchi va-t-il gérer sa faible glycémie?</subchapter>
+<subchapter>Comment Zucchi va-t-iel gérer sa faible glycémie?</subchapter>
             ** [Prendre le temps de vérifier avec le glucomètre]-> petitdej_hypo_glucometre
             ** [Prendre rapidement un peu de sucre]-> petitdej_hypo_sucre
 
@@ -99,10 +99,10 @@ Le petit-déjeuner est une partie cruciale de la gestion du diabète, mais peut 
 
 ===prep===
 
-Zucchi commence à se préparer pour la journée, mais avant de quitter la maison, iel doit vérifier ses équipements pour le diabète. Iel doit s'assurer d'avoir assez d'insuline pour la journée avec lui, en cas d'hyperglycémie ou s'il doit manger, mais aussi assez de glucose, en cas d'hypoglycémie, comme des sucres de raisin, du soda, ou tout ce qui a une grande concentration de glucose tout en étant facilement ingérable et transportable.
+Zucchi commence à se préparer pour la journée, mais avant de quitter la maison, iel doit vérifier ses équipements pour le diabète. Iel doit s'assurer d'avoir assez d'insuline pour la journée avec ellui, en cas d'hyperglycémie ou s'iel doit manger, mais aussi assez de glucose, en cas d'hypoglycémie, comme des sucres de raisin, du soda, ou tout ce qui a une grande concentration de glucose tout en étant facilement ingérable et transportable.
 *[Oh]
 
-Iel devrait vérifier son insuline dans le réfrigérateur et s'assurer d'en avoir également assez pour les prochains jours, car bientôt c'est le week-end, et la pharmacie sera fermée. Iel se sent anxieux et stressé à l'idée de manquer d'insuline ou de glucose pendant la journée ou les jours suivants. Iel est toujours inquiet d'oublier quelque chose d'important, donc iel vérifie tout deux fois.
+Iel devrait vérifier son insuline dans le réfrigérateur et s'assurer d'en avoir également assez pour les prochains jours, car bientôt c'est le week-end, et la pharmacie sera fermée. Iel se sent anxieux·se et stressé·e à l'idée de manquer d'insuline ou de glucose pendant la journée ou les jours suivants. Iel est toujours inquiet·e d'oublier quelque chose d'important, donc iel vérifie tout deux fois.
 
 <subchapter>Que va prendre Zucchi avec ellui? Que va faire Zucchi pour s'assurer de ne manquer de rien ?</subchapter>
 -> prep_quoi
@@ -121,27 +121,27 @@ Iel devrait vérifier son insuline dans le réfrigérateur et s'assurer d'en avo
 =prep_glucose
 ~ temps += 1
 ~ prepglucose = true
-Zucchi prends des sucres de raisin en plus, juste au cas où. Iel se sent soulagé mais aussi frustré de devoir penser à des choses comme ça juste pour sortir de la maison. Iel se sent déprimé à l'idée de devoir potentiellement manger à nouveau ces sucres en cas d'hypoglycémie. Avec le temps, c'est devenu vraiment dégoûtant.
+Zucchi prends des sucres de raisin en plus, juste au cas où. Iel se sent soulagé·e mais aussi frustré·e de devoir penser à des choses comme ça juste pour sortir de la maison. Iel se sent déprimé·e à l'idée de devoir potentiellement manger à nouveau ces sucres en cas d'hypoglycémie. Avec le temps, c'est devenu vraiment dégoûtant.
 ->prep_quoi
 
 =prep_soda
 ~ temps += 1
-Zucchi regarde dans le réfrigérateur pour du soda, mais n'en trouve pas. Iel doit bientôt aller faire des courses. {not glucose: -> prep_glucose| Iel est limité à l'utilisation des comprimés en cas d'hypoglycémie, ce qui ajoute une autre couche à leur désespoir.}
+Zucchi regarde dans le réfrigérateur pour du soda, mais n'en trouve pas. Iel doit bientôt aller faire des courses. {not glucose: -> prep_glucose| Iel est limité·e à l'utilisation des comprimés en cas d'hypoglycémie, ce qui ajoute une autre couche à son désespoir.}
 ->prep_quoi
 
 =prep_insuline
 ~ temps += 1
-Zucchi vérifie son stylo à insuline avant de partir, en s'assurant qu'il n'est pas périmé et qu'il contient suffisamment d'insuline. {not extrainsulin: Iel se sent soulagé mais aussi un peu stressé à l'idée de manquer d'insuline.}
+Zucchi vérifie son stylo à insuline avant de partir, en s'assurant qu'il n'est pas périmé et qu'il contient suffisamment d'insuline. {not extrainsulin: Iel se sent soulagé·e mais aussi un peu stressé·e à l'idée de manquer d'insuline.}
 ->prep_quoi
 
 =prep_insuline_frigo
 ~ temps += 1
-Zucchi se souvient de vérifier dans le réfrigérateur s'iel a assez d'insuline pour le week-end à venir. Iel semble en avoir assez, mais Zucchi est fatigué de devoir toujours penser à tant de choses en même temps.
+Zucchi se souvient de vérifier dans le réfrigérateur s'iel a assez d'insuline pour le week-end à venir. Iel semble en avoir assez, mais Zucchi est fatigué·e de devoir toujours penser à tant de choses en même temps.
 ->prep_quoi
 
 =prep_insuline_extra
 ~ temps += 1
-Zucchi prend un stylo à insuline supplémentaire, juste au cas où. {not checkinsulin: Iel se sent soulagé et aussi un peu agacé de devoir penser à des choses comme ça juste pour sortir de la maison.| Iel est un peu agacés de devoir penser à toutes ces choses juste pour sortir de la maison. }
+Zucchi prend un stylo à insuline supplémentaire, juste au cas où. {not checkinsulin: Iel se sent soulagé·e et aussi un peu agacé·e de devoir penser à des choses comme ça juste pour sortir de la maison.| Iel est un peu agacé·e de devoir penser à toutes ces choses juste pour sortir de la maison. }
 ->prep_quoi
 
 =prep_rapide
@@ -165,7 +165,7 @@ Zucchi a l'impression que presque tout est vérifié. Iel doit encore vérifier 
 
 ===cgm===
 ~ temps += 1
-Zucchi vérifie son capteur de glucose, s'assurant qu'il fonctionne correctement et que son téléphone a suffisamment de batterie. Iel sait que cet appareil est essentiel pour gérer son diabète, et quand il ne fonctionne pas correctement, cela peut être une expérience stressante et accablante. Iel se sent soulagé lorsque tout fonctionne bien, mais aussi un peu frustrés si ce n'est pas le cas, car cela signifie souvent qu'iel devra passer la journée a vérifier manuellement les niveaux de sucre dans son sang avec un glucomètre.
+Zucchi vérifie son capteur de glucose, s'assurant qu'il fonctionne correctement et que son téléphone a suffisamment de batterie. Iel sait que cet appareil est essentiel pour gérer son diabète, et quand il ne fonctionne pas correctement, cela peut être une expérience stressante et accablante. Iel se sent soulagé·e lorsque tout fonctionne bien, mais aussi un peu frustré·e si ce n'est pas le cas, car cela signifie souvent qu'iel devra passer la journée a vérifier manuellement les niveaux de sucre dans son sang avec un glucomètre.
 
 *[Vérifier]
 {~->cgm_marche|->cgm_marche_pas|->cgm_marche_pas}
@@ -181,7 +181,7 @@ Malheureusement, le capteur ne fonctionne pas. Le téléphone de Zucchi est char
 
     =cgm_hotline
     ~ temps += 2
-    Zucchi contacte la hotline du fabricant du capteur. Après quelques longues minutes au téléphone, l'opérateur trouve la solution pour faire fonctionner à nouveau le capteur. Zucchi se sent soulagé d'avoir obtenu de l'aide, mais aussi frustré par le temps d'attente.
+    Zucchi contacte la hotline du fabricant du capteur. Après quelques longues minutes au téléphone, l'opérateur trouve la solution pour faire fonctionner à nouveau le capteur. Zucchi se sent soulagé·e d'avoir obtenu de l'aide, mais aussi frustré·e par le temps d'attente.
     *[Humph]
         -> cgm_fin
     
@@ -189,7 +189,7 @@ Malheureusement, le capteur ne fonctionne pas. Le téléphone de Zucchi est char
     
     ~capteur = false
     
-    Zucchi décide de passer la journée sans le CGM. Iel se sent moins libre, plus stressé et anxieux, devant vérifier le sucre manuellement avec un glucomètre.
+    Zucchi décide de passer la journée sans le CGM. Iel se sent moins libre, plus stressé·e et anxieux·se, devant vérifier le sucre manuellement avec un glucomètre.
     
     {petitdejsans == false: {preprapide == false:<expl> Un <a href="https:\/\/www.verywellhealth.com/how-to-use-a-glucometer-1087304" target="_blank">glucomètre</a> est un petit appareil médical utilisé pour déterminer la concentration de glucose dans le sang. Le diabétique doit se piquer le doigt pour extraire une goutte de sang, qui sera ensuite analysée par l'appareil. Le glucomètre est l'appareil le plus fiable pour mesurer la concentration de glucose dans le sang, mais il nécessite beaucoup plus de soins et de temps pour l'utiliser.</expl>|}|}
     *[Ok]
@@ -210,7 +210,7 @@ Heureusement, le capteur fonctionne. Zucchi se sent soulagé·e, mais iel sait q
 -> cgm_fin
 
 ==cgm_fin==
-Toutes ces tâches et décisions, qui peuvent sembler petites, s'accumulent pour représenter un fardeau important et écrasant pour Zucchi. De l'emballage des accessoires pour le diabète, à la vérification des stylos à insuline, en passant par la gestion d'équipements défectueux, la gestion du diabète est un travail à plein temps qui ne s'arrête jamais. Zucchi se sent dépassé·e et stressé·e par le besoin constant de s'assurer qu'iel a suffisamment de matériel et la possibilité de devoir se passer d'un outil essentiel comme le CGM, mais iel est déterminé à continuer.
+Toutes ces tâches et décisions, qui peuvent sembler petites, s'accumulent pour représenter un fardeau important et écrasant pour Zucchi. De l'emballage des accessoires pour le diabète, à la vérification des stylos à insuline, en passant par la gestion d'équipements défectueux, la gestion du diabète est un travail à plein temps qui ne s'arrête jamais. Zucchi se sent dépassé·e et stressé·e par le besoin constant de s'assurer qu'iel a suffisamment de matériel et la possibilité de devoir se passer d'un outil essentiel comme le CGM, mais iel est déterminé·e à continuer.
 
     *[Le temps passe. Il est temps de penser à la journée à venir.]
     -> fin_chapitre_1
@@ -220,7 +220,7 @@ Toutes ces tâches et décisions, qui peuvent sembler petites, s'accumulent pour
 
 /* Sous-chapitre 6: fin du chapitre*** */
 
-Zucchi est maintenant face à la décision de comment poursuivre sa journée. Même s'iel essaie d'oublier sa maladie, iel sait que ce n'est pas possible. Chaque jour est un nouveau voyage dans le monde du diabète, et parfois, iel ne peut pas toujours tenir ses promesses, que ce soit concernant a santé, ses objectifs professionnels ou ses relations. Mais le plus important est de s'écouter, de tolérer et d'être indulgent envers ce qu'iel pense être des échecs, des déviations. S'iel veut rester déterminé·e, c'est à cela qu'iel doit donner tout son cœur.
+Zucchi est maintenant face à la décision de comment poursuivre sa journée. Même s'iel essaie d'oublier sa maladie, iel sait que ce n'est pas possible. Chaque jour est un nouveau voyage dans le monde du diabète, et parfois, iel ne peut pas toujours tenir ses promesses, que ce soit concernant sa santé, ses objectifs professionnels ou ses relations. Mais le plus important est de s'écouter, de tolérer et d'être indulgent·e envers ce qu'iel pense être des échecs, des déviations. S'iel veut rester déterminé·e, c'est à cela qu'iel doit donner tout son cœur.
 
 <subchapitre>Alors, que devrait faire Zucchi de sa journée?</subchapitre>
 
