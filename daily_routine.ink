@@ -792,7 +792,7 @@ Bientôt, la fatigue se fait sentir, et Zucchi se glisse sous les draps, accueil
 /* **********************FIN ************************* */
 
 === fin ===
-*[Fin]
+*[<b>Fin</b>]
 TODO: ajouter un lien incorporé dans "continue" pour accéder à la fin
 TODO: formatter en boucle
 <strong><i>Merci d'avoir consacré du temps à 'Équilibre au Quotidien'. Vous avez maintenant une compréhension approfondie des défis quotidiens auxquels sont confrontées les personnes atteintes de diabète de type 1, et de la nature continue de cette gestion. Nous espérons que cette histoire vous a démontré l'importance du soutien envers celleux qui vivent avec le diabète. Envisagez de sensibiliser et d'éduquer les autres sur cette condition. C'est ainsi que nous pouvons tous contribuer à faire la différence. Sur le diabète – mais pas seulement.</i></strong> -> END
