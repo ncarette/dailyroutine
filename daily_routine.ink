@@ -3,7 +3,7 @@
 
 <warning> <a href="https:\/\/www.verywellhealth.com/type-1-diabetes-overview-3289655" target="_blank">Le diabète de type 1</a> est une maladie chronique auto-immune grave. Elle se produit chez des personnes dont les défenses immunitaires, pour des raisons inconnues, détruisent les cellules du pancréas qui produisent de l'insuline. L'insuline est essentielle pour les humains : elle permet au glucose dans notre sang d'entrer dans nos cellules et de nourrir notre corps. Par conséquent, le diabète peut provoquer l'hypoglycémie, lorsqu'il n'y a pas assez de glucose dans le sang, et l'hyperglycémie, lorsqu'il y en a trop. Ces deux phénomènes, poussés à des extrêmes en durée ou en intensité, peuvent entraîner des complications graves, allant jusqu'au décès. Ce danger constant pour le diabétique se traduit par un fardeau mental continu, qui pèse souvent sur la vie quotidienne. Cette fiction se propose d'illustrer cela.</warning> 
 
-<strong><i>Cette histoire vise à sensibiliser aux difficultés de la gestion du diabète de type 1, veuillez garder à l'esprit que l'expérience n'est pas la même pour tout le monde et que le diabète peut être géré.</i></strong>
+<strong><i>Cette histoire vise à sensibiliser aux difficultés de la gestion du diabète de type 1, veuillez garder à l'esprit que l'expérience n'est pas la même pour tout le monde et que le diabète peut être bien contrôlé.</i></strong>
 
 /* **********************Sous-chapitre 1: Incipit************************* */
 
@@ -247,7 +247,7 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
 {glycemie <= 5: Zucchi s'élance sur son vélo, mais rapidement, iel réalise que ses jambes sont lourdes et faibles. Une hypoglycémie le·a ralentit, l'obligeant à faire demi-tour. Déçu·e et frustré·e, Zucchi abandonne l'idée du vélo et se dirige vers l'arrêt de bus le plus proche. -> trajet_bus | Zucchi opte pour le vélo, espérant arriver au travail rapidement et sans encombre. La brise matinale caresse son visage alors qu'iel pédale avec détermination, savourant chaque instant de liberté sur deux roues.}
     ~ velo = true
     ~ glycemie -= 3
-{temps > 8:Zucchi se tient devant les portes de son lieu de travail, le souffle court et le cœur battant. Malgré le fait d'avoir pédalé avec ardeur pour se rendre au travail, iel arrive en retard, sa respiration encore haletante, ses muscles fatigués. Un sentiment d'inquiétude monte en ellui alors qu'iel réalise les possibles conséquences de son retard. Iel prend une profonde inspiration, se préparant mentalement à faire face à ce qui l'attend à l'intérieur. ->retard_gros |{temps<5: Zucchi parvient à arriver au travail dans les temps. Iel se gare devant le bâtiment, reconnaissant·e d'avoir évité le retard, mais fatigué de cette course infernale. Un léger sentiment d'accomplissement l'envahit même si iel redoute la journée qui se profile. Le ventre vide et le souffle coupé, iel reste confiant·e quant à sa capacité à relever les défis qui pourraient se présenter. ->retard_sans | Zucchi arrive après son trajet en vélo devant les portes de son lieu de travail. Iel se dépèche de garer son vélo en sentant qu'iel est en retard. Un coup d'oeil sur son téléphone le rassure un peu. Iel sent une pointe d'apaisement en réalisant qu'il est arrivé peu en retard. Bien que la fatigue commence à se faire sentir dans ses muscles, un sourire léger se dessine sur son visage, mêlé à un soupir de soulagement. Iel se réconforte en se disant que ce léger retard ne devrait pas causer trop de soucis au travail. Se prenant mentalement en main, iel se prépare à affronter les défis de la journée, déterminé à donner le meilleur de ellui-même. ->retard_moyen}}
+{temps > 8:Zucchi se tient devant les portes de son lieu de travail, le souffle court et le cœur battant. Malgré le fait d'avoir pédalé avec ardeur pour se rendre au travail, iel arrive en retard, sa respiration encore haletante, ses muscles fatigués. Un sentiment d'inquiétude monte en ellui alors qu'iel réalise les possibles conséquences de son retard. Iel prend une profonde inspiration, se préparant mentalement à faire face à ce qui l'attend à l'intérieur. ->retard_gros |{temps<5: Zucchi parvient à arriver au travail dans les temps. Iel se gare devant le bâtiment, reconnaissant·e d'avoir évité le retard, mais fatigué·e de cette course infernale. Un léger sentiment d'accomplissement l'envahit même si iel redoute la journée qui se profile. Le ventre vide et le souffle coupé, iel reste confiant·e quant à sa capacité à relever les défis qui pourraient se présenter. ->retard_sans | Zucchi arrive après son trajet en vélo devant les portes de son lieu de travail. Iel se dépèche de garer son vélo en sentant qu'iel est en retard. Un coup d'oeil sur son téléphone le·a rassure un peu. Iel sent une pointe d'apaisement en réalisant qu'iel est arrivé peu en retard. Bien que la fatigue commence à se faire sentir dans ses muscles, un sourire léger se dessine sur son visage, mêlé à un soupir de soulagement. Iel se réconforte en se disant que ce léger retard ne devrait pas causer trop de soucis au travail. Se prenant mentalement en main, iel se prépare à affronter les défis de la journée, déterminé·e à donner le meilleur de ellui-même. ->retard_moyen}}
     
 
 ===trajet_bus===
@@ -461,7 +461,7 @@ Peu après, ses collègues se retrouvent pour partager un repas ensemble, riant 
     Zucchi décide d'accompagner ses collègues à la pause déjeuner, même si iel ne prévoit pas de manger. Iel veut garder un lien social avec ses collègues malgré sa situation, mais cette décision n'est pas sans conséquence sur son état émotionnel et physique, d'abord parce qu'effectuant sa pause sans manger, iel ne pourra a priori pas manger ensuite. En se rendant à la salle de pause, iel ressent une vague de faim qui s'intensifie à mesure que ses collègues dégustent leurs repas. Iel observe en silence, se sentant exclu·e de ce moment de partage, même si iel sait que c'est la meilleure décision pour sa santé.
     
     *[suite]
-    La pause se poursuit et l'ambiance se détend alors qu'une collègue apporte un délicieux gâteau fait maison pour partager avec l'équipe. Zucchi sent son estomac se tordre de faim à la vue de cette tentation sucrée, mais iel sait qu'iel ne peut pas se permettre de céder à la gourmandise. Iel envie ses collègues alors que'iels se régalent du gâteau, conscient·e que sa condition de santé lea prive une fois de plus de participer à un moment de convivialité.
+    La pause se poursuit et l'ambiance se détend alors qu'une collègue apporte un délicieux gâteau fait maison pour partager avec l'équipe. Zucchi sent son estomac se tordre de faim à la vue de cette tentation sucrée, mais iel sait qu'iel ne peut pas se permettre de céder à la gourmandise. Iel envie ses collègues alors que'iels se régalent du gâteau, conscient·e que sa condition de santé le·a prive une fois de plus de participer à un moment de convivialité.
     
     Finalement, iel décide d'acheter un pauvre sandwich qu'iel mangera à son bureau une fois que sa glycémie sera redescendue, afin de ne pas trop subir la faim pendant l'après-midi.
         **[Retourner travailler]-> aprem
@@ -618,13 +618,13 @@ Dans un monde où chaque décision peut avoir un impact sur sa santé, chaque in
 
 *[Prendre sa glycémie au glucomètre]
 
-Zucchi trouve un coin tranquille pour effectuer cette tâche, mais le stress persiste. Chaque chiffre affiché sur le glucomètre est scruté avec attention, chaque variation de quelques points est ressentie comme une montagne russe émotionnelle. Sa glycémie est normale, mais le non-fonctionnement de son CGM ne lea rassure pas, car il lui est impossible de suivre l'évolution de sa glycémie autrement qu'en prenant régulièrement le temps de faire des mesures. ->aprem_fin
+Zucchi trouve un coin tranquille pour effectuer cette tâche, mais le stress persiste. Chaque chiffre affiché sur le glucomètre est scruté avec attention, chaque variation de quelques points est ressentie comme une montagne russe émotionnelle. Sa glycémie est normale, mais le non-fonctionnement de son CGM ne le·a rassure pas, car il lui est impossible de suivre l'évolution de sa glycémie autrement qu'en prenant régulièrement le temps de faire des mesures. ->aprem_fin
 
 =aprem_fin
 *[se remettre à ses tâches]
 Entre les moments de check-up glycémique, Zucchi se concentre sur ses tâches professionnelles, mais la présence constante du diabète dans son esprit ne s'estompe jamais vraiment. Les collègues vont et viennent, absorbés par leurs propres préoccupations, tandis que Zucchi jongle avec une réalité invisible pour la plupart.
 
-Le stress monte en flèche lorsque les responsabilités professionnelles s'accumulent, accompagnées du poids constant de la gestion du diabète. Dans ce tourbillon d'obligations et d'émotions, Zucchi trouve néanmoins une force intérieure pour continuer à avancer. Chaque journée est une lutte, mais aussi une victoire. La persévérance et la détermination deviennent les alliées indispensables de Zucchi dans son combat quotidien pour une vie équilibrée malgré les défis du diabète.
+Le stress s'intensifie à mesure que les responsabilités professionnelles s'accumulent, ajoutant au fardeau déjà constant de la gestion du diabète. Dans ce tourbillon d'obligations et d'émotions, Zucchi puise néanmoins une force intérieure pour avancer. Chaque journée est une lutte, mais aussi une victoire. La persévérance et la détermination deviennent ses alliées essentielles dans son combat quotidien pour une vie équilibrée malgré les défis du diabète.
 
 -> soiree
 /* **********************Sous-chapitre 4: Fin de la journée ************************* */
@@ -632,9 +632,7 @@ Le stress monte en flèche lorsque les responsabilités professionnelles s'accum
 
 *[Finir la journée]
 
-Après une journée mouvementée et parsemée de défis, Zucchi se retrouve enfin face à la fin de sa journée de travail. Les dernières heures se sont écoulées lentement, chaque minute marquée par une lutte constante contre la fatigue et les exigences professionnelles. Malgré les obstacles, Zucchi a persévéré, faisant preuve d'une résilience impressionnante face aux défis du diabète et du quotidien.
-
-Alors que Zucchi éteint son ordinateur et rassemble ses affaires, un sentiment de soulagement l'envahit. La perspective de rentrer chez ellui apporte un réconfort bienvenu après une journée éprouvante. Les lumières du bureau s'estompent lentement, et Zucchi prend une profonde inspiration, laissant échapper le poids du stress accumulé.
+Alors que Zucchi ferme enfin son ordinateur et rassemble ses affaires, un sentiment de soulagement l'envahit. L'idée de retrouver le confort de son chez-soi après une journée épuisante lui apporte un réconfort bienvenu. Les lumières du bureau s'atténuent lentement, et Zucchi prend une profonde inspiration, libérant le poids du stress accumulé.
 
 **[Quitter le bureau]
 
@@ -662,7 +660,7 @@ Pressé par l'excitation de retrouver ses amis après une journée mouvementée,
 
 À son arrivée, Zucchi est accueilli par une cacophonie joyeuse de musique et de rires. Le bar est illuminé par une douce lumière tamisée et l'ambiance est électrique, chargée d'anticipation et de camaraderie. Un sourire se dessine sur le visage fatigué de Zucchi alors qu'iel s'approche du groupe, ressentant un profond soulagement d'être enfin parmi les siens.
 
-Cependant, au moment de commander une boisson, la réalité lea rattrape. Zucchi réalise qu'iel n'a pas pris le temps de vérifier sa glycémie avant de quitter la maison. Un frisson d'anxiété parcourt son corps alors qu'iel {capteur==true:sort son téléphone, redoutant ce qui s'affichera et qui pourrait compromettre sa soirée tant attendue.|sort son glucomètre, redoutant le résultat qui pourrait compromettre sa soirée tant attendue.}
+Cependant, au moment de commander une boisson, la réalité le·a rattrape. Zucchi réalise qu'iel n'a pas pris le temps de vérifier sa glycémie avant de quitter la maison. Un frisson d'anxiété parcourt son corps alors qu'iel {capteur==true:sort son téléphone, redoutant ce qui s'affichera et qui pourrait compromettre sa soirée tant attendue.|sort son glucomètre, redoutant le résultat qui pourrait compromettre sa soirée tant attendue.}
 
 {glycemie < 7 : ->situ_hypo_bar| ->situ_hyper_bar} 
     
@@ -708,7 +706,7 @@ Pressé par l'excitation de retrouver ses amis après une journée mouvementée,
 
 *[Profiter de la soirée]
 
-Cependant, au fil des heures et des verres, l'euphorie de la soirée commence à prendre le pas sur la prudence. Zucchi se laisse emporter par l'ambiance festive, oubliant momentanément les exigences de son diabète. Les bières coulent à flots, et dans l'ivresse de l'instant, iel perd le compte de sa consommation. Mais alors que la nuit avance, une sensation de malaise sourd commence à émerger.
+Cependant, au fil des heures et des verres, l'euphorie de la soirée commence à prendre le pas sur la prudence. Zucchi se laisse emporter par l'ambiance festive, oubliant momentanément les exigences de son diabète. La bières coule à flot, et dans l'ivresse de l'instant, iel perd le compte de sa consommation. Mais alors que la nuit avance, une sensation de malaise sourd commence à émerger.
 
 <expl>La consommation d'alcool présente des défis supplémentaires pour les personnes atteintes de diabète de type 1. En plus de son impact sur la glycémie, l'alcool peut altérer la capacité du corps à réguler le glucose dans le sang, ce qui nécessite une surveillance étroite de la glycémie. Les boissons alcoolisées, souvent riches en sucre, peuvent entraîner des fluctuations importantes de la glycémie, conduisant à des hyperglycémies mais aussi des hypoglycémies. De plus, l'effet de l'alcool sur le corps peut masquer les symptômes d'une glycémie basse, augmentant le risque d'hypoglycémie non détectée. En état d'ivresse, il est fréquent que les personnes oublient de surveiller leur taux de sucre sanguin, ce qui peut engendrer des complications graves liées au diabète. </expl>
 
