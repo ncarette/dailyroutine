@@ -81,7 +81,7 @@ Zucchi saute complètement le petit-déjeuner, ressentant la pression du temps e
                 *[Ok.]->petitdej_fin
     
             =petitdej_hypo_sucre
-            Zucchi prend rapidement un peu de sucre. Iel ressent un sentiment d'urgence mais est aussi inquiet de prendre trop ou trop peu de sucre. Iel se sent toujours étourdis et un peu incertain de son taux de sucre dans le sang, car iel ne l'a pas vérifié avec un glucomètre. Peut-être que le sucre pris suffira, mais peut-être aussi qu'il en a mis trop, ou pas assez. L'angoisse de comment il devra passer les prochaines heures s'installe en lui alors que son ventre continue de gargouiller.
+            Zucchi prend rapidement un peu de sucre. Iel ressent un sentiment d'urgence mais est aussi inquiet de prendre trop ou trop peu de sucre. Iel se sent toujours étourdis et un peu incertain de son taux de sucre dans le sang, car iel ne l'a pas vérifié avec un glucomètre. Peut-être que le sucre pris suffira, mais peut-être aussi qu'iel en a pris trop, ou pas assez. L'angoisse de comment iel devra passer les prochaines heures s'installe en ellui alors que son ventre continue de gargouiller.
             ~ glycemie += 2
             <expl> Un <a href="https:\/\/www.verywellhealth.com/how-to-use-a-glucometer-1087304" target="_blank">glucomètre</a> est un petit appareil médical utilisé pour déterminer la concentration de glucose dans le sang. Le diabétique doit se piquer le doigt pour extraire une goutte de sang, qui sera ensuite analysée par l'appareil. Le glucomètre est l'appareil le plus fiable pour mesurer la concentration de glucose dans le sang. Par conséquent, lorsque les valeurs de glycémie semblent critiques, il est important d'utiliser un glucomètre pour vérifier ce que votre corps ressent et ce que le CGM, beaucoup moins fiable, vous dit.</expl>
 
@@ -205,7 +205,7 @@ Malheureusement, le capteur ne fonctionne pas. Le téléphone de Zucchi est char
         ->cgm_fin
 
 ==cgm_marche==
-Heureusement, le capteur fonctionne. Zucchi se sent soulagé·e, mais iel sait que la situation inverse s'est tellement produite. Le poids de ces incertitudes et l'impact sur sa santé et son emploi du temps sont trop grands pour être oubliés.
+Heureusement, le capteur fonctionne. Zucchi se sent soulagé·e, mais iel sait que la situation inverse s'est déjà tellement souvent produite. Le poids de ces incertitudes et l'impact sur sa santé et son emploi du temps sont trop grands pour être oubliés.
 *[Humph]
 -> cgm_fin
 
@@ -293,7 +293,7 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
 
     ===situ_hyper_trajet===
     La glycémie de Zucchi est élevée, ce qui indique une concentration importante de sucre dans son sang. Une sensation de soif et de fatigue l'accable, lui rappelant la nécessité pressante de s'administrer de l'insuline dès que possible.
-    TODO: raccourcir paragraphe hypo/hyper
+
     <expl> L'hyperglycémie se produit lorsque le taux de glucose dans le sang devient anormalement élevé. Cela peut se produire si l'insuline n'est pas administrée en quantité suffisante par rapport à la quantité de glucose consommée ou si les injections sont manquées. Les symptômes de l'hyperglycémie comprennent la soif excessive, l'envie fréquente d'uriner, la fatigue, la vision floue et une sensation générale de malaise. Pour traiter l'hyperglycémie, il est recommandé de boire beaucoup d'eau pour aider à éliminer le glucose en excès dans le sang. En outre, l'administration d'insuline supplémentaire peut être nécessaire pour ramener le taux de glucose sanguin à des niveaux normaux. Une hyperglycémie non traitée peut entraîner des complications à long terme telles que des dommages aux vaisseaux sanguins, aux nerfs et aux organes; qui peuvent dans les cas extrêmes conduire jusqu'au décès.</expl>
     
     Cependant, l'idée de le faire en public, alors que le bus est bondé et en mouvement, le·a met mal à l'aise. Zucchi doit alors prendre une décision :
@@ -359,12 +359,12 @@ Iel se sent déçu·e de ellui-même car la ponctualité ne semble pas être que
 
 ===retard_moyen===
 *[Entrer]
-Iel se faufile discrètement entre ses collègues, son cœur battant la chamade à l'idée de devoir affronter la réaction probable de son patron. Les regards désapprobateurs et les murmures étouffés de ses collègues le·a mettent encore plus mal à l'aise alors qu'iel essaie de dissimuler son retard. La tension monte en lui alors qu'iel se demande comment iel va se sortir de cette situation délicate. 
+Iel se faufile discrètement entre ses collègues, son cœur battant la chamade à l'idée de devoir affronter la réaction probable de son patron. Les regards désapprobateurs et les murmures étouffés de ses collègues le·a mettent encore plus mal à l'aise alors qu'iel essaie de dissimuler son retard. La tension monte en ellui alors qu'iel se demande comment iel va se sortir de cette situation délicate. 
 
 Une fois installé·e à son bureau, iel préfère rester discret·e en sortant ses dossiers et en démarrant son ordinateur. Après avoir pris place, iel inspire profondément : malgré les péripéties du matin, le·a voilà enfin prêt·e à travailler !
 
 **[Se mettre au travail]
-En commençant à lire ses mails, iel ressent sur lui le jugement de ses collègues. En vrai, iel peut les comprendre : ses difficultés quotidiennes sont principalement invisibles, et les autres doivent ressentir un sentiment d'injustice à le·a voir souvent arriver en retard. Pour les autres, être ponctuel·le semble être une évidence, mais pour ellui, c'est tout le contraire. Iel se sent accablé·e par le regard des autres et la culpabilité l'envahit, car iel se sent incapable de gérer correctement sa vie, ses responsabilités et sa santé. Malgré ses efforts constants, iel se heurte au poids persistant de sa maladie, qui rend parfois les choses insurmontables, surtout lorsqu'iel tente de suivre le rythme trépidant de celleux qui n'ont pas à porter ce fardeau mental.
+En commençant à lire ses mails, iel ressent sur ellui le jugement de ses collègues. En vrai, iel peut les comprendre : ses difficultés quotidiennes sont principalement invisibles, et les autres doivent ressentir un sentiment d'injustice à le·a voir souvent arriver en retard. Pour les autres, être ponctuel·le semble être une évidence, mais pour ellui, c'est tout le contraire. Iel se sent accablé·e par le regard des autres et la culpabilité l'envahit, car iel se sent incapable de gérer correctement sa vie, ses responsabilités et sa santé. Malgré ses efforts constants, iel se heurte au poids persistant de sa maladie, qui rend parfois les choses insurmontables, surtout lorsqu'iel tente de suivre le rythme trépidant de celleux qui n'ont pas à porter ce fardeau mental.
 
 ***[Humpf]-> midi
 
@@ -375,7 +375,7 @@ Iel entre dans le bâtiment avec discrétion, espérant passer inaperçu·e pend
 **[Se mettre au travail]
 Installé·e à son bureau, Zucchi adresse un sourire tendu à ses collègues, tentant de dissimuler le stress persistant. Son esprit reste embrouillé par les événements du matin, tandis que les bruits du bureau semblent lointains alors qu'iel tente de reprendre ses esprits. Le regard scrutateur de son patron accroît la pression, poussant Zucchi à se concentrer davantage. Chaque geste, chaque mot est soigneusement pesé pour éviter de révéler le trouble intérieur. Les minutes s'étirent alors que l'ambiance se charge d'une légère tension.
 
-Malgré tout, Zucchi se sent comme un funambule sur un fil, jonglant entre les exigences du travail et la gestion discrète du diabète. Chaque battement de cœur lui rappelle la nécessité de rester vigilant·e. La réalité d'une gestion souvent invisible ajoute une touche de complexité à la journée. Comment rendre visible sans en avoir honte le fait que d'arriver à l'heure constitue non seulement un exploit pour lui aujourd'hui, mais s'accompagne également de son lot de conséquences sur sa santé ?
+Malgré tout, Zucchi se sent comme un funambule sur un fil, jonglant entre les exigences du travail et la gestion discrète du diabète. Chaque battement de cœur lui rappelle la nécessité de rester vigilant·e. La réalité d'une gestion souvent invisible ajoute une touche de complexité à la journée. Comment rendre visible sans en avoir honte le fait que d'arriver à l'heure constitue non seulement un exploit pour ellui aujourd'hui, mais s'accompagne également de son lot de conséquences sur sa santé ?
 
 ***[Humpf]-> midi
 
@@ -573,9 +573,9 @@ Après un matin difficile marqué par des retards et des fluctuations de sa glyc
 Après une matinée chaotique, Zucchi décide qu'il est préférable de prendre une pause loin du stress du bureau. Au lieu de se rendre au travail, iel opte pour une journée à l'extérieur, en compagnie de ses amis, dans l'espoir de trouver un peu de réconfort et de détente. Zucchi retrouve ses amis dans un café pittoresque en ville, où les rires et les conversations animées remplacent temporairement les soucis du quotidien. Autour d'une tasse de café fumante, iel partage ses frustrations du matin tout en écoutant les récits des autres. L'atmosphère chaleureuse et le soutien des amis contribuent à apaiser les tensions accumulées.
 
 *[Midi arrive]
-Après un moment de détente au café, Zucchi et l'une de ses amies décident de poursuivre leur journée ensemble en allant déjeuner dans un restaurant voisin. Sur le chemin, ils traversent un parc animé où les enfants jouent et les chiens se promènent. Le soleil brille au-dessus d'eux, dissipant peu à peu les nuages de souci qui planaient sur Zucchi ce matin-là. Les rires et les sourires des passants ajoutent à l'atmosphère de légèreté et de joie qui règne autour d'eux.
+Après un moment de détente au café, Zucchi et l'une de ses amies décident de poursuivre leur journée ensemble en allant déjeuner dans un restaurant voisin. Sur le chemin, iels traversent un parc animé où les enfants jouent et les chiens se promènent. Le soleil brille au-dessus d'eux, dissipant peu à peu les nuages de souci qui planaient sur Zucchi ce matin-là. Les rires et les sourires des passants ajoutent à l'atmosphère de légèreté et de joie qui règne autour d'eux.
 
-Au restaurant, Zucchi et son amie sont accueillis par l'odeur alléchante des plats qui s'échappent de la cuisine. Iels s'installent à une table près de la fenêtre, d'où iels peuvent observer les passants et profiter de la lumière naturelle qui baigne la pièce. Ensemble, iels parcourent le menu varié, discutant des différentes options et partageant des souvenirs de leurs précédents déjeuners ensemble. Cependant, le menu varié présente un défi pour Zucchi, qui doit naviguer avec précaution pour choisir des plats adaptés à son régime alimentaire et à son diabète. La discussion avec son amie sur les choix alimentaires devient un exercice d'équilibre entre les envies et les besoins de santé de Zucchi.
+Au restaurant, Zucchi et son amie sont accueilli·e·s par l'odeur alléchante des plats qui s'échappent de la cuisine. Iels s'installent à une table près de la fenêtre, d'où iels peuvent observer les passants et profiter de la lumière naturelle qui baigne la pièce. Ensemble, iels parcourent le menu varié, discutant des différentes options et partageant des souvenirs de leurs précédents déjeuners ensemble. Cependant, le menu varié présente un défi pour Zucchi, qui doit naviguer avec précaution pour choisir des plats adaptés à son régime alimentaire et à son diabète. La discussion avec son amie sur les choix alimentaires devient un exercice d'équilibre entre les envies et les besoins de santé de Zucchi.
 
 **[Examiner encore le menu]
 Alors que Zucchi examine le menu, l'ombre du diabète plane sur ses décisions. Iel doit non seulement choisir des plats savoureux mais aussi prendre en compte leur impact sur sa glycémie. Choisir la bonne dose d'insuline pour accompagner son repas devient un exercice délicat. Les glucides, les graisses et les protéines de chaque plat doivent être pris en compte, et Zucchi se retrouve à faire des calculs mentaux complexes pour ajuster sa dose d'insuline en conséquence.
@@ -634,7 +634,7 @@ Le stress monte en flèche lorsque les responsabilités professionnelles s'accum
 
 Après une journée mouvementée et parsemée de défis, Zucchi se retrouve enfin face à la fin de sa journée de travail. Les dernières heures se sont écoulées lentement, chaque minute marquée par une lutte constante contre la fatigue et les exigences professionnelles. Malgré les obstacles, Zucchi a persévéré, faisant preuve d'une résilience impressionnante face aux défis du diabète et du quotidien.
 
-Alors que Zucchi éteint son ordinateur et rassemble ses affaires, un sentiment de soulagement l'envahit. La perspective de rentrer chez lui apporte un réconfort bienvenu après une journée éprouvante. Les lumières du bureau s'estompent lentement, et Zucchi prend une profonde inspiration, laissant échapper le poids du stress accumulé.
+Alors que Zucchi éteint son ordinateur et rassemble ses affaires, un sentiment de soulagement l'envahit. La perspective de rentrer chez ellui apporte un réconfort bienvenu après une journée éprouvante. Les lumières du bureau s'estompent lentement, et Zucchi prend une profonde inspiration, laissant échapper le poids du stress accumulé.
 
 **[Quitter le bureau]
 
@@ -644,7 +644,7 @@ Arrivé chez ellui, Zucchi laisse échapper un soupir de soulagement en franchis
 
 ***[Faire un choix]
 
-D'un côté, ses amis l'attendent dans un café animé en ville, prêts à partager un verre et à décompresser après une longue journée. D'un autre côté, Zucchi ressent le besoin impérieux de se remettre de ses émotions, de prendre du temps pour lui-même et de se ressourcer. De plus, iel doit songer au diner, n'ayant probablement pas le temps de cuisiner un repas de qualité si iel va en ville.
+D'un côté, ses amis l'attendent dans un café animé en ville, prêts à partager un verre et à décompresser après une longue journée. D'un autre côté, Zucchi ressent le besoin impérieux de se remettre de ses émotions, de prendre du temps pour ellui-même et de se ressourcer. De plus, iel doit songer au diner, n'ayant probablement pas le temps de cuisiner un repas de qualité si iel va en ville.
 
 <subchapitre>Alors, que devrait faire Zucchi de sa soirée?</subchapitre>
 ****[Aller vite rejoindre ses amis] -> soiree_vite
@@ -708,7 +708,7 @@ Pressé par l'excitation de retrouver ses amis après une journée mouvementée,
 
 *[Profiter de la soirée]
 
-Cependant, au fil des heures et des verres, l'euphorie de la soirée commence à prendre le pas sur la prudence. Zucchi se laisse emporter par l'ambiance festive, oubliant momentanément les exigences de son diabète. Les bières coulent à flots, et dans l'ivresse de l'instant, il perd le compte de sa consommation. Mais alors que la nuit avance, une sensation de malaise sourd commence à émerger.
+Cependant, au fil des heures et des verres, l'euphorie de la soirée commence à prendre le pas sur la prudence. Zucchi se laisse emporter par l'ambiance festive, oubliant momentanément les exigences de son diabète. Les bières coulent à flots, et dans l'ivresse de l'instant, iel perd le compte de sa consommation. Mais alors que la nuit avance, une sensation de malaise sourd commence à émerger.
 
 <expl>La consommation d'alcool présente des défis supplémentaires pour les personnes atteintes de diabète de type 1. En plus de son impact sur la glycémie, l'alcool peut altérer la capacité du corps à réguler le glucose dans le sang, ce qui nécessite une surveillance étroite de la glycémie. Les boissons alcoolisées, souvent riches en sucre, peuvent entraîner des fluctuations importantes de la glycémie, conduisant à des hyperglycémies mais aussi des hypoglycémies. De plus, l'effet de l'alcool sur le corps peut masquer les symptômes d'une glycémie basse, augmentant le risque d'hypoglycémie non détectée. En état d'ivresse, il est fréquent que les personnes oublient de surveiller leur taux de sucre sanguin, ce qui peut engendrer des complications graves liées au diabète. </expl>
 
@@ -747,7 +747,7 @@ Zucchi trouve un coin calme dans le bar où iel peut s'asseoir et se reposer un 
   *[Rentrer chez ellui pour se reposer] -> bar_rentrer_tot
 
 =bar_rentrer_tot
-Fatigué·e mais soulagé·e, Zucchi rentre chez lui après une soirée mouvementée, sachant qu'iel a pris des risques en gérant sa glycémie dans un environnement aussi chaotique.{situ_hyper_bar: S'endormant rapidement en sautant le repas, Zucchi se sent tout de même reconnaissant pour les moments précieux partagés avec ses proches, malgré les défis rencontrés en cours de route.|Pourtant, malgré les défis rencontrés, iel ne peut s'empêcher de sourire en repensant aux moments de complicité partagés avec ses amis.} Ces souvenirs resteront gravés dans sa mémoire, même lorsque la lumière du jour chassera les ombres de la nuit.
+Fatigué·e mais soulagé·e, Zucchi rentre chez ellui après une soirée mouvementée, sachant qu'iel a pris des risques en gérant sa glycémie dans un environnement aussi chaotique.{situ_hyper_bar: S'endormant rapidement en sautant le repas, Zucchi se sent tout de même reconnaissant pour les moments précieux partagés avec ses proches, malgré les défis rencontrés en cours de route.|Pourtant, malgré les défis rencontrés, iel ne peut s'empêcher de sourire en repensant aux moments de complicité partagés avec ses amis.} Ces souvenirs resteront gravés dans sa mémoire, même lorsque la lumière du jour chassera les ombres de la nuit.
 ->fin
 
 =bar_amis
@@ -772,13 +772,13 @@ Zucchi rentre tard chez ellui après une soirée bien remplie. Les émotions de 
 
 <chapter>Chapitre 3: Quelle soirée !</chapter>
 
-Dans un moment de lucidité après une journée éreintante, Zucchi décide finalement de rester chez lui pour se reposer. Une soirée tranquille semble être exactement ce dont iel a besoin pour recharger ses batteries. Après tout, ses amis comprendront sûrement, même si une pointe de regret persiste dans un coin de son esprit. Zucchi se sent enveloppé par le calme réconfortant de son chez-soi. 
+Dans un moment de lucidité après une journée éreintante, Zucchi décide finalement de rester chez ellui pour se reposer. Une soirée tranquille semble être exactement ce dont iel a besoin pour recharger ses batteries. Après tout, ses amis comprendront sûrement, même si une pointe de regret persiste dans un coin de son esprit. Zucchi se sent enveloppé par le calme réconfortant de son chez-soi. 
 
 *[Cuisiner un bon repas]
 
-Iel prend le temps de préparer un repas nourrissant, choisi avec soin pour répondre aux besoins de son corps et apaiser son esprit fatigué. Pendant que les saveurs se mélangent dans la cuisine, Zucchi se permet un moment de pause, écoutant le silence paisible qui règne autour de lui.
+Iel prend le temps de préparer un repas nourrissant, choisi avec soin pour répondre aux besoins de son corps et apaiser son esprit fatigué. Pendant que les saveurs se mélangent dans la cuisine, Zucchi se permet un moment de pause, écoutant le silence paisible qui règne autour d'ellui.
 
-Avec un plat fumant devant lui, Zucchi se blottit dans son canapé, enveloppé dans une couverture douce. Iel choisit un film apaisant, laissant les images douces et les dialogues calmes l'emporter dans un monde de fiction momentané. Entre deux scènes, iel prend le temps de faire un peu d'administration pour son diabète, vérifiant sa glycémie et ajustant son traitement si nécessaire. C'est un rituel rassurant, un moment où iel peut prendre soin d'ellui-même en toute tranquillité.
+Avec un plat fumant devant ellui, Zucchi se blottit dans son canapé, enveloppé dans une couverture douce. Iel choisit un film apaisant, laissant les images douces et les dialogues calmes l'emporter dans un monde de fiction momentané. Entre deux scènes, iel prend le temps de faire un peu d'administration pour son diabète, vérifiant sa glycémie et ajustant son traitement si nécessaire. C'est un rituel rassurant, un moment où iel peut prendre soin d'ellui-même en toute tranquillité.
 
 La soirée s'étire lentement, et Zucchi se sent de plus en plus détendu à mesure que les heures passent. L'odeur réconfortante de la nourriture, le murmure apaisant du film, tout contribue à créer une atmosphère de sérénité. 
 
