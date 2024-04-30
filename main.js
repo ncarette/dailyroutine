@@ -4,6 +4,7 @@
     var story = new inkjs.Story(storyContent);
 
     var savePoint = "";
+    var savesArray = [];
 
     let savedTheme;
     let globalTagTheme;
@@ -41,6 +42,9 @@
 
     // Set initial save point
     savePoint = story.state.toJson();
+    // puts initial save point into saves array
+    savesArray = [];
+    savesArray.push(savePoint);
 
     // Kick off the start of the story!
     continueStory(true);
@@ -183,6 +187,9 @@
                 // This is where the save button will save from
                 savePoint = story.state.toJson();
 
+                // Puts new save in saves array
+                savesArray.push(savePoint);
+
                 // Aaand loop
                 continueStory();
             });
@@ -205,7 +212,8 @@
 
         // set save point to here
         savePoint = story.state.toJson();
-
+        savesArray = [];
+        savesArray.push(savePoint);
         continueStory(true);
 
         outerScrollContainer.scrollTo(0, 0);
@@ -263,6 +271,12 @@
             var el = allElements[i];
             el.parentNode.removeChild(el);
         }
+    }
+
+    //TODO: continue this
+    // function that removes last el of given selector
+    function removeLast(selector){
+        $(".story :last-child").children().last().remove();
     }
 
     // Used for hiding and showing the header when you CLEAR or RESTART the story respectively.
@@ -377,6 +391,24 @@
             document.body.classList.add("switched");
             document.body.classList.toggle("dark");
         });
+
+        let returnEl = document.getElementById("return");
+
+            returnEl.addEventListener("click", function(event) {
+                // need to remove only the two last ones
+                try {
+                    removeLast();
+                } catch(e) {
+                    console.debug("Couldn't remove last p");
+                }
+                try {
+                    story.state.LoadJson(savesArray[savesArray.length - 2]);
+                } catch (e) {
+                    console.debug("Couldn't find el in return array");
+                }
+                savesArray.pop();
+                continueStory(true);
+            });
     }
 
 })(storyContent);
