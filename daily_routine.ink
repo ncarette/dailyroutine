@@ -19,14 +19,15 @@ VAR prepglucose = false
 VAR velo = false
 VAR capteur = true 
 
-
 *[<b>Commencer l'histoire</b>]
 
 <chapter>Chapitre 1: Un Début Difficile</chapter>
 
+# AUDIO: audio/iphone_alarm.wav
 Le réveil sonne, tirant Zucchi de son sommeil. <a onclick="CreateDialogBox()">Iel</a> se réveille péniblement et tend la main pour l'éteindre, frottant le sommeil de ses yeux. En se redressant, iel remarque la sourde douleur de la fatigue dans ses os, une sensation bien trop familière. Iel vit avec un diabète de type 1, et iel sait que ce sera encore une journée de jonglage constant.
     **[Levez-vous !]
 
+# AUDIO: audio/bed-sheets.wav
 Zucchi attrape son téléphone sur la table de nuit et consulte sa glycémie sur l'application CGM. 
 
 <expl> Un <a href="https:\/\/www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes/continuous-glucose-monitoring" target="_blank">CGM</a> est un Moniteur de Glucose en Continu, un petit capteur inséré sous la peau qui émet toutes les quelques minutes les niveaux de glucose sanguin, également appelé glycémie, grâce à un transmetteur. Cette glycémie est ensuite affichée sur un moniteur qui est souvent le téléphone de l'utilisateur. Le coût d'un CGM est élevé et les compagnies d'assurance suisses ne remboursent les CGM que dans certaines conditions restrictives, pas pour tous les diabétiques. </expl> 
@@ -48,6 +49,7 @@ Zucchi envisage ses options pour le petit-déjeuner. Un bol de céréales semble
 * [Sauter le petit-déjeuner] -> petitdej_sans
 
 =petitdej_sain
+# AUDIO: audio/frying_eggs.wav
 Zucchi prend le temps de préparer un petit-déjeuner sain, optant pour des œufs brouillés et des épinards. L'arôme savoureux des œufs flotte dans la cuisine, faisant gronder l'estomac de Zucchi. En mangeant, iel ressent un sentiment de satisfaction en sachant qu'iel fait un bon choix pour sa santé. Cependant, en regardant l'heure, iel réalise qu'iel est en retard pour le travail. Son cœur bat la chamade d'anxiété et de frustration, sachant qu'iel doit choisir entre sa santé et sa ponctualité. Iel ressent un sentiment de culpabilité en continuant à se préparer pour cette journée, déterminé·e à arriver au travail à l'heure.
 ~ temps += 3
 ~ glycemie += 2
@@ -57,6 +59,7 @@ Zucchi prend le temps de préparer un petit-déjeuner sain, optant pour des œuf
 ~ temps += 1
 ~ glycemie += 10
 ~ petitdejsucre = true
+# AUDIO: audio/breakfast_cereal.wav
 Zucchi se sert un bol de céréales, attiré·e par les morceaux colorés et croquants. Alors qu'iel verse le lait, l'arôme sucré des céréales embaume la pièce. À la première bouchée, la douceur et la texture croquante des céréales le·a satisfont pleinement. Cependant, en terminant son bol, iel commence à ressentir de la lourdeur. Iel vérifie sa glycémie, qui est élevée. Iel réalise que les céréales ont rapidement fait grimper sa glycémie. Iel doit prendre plus d'insuline que prévu et surveiller sa glycémie de près. Iel se sent coupable et frustré·e de ne pas avoir fait des choix plus sains. Maintenant en retard pour le travail, iel se sent stressé·e.
 
 <expl> Les diabétiques de type 1 doivent prendre de l'<a href="https:\/\/www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments" target="_blank">insuline</a> car leur pancréas ne le produit pas par lui-même. Iels doivent prendre de l'insuline plusieurs fois par jour, notamment lorsqu'iels mangent et boivent, pour contrôler leur taux de glucose sanguin. Il existe différentes façons de prendre de l'insuline. Iels peuvent utiliser une seringue et une aiguille, un stylo à insuline ou une pompe à insuline. Les pompes et les stylos sont plus pratiques mais plus chers, quoique remboursés par les compagnies d'assurance suisses.</expl>
@@ -65,6 +68,7 @@ Zucchi se sert un bol de céréales, attiré·e par les morceaux colorés et cro
 =petitdej_sans
 ~ petitdejsans = true
 ~ glycemie -= 2
+# AUDIO: 
 Zucchi saute complètement le petit-déjeuner, ressentant la pression du temps et le stress d'être en retard pour le travail. Peu de temps après, iel vérifie rapidement sa glycémie et elle a continué à baisser dangereusement. Iel se sent étourdi·e, anxieux·se et incertain·e sur la marche à suivre. Son estomac gargouille de faim et iel se sent faible. La pensée de faire face à l'hypoglycémie pendant le travail le·a remplit de crainte et de culpabilité. Iel sait que sauter le petit-déjeuner a des conséquences sur son taux de sucre dans le sang et iel doit donc prendre une décision sur la façon de le gérer.
 
 <subchapter>Comment Zucchi va-t-iel gérer sa faible glycémie?</subchapter>
@@ -89,15 +93,19 @@ Zucchi saute complètement le petit-déjeuner, ressentant la pression du temps e
 
 
 ===petitdej_fin===
+
 Le petit-déjeuner est une partie cruciale de la gestion du diabète, mais peut aussi être une source de stress et de frustration, surtout lorsque le temps est un facteur. Zucchi doit équilibrer le besoin de prendre un petit-déjeuner sain avec la réalité de son emploi du temps chargé, et cela peut être une tâche difficile, avec des conséquences. Dans sa routine quotidienne, Zucchi doit toujours faire des choix et subir les conséquences de ces choix, qui peuvent occuper plus ou moins d'espace mental.
 
 *[Maintenant, il est temps de faire ses affaires]
+
 -> prep
 
 
 /* **********************Sous-chapitre 3: Préparation ************************* */
 
 ===prep===
+# AUDIO:
+# AUDIOLOOP: audio/get_dressed.m4a
 
 Zucchi commence à se préparer pour la journée, mais avant de quitter la maison, iel doit vérifier ses équipements pour le diabète. Iel doit s'assurer d'avoir assez d'insuline pour la journée avec ellui, en cas d'hyperglycémie ou s'iel doit manger, mais aussi assez de glucose, en cas d'hypoglycémie, comme des sucres de raisin, du soda, ou tout ce qui a une grande concentration de glucose tout en étant facilement ingérable et transportable.
 *[Oh]
@@ -121,31 +129,37 @@ Iel devrait vérifier son insuline dans le réfrigérateur et s'assurer d'en avo
 =prep_glucose
 ~ temps += 1
 ~ prepglucose = true
+
 Zucchi prends des sucres de raisin en plus, juste au cas où. Iel se sent soulagé·e mais aussi frustré·e de devoir penser à des choses comme ça juste pour sortir de la maison. Iel se sent déprimé·e à l'idée de devoir potentiellement manger à nouveau ces sucres en cas d'hypoglycémie. Avec le temps, c'est devenu vraiment dégoûtant.
 ->prep_quoi
 
 =prep_soda
 ~ temps += 1
+# AUDIO: audio/fridge_opening.wav
 Zucchi regarde dans le réfrigérateur pour du soda, mais n'en trouve pas. Iel doit bientôt aller faire des courses. {not glucose: -> prep_glucose| Iel est limité·e à l'utilisation des comprimés en cas d'hypoglycémie, ce qui ajoute une autre couche à son désespoir.}
 ->prep_quoi
 
 =prep_insuline
 ~ temps += 1
+
 Zucchi vérifie son stylo à insuline avant de partir, en s'assurant qu'il n'est pas périmé et qu'il contient suffisamment d'insuline. {not extrainsulin: Iel se sent soulagé·e mais aussi un peu stressé·e à l'idée de manquer d'insuline.}
 ->prep_quoi
 
 =prep_insuline_frigo
 ~ temps += 1
+# AUDIO: audio/fridge_opening.wav
 Zucchi se souvient de vérifier dans le réfrigérateur s'iel a assez d'insuline pour le week-end à venir. Iel semble en avoir assez, mais Zucchi est fatigué·e de devoir toujours penser à tant de choses en même temps.
 ->prep_quoi
 
 =prep_insuline_extra
 ~ temps += 1
+# AUDIO: audio/fridge_opening.wav
 Zucchi prend un stylo à insuline supplémentaire, juste au cas où. {not checkinsulin: Iel se sent soulagé·e et aussi un peu agacé·e de devoir penser à des choses comme ça juste pour sortir de la maison.| Iel est un peu agacé·e de devoir penser à toutes ces choses juste pour sortir de la maison. }
 ->prep_quoi
 
 =prep_rapide
 ~ preprapide = true
+
 Zucchi met rapidement quelques sucres de raisin dans son sac sans vérifier les stylos à insuline. Iel ne vérifie pas son CGM et ne réalise pas qu'il ne fonctionne pas correctement. Cela conduira sûrement à une journée stressante, où iel devra constamment vérifier sa glycémie avec un glucomètre et ne se sentira pas aussi libre.
 
 ~ capteur = false
@@ -157,6 +171,7 @@ Zucchi met rapidement quelques sucres de raisin dans son sac sans vérifier les 
     -> fin_chapitre_1
 
 =prep_fin
+
 Zucchi a l'impression que presque tout est vérifié. Iel doit encore vérifier que son capteur de fonctionne, car il est essentiel pour sa journée.
     *[Vérifier le capteur de glycémie.]
     -> cgm
@@ -165,6 +180,7 @@ Zucchi a l'impression que presque tout est vérifié. Iel doit encore vérifier 
 
 ===cgm===
 ~ temps += 1
+# AUDIO: 
 Zucchi vérifie son capteur de glucose, s'assurant qu'il fonctionne correctement et que son téléphone a suffisamment de batterie. Iel sait que cet appareil est essentiel pour gérer son diabète, et quand il ne fonctionne pas correctement, cela peut être une expérience stressante et accablante. Iel se sent soulagé·e lorsque tout fonctionne bien, mais aussi un peu frustré·e si ce n'est pas le cas, car cela signifie souvent qu'iel devra passer la journée a vérifier manuellement les niveaux de sucre dans son sang avec un glucomètre.
 
 *[Vérifier]
@@ -181,12 +197,13 @@ Malheureusement, le capteur ne fonctionne pas. Le téléphone de Zucchi est char
 
     =cgm_hotline
     ~ temps += 2
+    # AUDIO: audio/phone_ring.wav
     Zucchi contacte la hotline du fabricant du capteur. Après quelques longues minutes au téléphone, l'opérateur trouve la solution pour faire fonctionner à nouveau le capteur. Zucchi se sent soulagé·e d'avoir obtenu de l'aide, mais aussi frustré·e par le temps d'attente.
     *[Humph]
         -> cgm_fin
     
     =cgm_sans
-    
+    # AUDIO: 
     ~capteur = false
     
     Zucchi décide de passer la journée sans le CGM. Iel se sent moins libre, plus stressé·e et anxieux·se, devant vérifier le sucre manuellement avec un glucomètre.
@@ -198,6 +215,7 @@ Malheureusement, le capteur ne fonctionne pas. Le téléphone de Zucchi est char
     =cgm_use_glucometre
     ~temps += 1
     ~capteur = false
+    # AUDIO: 
     Zucchi vérifie sa glycémie avec un glucomètre, ce n'est pas aussi pratique que le CGM mais cela  lui permet d'avoir toujours une idée de son taux de sucre dans le sang et de faire les ajustements nécessaires. Iel se sent soulagé·e mais aussi frustré·e par l'inconvénient d'avoir à utiliser une méthode manuelle qui est beaucoup plus chronophage.
 
     {petitdejsans == false: {preprapide == false:<expl> Un <a href="https:\/\/www.verywellhealth.com/how-to-use-a-glucometer-1087304" target="_blank">glucomètre</a> est un petit appareil médical utilisé pour déterminer la concentration de glucose dans le sang. Le diabétique doit se piquer le doigt pour extraire une goutte de sang, qui sera ensuite analysée par l'appareil. Le glucomètre est l'appareil le plus fiable pour mesurer la concentration de glucose dans le sang, mais il nécessite beaucoup plus de soins et de temps pour l'utiliser.</expl>|}|}
@@ -205,11 +223,13 @@ Malheureusement, le capteur ne fonctionne pas. Le téléphone de Zucchi est char
         ->cgm_fin
 
 ==cgm_marche==
+# AUDIO: 
 Heureusement, le capteur fonctionne. Zucchi se sent soulagé·e, mais iel sait que la situation inverse s'est déjà tellement souvent produite. Le poids de ces incertitudes et l'impact sur sa santé et son emploi du temps sont trop grands pour être oubliés.
 *[Humph]
 -> cgm_fin
 
 ==cgm_fin==
+# AUDIO: 
 Toutes ces tâches et décisions, qui peuvent sembler petites, s'accumulent pour représenter un fardeau important et écrasant pour Zucchi. De l'emballage des accessoires pour le diabète, à la vérification des stylos à insuline, en passant par la gestion d'équipements défectueux, la gestion du diabète est un travail à plein temps qui ne s'arrête jamais. Zucchi se sent dépassé·e et stressé·e par le besoin constant de s'assurer qu'iel a suffisamment de matériel et la possibilité de devoir se passer d'un outil essentiel comme le CGM, mais iel est déterminé·e à continuer.
 
     *[Le temps passe. Il est temps de penser à la journée à venir.]
@@ -219,7 +239,7 @@ Toutes ces tâches et décisions, qui peuvent sembler petites, s'accumulent pour
 ==fin_chapitre_1
 
 /* Sous-chapitre 6: fin du chapitre*** */
-
+# AUDIO: 
 Zucchi est maintenant face à la décision de comment poursuivre sa journée. Même s'iel essaie d'oublier sa maladie, iel sait que ce n'est pas possible. Chaque jour est un nouveau voyage dans le monde du diabète, et parfois, iel ne peut pas toujours tenir ses promesses, que ce soit concernant sa santé, ses objectifs professionnels ou ses relations. Mais le plus important est de s'écouter, de tolérer et d'être indulgent·e envers ce qu'iel pense être des échecs, des déviations. S'iel veut rester déterminé·e, c'est à cela qu'iel doit donner tout son cœur.
 
 <subchapitre>Alors, que devrait faire Zucchi de sa journée?</subchapitre>
@@ -243,7 +263,7 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
 * [Prendre le vélo] -> trajet_velo
 
 ===trajet_velo===
-
+# AUDIO: audio/bike.wav
 {glycemie <= 5: Zucchi s'élance sur son vélo, mais rapidement, iel réalise que ses jambes sont lourdes et faibles. Une hypoglycémie le·a ralentit, l'obligeant à faire demi-tour. Déçu·e et frustré·e, Zucchi abandonne l'idée du vélo et se dirige vers l'arrêt de bus le plus proche. -> trajet_bus | Zucchi opte pour le vélo, espérant arriver au travail rapidement et sans encombre. La brise matinale caresse son visage alors qu'iel pédale avec détermination, savourant chaque instant de liberté sur deux roues.}
     ~ velo = true
     ~ glycemie -= 3
@@ -252,12 +272,13 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
 
 ===trajet_bus===
 ~ temps += 2
+# AUDIO: audio/bus_stop.wav
 {not trajet_velo:Zucchi décide de prendre le bus pour se rendre au travail.|} A l'arrêt de bus, iel attend de longues minutes que le bus arrive. Il finit par arriver avec assez de retard pour augmenter son stress d'être à l'heure au travail. Acceptant qu'iel sera en retard, iel monte dans le bus tout en se rappelant de regarder où en est sa glycémie.
     * [Regarder sa glycémie]
     {glycemie >= 5: {glycemie >= 15: -> situ_hyper_trajet| ->situ_normale_trajet}| -> situ_hypo_trajet}
 
     ===situ_hypo_trajet===
-    
+# AUDIO: audio/bus.flac
     Alors que Zucchi monte dans le bus, une sensation de faiblesse l'envahit subitement, signe que sa glycémie est en baisse. Cette sensation le·a contraint à chercher un siège, incapable de rester debout en raison de l'hypoglycémie qui le prend au dépourvu. Iel check son téléphone afin de vérifier son capteur, qui affiche effectivement une glycémie basse.
     
     <expl> L'hypoglycémie survient lorsque le taux de glucose dans le sang devient anormalement bas. Cela peut se produire si trop d'insuline est injectée par rapport à la quantité de glucose consommée ou si le repas est retardé ou manqué. Les symptômes de l'hypoglycémie peuvent inclure la faim, la transpiration, les tremblements, les étourdissements et la confusion. Pour traiter l'hypoglycémie, il est recommandé de consommer rapidement des aliments ou des boissons contenant du sucre, comme du soda, des comprimés de glucose ou des bonbons. Il est également important d'éviter toute activité physique. En cas d'hypoglycémie sévère, les conséquences peuvent être graves, avec un risque de déséquilibre important du taux de sucre dans le cerveau pouvant conduire à des dissociations, une perte de conscience voire dans les cas extrêmes, au décès. </expl>
@@ -286,7 +307,7 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
             {temps > 12: Zucchi sort du bus précipitamment, se sentant déjà coupable de son retard flagrant. Avec appréhension, iel consulte son téléphone et réalise avec consternation que le retard est bien plus important que prévu. Une boule d'angoisse se forme dans son estomac alors qu'iel prend conscience des répercussions de cet écart de temps. Toujours fragile de son hypogycémie, iel se hâte à travers la foule, tentant de dissimuler son malaise derrière une expression neutre. La tension monte alors qu'iel se rapproche du bâtiment, anticipant avec anxiété les réactions de ses collègues et de son patron. ->retard_gros |{temps<6: Zucchi descend précipitamment du bus. Un sourire léger se dessine sur son visage en consultant son téléphone et en constatant qu'iel ne devrait pas avoir de retard. Cependant, une pointe de nervosité persiste alors qu'iel se prépare à affronter une nouvelle journée de travail. Fatigué de cette course infernale et toujours fragile de son hypoglycémie, les pensées tourbillonnent dans l'esprit de Zucchi alors qu'iel se fraye un chemin à travers la foule, se concentrant sur les tâches qui l'attendent. ->retard_sans | Iel sort du bus en hâte, espérant que son retard ne soit pas trop remarqué. Jetant un coup d'œil rapide à son téléphone, iel réalise avec soulagement que le retard est minime, mais cela ne suffit pas à apaiser complètement son inquiétude. Toujours un peu fragile de son hypoglycémie, les pensées se bousculent dans son esprit alors qu'iel se fraye un chemin à travers la foule vers son lieu de travail. Un mélange d'embarras et de frustration l'envahit, sachant qu'iel devra justifier son retard à son patron et à ses collègues. Cette sensation de malaise grandit alors qu'iel se rapproche de l'entrée du bâtiment, se préparant mentalement à affronter les conséquences de son retard. ->retard_moyen}}
 
         =hypo_acheter
-        
+        # AUDIO: audio/city_walk.wav
         Zucchi descend du bus à l'arrêt suivant et se rend au magasin pour acheter une boisson sucrée. Cela lui fait perdre encore plus de temps, mais c'est nécessaire pour traiter son hypoglycémie. Iel doit maintenant patienter que son taux de sucre dans le sang remonte. Zucchi continue son trajet vers le travail après avoir repris un peu de force. 
          
         {temps > 12: Après avoir récupéré, Zucchi reprend son chemin vers le travail, mais réalise avec consternation qu'iel est bien plus en retard que prévu. Iel se dépêche autant que possible, mais le temps perdu et la faiblesse persistante commencent à peser lourdement sur son esprit. Les pensées de justifications et d'excuses se bousculent alors qu'iel se rapproche du bâtiment, agacé·e d'avoir dû sortir du bus plus tôt et redoutant les réactions de ses collègues et de son patron. ->retard_gros |{temps<6: Après avoir récupéré, Zucchi poursuit son trajet vers le travail, se sentant soulagé·e en voyant qu'iel devrait arriver à l'heure. Cependant, iel ne peut s'empêcher de ressentir une pointe d'agacement d'avoir dû se dépêcher autant avant de partir, sacrifiant ainsi une préparation adéquate pour la journée. Malgré cela, iel aborde la journée avec une attitude positive, même si iel reste un peu faible et irrité·e par cette situation. ->retard_sans | Après avoir récupéré, Zucchi poursuit son trajet vers le travail, réalisant avec soulagement qu'iel est seulement un peu en retard. Iel accélère le pas, agacé·e d'avoir dû sortir du bus plus tôt et de s'être pressé·e pour arriver à l'heure. Malgré cette frustration, iel se sent mieux après avoir pris soin de sa santé et aborde la journée avec optimisme, bien que la faiblesse persistante soit encore présente. ->retard_moyen}}
@@ -305,7 +326,8 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
         Zucchi décide de ne pas s'injecter d'insuline dans le bus et préfère attendre d'être descendu pour le faire. Cela prolonge sa période d'hyperglycémie et aggrave son mal-être, mais iel préfère cette option pour des raisons de confort et de discrétion.
         
         Le trajet continue et iel arrive enfin à son arrêt. À la sortie, iel se dépèche de trouver un endroit approprié afin de prendre de l'insuline. Cette piqûre tardive le·a fatigue considérablement, alors qu'iel n'est même pas encore arrivé au travail, mais Zucchi se sent soulagé·e de pouvoir enfin traiter son hyperglycémie.
-        
+        * [Marcher jusqu'au travail]
+        # AUDIO: audio/city_walk.wav
         {temps > 12: Alors que Zucchi se dépêche vers son lieu de travail, un frisson d'inquiétude traverse son corps en constatant l'étendue de son retard. Chaque pas est une course contre le temps, chaque souffle est un rappel de sa lutte contre l'hyperglycémie. Le poids du temps perdu et de l'incertitude s'ajoute à sa charge déjà lourde. À mesure qu'il se rapproche du bâtiment, la tension monte, mêlée d'une pointe d'espoir que son retard ne sera pas trop sévèrement jugé. ->retard_gros |{temps<6: Zucchi constate qu'iel ne devrait pas être en retard. Malgré le soulagement d'arriver à temps, Zucchi ressent encore les effets de l'hyperglycémie et de l'injection d'insuline tardive. Chaque pas vers le travail est une victoire, mais chaque instant est également teinté d'une inquiétude persistante. Les murmures de la fatigue et de l'appréhension s'entremêlent alors qu'il se prépare à affronter la journée, déterminé à faire de son mieux malgré les obstacles. ->retard_sans | Cette attente pour s'injecter de l'insuline devient encore plus pesante lorsqu'iel réalise d'être un peu en retard. Chaque minute semble une éternité alors que Zucchi se hâte vers le travail, le malaise de l'hyperglycémie l'accompagnant à chaque pas. Une tension palpable envahit l'air alors qu'il se rapproche du bâtiment, partagé entre le soulagement d'être arrivé et l'inquiétude face aux défis à venir. ->retard_moyen}}
 
         =hyper_assis
@@ -325,6 +347,7 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
 
 ===retard_gros===
 *[Entrer]
+# AUDIOLOOP: audio/office.flac
 Iel se faufile dans le bâtiment, les yeux baissés, conscient de l'heure tardive affichée sur son téléphone. Les regards curieux et accusateurs de ses collègues le·a mettent encore plus mal à l'aise alors qu'iel essaie de se frayer un chemin jusqu'à son bureau. L'air lourd de l'incertitude pèse sur ses épaules, son esprit tourmenté par les réprimandes potentielles du patron. Arrivé·e à son poste, iel tente de se faire le plus discret possible en sortant ses dossiers et en allumant sa machine de travail. Iel s'assied et respire un grand coup : malgré toutes les difficultés du matin, le·a voici au travail !
 **[Ouf]
 Cependant, son soulagement est de courte durée lorsque son regard croise celui de son patron, dont le visage exprime une colère contenue. Les mots sévères du supérieur s'abattent sur ellui comme un coup de fouet, le stress montant en flèche alors qu'iel envisage les conséquences potentielles de cet énième retard. Iel tente de sortir les meilleures excuses, trop gené·e de parler de son diabète, trop fatigué·e, aussi, des potentielles explications approfondies qu'iel devra donner sur celui-ci si iel s'aventure à le mentionner.
@@ -359,6 +382,7 @@ Iel se sent déçu·e de ellui-même car la ponctualité ne semble pas être que
 
 ===retard_moyen===
 *[Entrer]
+# AUDIOLOOP: audio/office.flac
 Iel se faufile discrètement entre ses collègues, son cœur battant la chamade à l'idée de devoir affronter la réaction probable de son patron. Les regards désapprobateurs et les murmures étouffés de ses collègues le·a mettent encore plus mal à l'aise alors qu'iel essaie de dissimuler son retard. La tension monte en ellui alors qu'iel se demande comment iel va se sortir de cette situation délicate. 
 
 Une fois installé·e à son bureau, iel préfère rester discret·e en sortant ses dossiers et en démarrant son ordinateur. Après avoir pris place, iel inspire profondément : malgré les péripéties du matin, le·a voilà enfin prêt·e à travailler !
@@ -370,6 +394,7 @@ En commençant à lire ses mails, iel ressent sur ellui le jugement de ses coll�
 
 ===retard_sans===
 *[Entrer]
+# AUDIOLOOP: audio/office.flac
 Iel entre dans le bâtiment avec discrétion, espérant passer inaperçu·e pendant qu'iel se dirige vers son bureau. Le soulagement initial d'être arrivé·e à l'heure se mélange rapidement à une légère appréhension à l'idée d'expliquer à son patron sa distraction.
 
 **[Se mettre au travail]
@@ -382,7 +407,7 @@ Malgré tout, Zucchi se sent comme un funambule sur un fil, jonglant entre les e
 /* **********************Sous-chapitre 3: Glycemie et midi ************************* */
 
 ===midi===
-
+# AUDIOLOOP: audio/office.flac
 {capteur==false: ->midi_glucometre | ->midi_check_cgm}
 
 =midi_check_cgm
@@ -417,6 +442,7 @@ Zucchi ouvre la trousse de son glucomètre, installe les outils, et prends une p
 Midi arrive, et Zucchi comprend que la meilleure chose à faire est d'anticiper sa pause repas de quelques temps. Iel se lève de son poste de travail, conscient·e des coups d'oeils curieux de ses collègues. Certains lui lancent des regards interrogateurs, se demandant pourquoi iel part si tôt en pause. Zucchi se sent exposé·e, mais priorise sa santé et se dirige vers la salle de pause.
 
 ***[Manger]
+# AUDIOLOOP: audio/cafeteria.wav
 Alors que Zucchi s'assoit seul·e au refectoire, iel ressent un pincement au cœur en voyant ses collègues vaquer à leurs occupations, loin de la salle de pause. L'absence de compagnie autour de la table accentue le sentiment de solitude, renforcé par le fait que les autres semblent occupés à leurs tâches. Les chaises vides autour d'ellui résonnent comme un écho de son isolement momentané. Pourtant, même si ses collègues ne partagent pas ce repas avec ellui, leur indifférence apparente ajoute une couche supplémentaire à son sentiment d'incompréhension. Cette solitude forcée, conséquence de sa pause anticipée pour gérer son hypoglycémie, laisse un goût amer dans sa bouche, symbolisant la distance qui persiste parfois entre sa réalité et celle des autres.
 
 Peu après, ses collègues se retrouvent pour partager un repas ensemble, riant et échangeant des plaisanteries autour de la table. Le dessert qu'une des collègues a apporté est partagé avec enthousiasme, créant un sentiment de camaraderie qui semble exclure involontairement Zucchi. Cette scène, qui aurait pu être un moment de connexion et de détente, devient pour ellui un rappel douloureux de l'écart entre sa vie et celle de ses collègues. Le fossé se creuse davantage alors que les rires résonnent dans la salle, laissant Zucchi se sentir isolé·e et incompris·e.
@@ -434,6 +460,7 @@ Peu après, ses collègues se retrouvent pour partager un repas ensemble, riant 
 *[Accompagner ses collègues à la pause, sans manger]-> midi_sans
 
     =midi_manger
+    # AUDIOLOOP: audio/cafeteria.wav
     La glycémie de Zucchi est élevée, ce qui rend son choix de repas pour la pause déjeuner plus compliqué. Iel se sent fatigué·e et affamé·e, sachant qu'iel doit faire attention à ce qu'iel mange pour contenir l'hyperglycémie.
     
     *[Choisir un plat]    
@@ -453,11 +480,13 @@ Peu après, ses collègues se retrouvent pour partager un repas ensemble, riant 
     
     La solitude s'installe davantage lorsque l'une de ses collègues apporte un gâteau qu'elle a préparé, et tout le monde se réunit autour pour le déguster ensemble. Zucchi se sent exclu·e de ce moment de camaraderie, conscient·e que la consommation de gâteau n'est pas une option pour ellui dans cet état. Cette exclusion involontaire renforce le sentiment de solitude et d'incompréhension de Zucchi face à sa condition de santé.
     
-    **[Aller manger] 
+    **[Aller manger]
+    # AUDIOLOOP: audio/cafeteria.wav
     Finalement, la glycémie de Zucchi finit par descendre, lui permettant d'enfin se rendre au réfectoire afin de manger. Iel regarde le buffet du déjeuner, essayant de trouver quelque chose qui lui conviendra sur le plan glycémique. Iel se rend compte que la plupart des options ne sont pas adaptées pour que sa glycémie soit parfaite. Il lui faudrait un bon équilibre entre féculents, légumes et protéines, avec le moins de sucres rapides possible, et de préférence pas trop gras, car le gras a pour effet de dérégler l'ingestion du sucre et de conduire à une glycémie instable pendant plusieurs heures. Ces difficultés s'ajoutent à celles déjà rencontrées pendant ce repas, augmentant davantage la solitude et le stress de Zucchi. Iel finit par choisir un repas qui n'est pas son préféré, mais qui lui permettra de stabiliser sa glycémie pour les prochaines heures.
         ***[Retourner travailler]-> aprem
         
     =midi_sans
+    # AUDIOLOOP: audio/cafeteria.wav
     Zucchi décide d'accompagner ses collègues à la pause déjeuner, même si iel ne prévoit pas de manger. Iel veut garder un lien social avec ses collègues malgré sa situation, mais cette décision n'est pas sans conséquence sur son état émotionnel et physique, d'abord parce qu'effectuant sa pause sans manger, iel ne pourra a priori pas manger ensuite. En se rendant à la salle de pause, iel ressent une vague de faim qui s'intensifie à mesure que ses collègues dégustent leurs repas. Iel observe en silence, se sentant exclu·e de ce moment de partage, même si iel sait que c'est la meilleure décision pour sa santé.
     
     *[suite]
@@ -471,6 +500,7 @@ Peu après, ses collègues se retrouvent pour partager un repas ensemble, riant 
 <> est dans la normale. Un léger sourire se dessine sur son visage, dissipant les nuages d'inquiétude qui planaient précédemment. Pour un moment, iel savoure le soulagement temporaire que lui procure cette lecture rassurante, lui permettant de commencer sa journée de travail avec un poids en moins sur les épaules. Cependant, même dans ce moment de répit, iel reste conscient des défis constants posés par sa condition et de la vigilance nécessaire pour maintenir cette stabilité glycémique.
 
 *[Aller en pause]
+# AUDIOLOOP: audio/cafeteria.wav
 Midi arrive, et Zucchi part en pause avec ses collègues afin de se restaurer. Iel regarde le buffet du déjeuner, essayant de trouver quelque chose qui lui conviendra sur le plan glycémique. Iel se rend compte que la plupart des options ne sont pas adaptées pour que sa glycémie soit parfaite. Il lui faudrait un bon équilibre entre féculents, légumes et protéines, avec le moins de sucres rapides possible, et de préférence pas trop gras, car le gras à pour effet de déregler l'ingestion du sucre et de conduire à une glycémie instable pendant plusieurs heures.
 
 **[Choisir à manger]
@@ -596,6 +626,7 @@ Cependant, la tranquillité de l'après-midi est brusquement interrompue par un 
 /* **********************Sous-chapitre 4: Fatigue de l'aprèm ************************* */
 
 ===aprem===
+# AUDIOLOOP: office.flac
 Alors que l'après-midi s'étire devant ellui, Zucchi s'enfonce confortablement dans son fauteuil, laissant ses muscles se détendre lentement. Le tic-tac régulier de l'horloge murale remplit l'air, tandis que les rayons du soleil jouent à travers les rideaux, créant des motifs dansants sur le sol. Une légère brise souffle à travers la fenêtre entrouverte, apportant avec elle le doux parfum des fleurs du jardin. Malgré le calme apparent, l'anticipation de ce que l'après-midi réserve pèse sur l'esprit de Zucchi, lui rappelant que chaque instant de répit est précieux dans sa lutte contre le diabète.
 {capteur==false: Chaque pause est l'occasion de vérifier sa glycémie, même si cela signifie devoir recourir à des méthodes manuelles plus laborieuses. ->aprem_glucometre|{maison: ->aprem_capteur|->aprem_capteur_fail}}
 
@@ -635,13 +666,13 @@ Le stress s'intensifie à mesure que les responsabilités professionnelles s'acc
 Alors que Zucchi ferme enfin son ordinateur et rassemble ses affaires, un sentiment de soulagement l'envahit. L'idée de retrouver le confort de son chez-soi après une journée épuisante lui apporte un réconfort bienvenu. Les lumières du bureau s'atténuent lentement, et Zucchi prend une profonde inspiration, libérant le poids du stress accumulé.
 
 **[Quitter le bureau]
-
+# AUDIO: audio/city_walk.wav
 En quittant le bureau, Zucchi est accueilli par la douce lueur du crépuscule qui enveloppe la ville. Les rues animées semblent moins chaotiques maintenant, offrant un contraste apaisant avec l'agitation de la journée. Le trajet de retour à la maison est ponctué par le bourdonnement régulier des voitures et le brouhaha lointain des passants, créant une toile de fond familière pour la routine quotidienne.
 
 Arrivé chez ellui, Zucchi laisse échapper un soupir de soulagement en franchissant le seuil de sa porte. Le foyer chaleureux offre un havre de paix après les turbulences de la journée. Dans la tranquillité de son sanctuaire personnel, Zucchi trouve enfin un moment de répit, loin du tumulte du monde extérieur. Très vite, après avoir reçu un message d'une amie, Zucchi se retrouve confronté à un choix délicat, une décision qui influencera le reste de sa soirée. 
 
 ***[Faire un choix]
-
+# AUDIO:
 D'un côté, ses amis l'attendent dans un café animé en ville, prêts à partager un verre et à décompresser après une longue journée. D'un autre côté, Zucchi ressent le besoin impérieux de se remettre de ses émotions, de prendre du temps pour ellui-même et de se ressourcer. De plus, iel doit songer au diner, n'ayant probablement pas le temps de cuisiner un repas de qualité si iel va en ville.
 
 <subchapitre>Alors, que devrait faire Zucchi de sa soirée?</subchapitre>
@@ -711,7 +742,7 @@ Cependant, au fil des heures et des verres, l'euphorie de la soirée commence à
 <expl>La consommation d'alcool présente des défis supplémentaires pour les personnes atteintes de diabète de type 1. En plus de son impact sur la glycémie, l'alcool peut altérer la capacité du corps à réguler le glucose dans le sang, ce qui nécessite une surveillance étroite de la glycémie. Les boissons alcoolisées, souvent riches en sucre, peuvent entraîner des fluctuations importantes de la glycémie, conduisant à des hyperglycémies mais aussi des hypoglycémies. De plus, l'effet de l'alcool sur le corps peut masquer les symptômes d'une glycémie basse, augmentant le risque d'hypoglycémie non détectée. En état d'ivresse, il est fréquent que les personnes oublient de surveiller leur taux de sucre sanguin, ce qui peut engendrer des complications graves liées au diabète. </expl>
 
 <subchapter> Que devrait-faire Zucchi ? </subchapter>
-  **[Vérifier sa glycémie rapidement] -> bar_glycemie
+  **[Se mettre à l'écart pour vérifier sa glycémie] -> bar_glycemie
   **[Continuer à profiter de la soirée sans vérifier sa glycémie] -> bar_sans_glycemie
 
 ===bar_glycemie===
@@ -726,7 +757,7 @@ Zucchi décide d'ignorer momentanément sa glycémie afin de continuer à profit
   *[Rejoindre ses amis pour danser] -> bar_danser
   *(crush){bar_sans_glycemie}[Engager une conversation avec une personne inconnue] -> bar_rencontre
   *[Prendre un moment pour se reposer seul] -> bar_repos
-
+TODO: gérer la situ rencontre et la situ hyper/alcool
 =bar_danser
 Zucchi se mêle à la foule et se lance sur la piste de danse avec ses amis. Iels rient, dansent et s'amusent ensemble, créant de jolis souvenirs. Les notes de musique les emportent dans un tourbillon de mouvements spontanés, alors qu'iels se laissent porter par l'atmosphère festive de la soirée. Les conversations joyeuses et les éclats de rire résonnent autour d'eux, ajoutant une touche de légèreté à leur soirée. Ensemble, iels profitent de l'instant présent, savourant chaque moment passé ensemble dans cette ambiance animée. {situ_hyper_bar: Zucchi se sent tout de même de plus en plus exténué, et iel se demande à quel point rester tard au bar est une bonne idée pour sa santé.|}
 ->bar_choix
@@ -769,6 +800,7 @@ Zucchi rentre tard chez ellui après une soirée bien remplie. Les émotions de 
 ===soiree_repos===
 
 <chapter>Chapitre 3: Quelle soirée !</chapter>
+
 
 Dans un moment de lucidité après une journée éreintante, Zucchi décide finalement de rester chez ellui pour se reposer. Une soirée tranquille semble être exactement ce dont iel a besoin pour recharger ses batteries. Après tout, ses amis comprendront sûrement, même si une pointe de regret persiste dans un coin de son esprit. Zucchi se sent enveloppé par le calme réconfortant de son chez-soi. 
 
