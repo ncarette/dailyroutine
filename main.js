@@ -139,8 +139,6 @@
                     }
                 }
 
-                // SUCCESS - activate success if not yet activated
-                // the success already exists in the page but needs to be colored + random window needs to open
                 if (splitTag && splitTag.property == "SUCCESS") {
                     var regex = /\/(\w+)_c\.png$/; // Expression régulière pour extraire le nom de l'ID
                     var match = splitTag.val.match(regex); // Trouver la correspondance dans l'URL
@@ -148,12 +146,19 @@
                         var id = match[1]; // Le premier groupe de capture contient le nom de l'ID
                         var img = document.getElementById(id); // Trouver l'élément avec l'ID correspondant
                         if (img) {
-                            img.src = splitTag.val; // Changer la source de l'image
-                            // Afficher une boîte de dialogue d'alerte avec le titre de l'image
-                            alert("Bravo ! Vous avez débloqué le succès " + img.title);
+                            // Vérifier si le succès a déjà été débloqué
+                            var successAlreadyUnlocked = localStorage.getItem(id + "_unlocked");
+                            if (!successAlreadyUnlocked) {
+                                img.src = splitTag.val; // Changer la source de l'image
+                                // Afficher une boîte de dialogue d'alerte avec le titre de l'image
+                                alert("Bravo ! Vous avez débloqué le succès " + img.title);
+                                // Marquer le succès comme débloqué pour qu'il ne soit pas déclenché à nouveau
+                                localStorage.setItem(id + "_unlocked", true);
+                            }
                         }
                     }
                 }
+
             }
 
             // Create paragraph element (initially hidden)
