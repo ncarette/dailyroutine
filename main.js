@@ -141,10 +141,18 @@
 
                 // SUCCESS - activate success if not yet activated
                 // the success already exists in the page but needs to be colored + random window needs to open
-                if( splitTag && splitTag.property == "SUCCESS" ) {
-                    document.getElementById("friends").src = splitTag.val;
-                    // needs to detect which one it is and put the colored version 
-                    // needs to put an allert box or something like that
+                if (splitTag && splitTag.property == "SUCCESS") {
+                    var regex = /\/(\w+)_c\.png$/; // Expression régulière pour extraire le nom de l'ID
+                    var match = splitTag.val.match(regex); // Trouver la correspondance dans l'URL
+                    if (match) {
+                        var id = match[1]; // Le premier groupe de capture contient le nom de l'ID
+                        var img = document.getElementById(id); // Trouver l'élément avec l'ID correspondant
+                        if (img) {
+                            img.src = splitTag.val; // Changer la source de l'image
+                            // Afficher une boîte de dialogue d'alerte avec le titre de l'image
+                            alert("Bravo ! Vous avez débloqué le succès " + img.title);
+                        }
+                    }
                 }
             }
 
