@@ -115,6 +115,28 @@ h2 {
     }
 }
 
+/* Styles pour la success-box mobile */
+.success-box-mobile {
+    display: none; /* Masque la success-box par défaut */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px; /* Largeur de la boîte */
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Animation d'apparition */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .success-title {
     font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
     font-size: 20pt;
