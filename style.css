@@ -93,15 +93,26 @@ h2 {
     transition: background-color 0.6s;
 }
 
-.success-box {
-    position: fixed;
-    top: 50px;
-    left: 10px;
-    z-index: 999;
-    background: white;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+/* Styles pour les appareils mobiles */
+@media screen and (max-width: 768px) {
+    .success-box {
+        /* Masque la success-box sur les appareils mobiles */
+        display: none;
+    }
+}
+/* Styles pour les ordinateurs */
+@media screen and (min-width: 769px) {
+    .success-box {
+        /* Styles spécifiques pour les ordinateurs */
+        position: fixed;
+        top: 50px;
+        left: 10px;
+        z-index: 999;
+        background: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .success-title {
