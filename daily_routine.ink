@@ -28,6 +28,7 @@ Le réveil sonne, tirant Zucchi de son sommeil. <a onclick="CreateDialogBox()">I
     **[Levez-vous !]
 TODO: Bed sheets and call lower and refectoire
 # AUDIO: audio/bed-sheets.wav
+# SUCCESS: icons/friends_c.png
 Zucchi attrape son téléphone sur la table de nuit et consulte sa glycémie sur l'application CGM. 
 
 <expl> Un <a href="https:\/\/www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes/continuous-glucose-monitoring" target="_blank">CGM</a> est un Moniteur de Glucose en Continu, un petit capteur inséré sous la peau qui émet toutes les quelques minutes les niveaux de glucose sanguin, également appelé glycémie, grâce à un transmetteur. Cette glycémie est ensuite affichée sur un moniteur qui est souvent le téléphone de l'utilisateur. Le coût d'un CGM est élevé et les compagnies d'assurance suisses ne remboursent les CGM que dans certaines conditions restrictives, pas pour tous les diabétiques. </expl> 
