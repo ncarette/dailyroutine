@@ -41,6 +41,7 @@ La glycémie est un peu basse, iel sait qu'iel a besoin de manger quelque chose,
 
 ===petitdej===
 
+# SUCCESS: icons/friends_c.png
 Zucchi envisage ses options pour le petit-déjeuner. Un bol de céréales semble tentant, mais iel sait que cela ferait augmenter sa glycémie. Préparer quelque chose de plus sain, comme des œufs brouillés et des épinards, prendrait trop de temps, et iel est déjà en retard pour le travail. Sauter le petit-déjeuner tout court ferait certainement baisser sa glycémie plus tard dans la matinée.
 
 <subchapter>Que va faire Zucchi pour le petit-déjeuner ?</subchapter>

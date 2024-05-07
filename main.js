@@ -1,4 +1,7 @@
 (function(storyContent) {
+    // clear localstorage à chaque refresh de page
+    window.addEventListener('beforeunload', function() {
+    localStorage.clear();});
 
     // Create ink story from the content using inkjs
     var story = new inkjs.Story(storyContent);

@@ -93,15 +93,44 @@ h2 {
     transition: background-color 0.6s;
 }
 
-.successbox {
-
+.success-box {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    z-index: 999;
+    background: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.successbox img {
+.success-title {
+    font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    font-style: normal;
+    font-weight: lighter;
+    color: #702963;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.success-columns {
+    display: flex;
+    margin-left: 10px;
+}
+
+.success-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px; /* Espacement entre les colonnes */
+}
+
+.success-images img {
     width: 80px;
     height: 80px;
+    margin-bottom: 10px; /* Espacement entre les images */
 }
-
 
 p {
     font-size: 13pt;
