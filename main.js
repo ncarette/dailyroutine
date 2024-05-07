@@ -138,6 +138,13 @@
                         return;
                     }
                 }
+
+                // SUCCESS - activate success if not yet activated
+                // the success already exists in the page but needs to be colored + random window needs to open
+                if( splitTag && splitTag.property == "SUCCESS" ) {
+                    // needs to detect which one it is and put the colored version 
+                    // needs to put an allert box or something like that
+                }
             }
 
             // Create paragraph element (initially hidden)
