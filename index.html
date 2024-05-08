@@ -14,6 +14,7 @@
 <body>
 
     <div class="outerContainer">
+        <div class="arrow rotate">➜</div>
         <div id="success" class="success-box show">
             <h2 class="success-title">Succès</h2>
             <div class="success-columns">
@@ -34,7 +35,6 @@
             </div>
         </div>
         <div class="success-box-mobile">
-            <div class="arrow">➜</div>
             <div class="content">
                 <h2 class="success-title">Succès</h2>
                 <div class="success-columns">
@@ -62,7 +62,12 @@
           <a id="reload" title="Reload from save point">charger</a>
         </div>        
         <div id="dialogbox"></div>
-
+        <div id="custom-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+          </div>
+        </div>
         <div id="story" class="container">
             <div class="header">
                 <h1>Équilibre au Quotidien</h1>
@@ -86,44 +91,6 @@
             DialogBox.appendChild(CloseBtn);
             document.getElementById("dialogbox").appendChild(DialogBox);
             };
-    </script>
-    <script type="text/javascript">
-        // Détecte le swipe vers la droite pour afficher la success-box mobile
-        document.addEventListener('touchstart', handleTouchStart, false);        
-        document.addEventListener('touchmove', handleTouchMove, false);
-
-        var xDown = null;                                                        
-        var yDown = null;                                                        
-
-            function handleTouchStart(evt) {                                         
-                xDown = evt.touches[0].clientX;                                      
-                yDown = evt.touches[0].clientY;                                      
-            };                                                
-
-            function handleTouchMove(evt) {
-                if ( ! xDown || ! yDown ) {
-                    return;
-                }
-
-                var xUp = evt.touches[0].clientX;                                    
-                var yUp = evt.touches[0].clientY;
-
-                var xDiff = xDown - xUp;
-                var yDiff = yDown - yUp;
-
-                if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-                    if ( xDiff > 0 ) {
-                        /* left swipe */ 
-                    } else {
-                        /* right swipe */
-                        document.querySelector('.success-box-mobile').style.transform = 'translateX(0)';
-                    }                       
-                }
-                /* reset values */
-                xDown = null;
-                yDown = null;                                             
-            };
-
     </script>
     <script src="ink.js"></script>
     <script src="daily_routine.js"></script>

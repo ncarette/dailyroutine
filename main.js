@@ -152,12 +152,22 @@
                             // Vérifier si le succès a déjà été débloqué
                             var successAlreadyUnlocked = localStorage.getItem(id + "_unlocked");
                             if (!successAlreadyUnlocked) {
+                                img.classList.add("flashlight");
                                 img.src = splitTag.val; // Changer la source de l'image
+                                // Jouer la musique de succès
+                                  this.audio = new Audio("audio/win.wav");
+                                  this.audio.play();
                                 // Afficher une boîte de dialogue d'alerte avec le titre de l'image
-                                alert("Bravo ! Vous avez débloqué le succès " + img.title);
+                                showModal("Bravo ! Vous avez débloqué le succès " + img.title);
                                 // Marquer le succès comme débloqué pour qu'il ne soit pas déclenché à nouveau
                                 localStorage.setItem(id + "_unlocked", true);
-                            }
+                                
+                                // Ajoute cette condition pour gérer la boîte de succès mobile
+                                var successBoxMobileImg = successBoxMobile.querySelector('#' + id);
+                                if (successBoxMobileImg) {
+                                    successBoxMobileImg.src = splitTag.val;
+                                }
+                            }   
                         }
                     }
                 }
@@ -402,5 +412,26 @@
             document.body.classList.toggle("dark");
         });
     }
-    
+
+    function showModal(message) {
+        var modal = document.getElementById("custom-modal");
+        var modalMessage = document.getElementById("modal-message");
+        modalMessage.innerHTML = message;
+        modal.style.display = "block";
+
+        var closeButton = document.getElementsByClassName("close")[0];
+        closeButton.onclick = function() {
+            modal.style.display = "none";
+        }
+    }
+
+    // Toggle mobile success-box
+    var arrow = document.querySelector('.arrow');
+    var successBoxMobile = document.querySelector('.success-box-mobile');
+
+    arrow.addEventListener('click', function() {
+        this.classList.toggle('rotate');
+        successBoxMobile.classList.toggle('show');
+    });
+
 })(storyContent);
