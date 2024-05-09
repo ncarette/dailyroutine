@@ -7,7 +7,7 @@
 
 /* **********************Sous-chapitre 1: Incipit************************* */
 
-TODO: win sound must be integrated into success
+TODO: styliser success-box
 TODO: when "recommencer" : local storage must be cleared ? fix local storage stuff
 # variables
 VAR temps=0

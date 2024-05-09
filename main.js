@@ -1,13 +1,21 @@
 (function(storyContent) {
-    // clear localstorage à chaque refresh de page
-    window.addEventListener('beforeunload', function() {
-    localStorage.clear();});
 
     // Create ink story from the content using inkjs
     var story = new inkjs.Story(storyContent);
 
     var savePoint = "";
 
+    var imgs_array = ["cgm","friends","glucometer","hypo","insulin","love","meal","selfcare","time","work"]
+    let imgs = JSON.string(imgs_array)
+    localStorage.setItem("key", imgs)
+
+/* 
+// Retrieving the string
+let retString = localStorage.getItem("key")
+
+// Retrieved array
+let retArray = JSON.parse(retString)
+*/
     let savedTheme;
     let globalTagTheme;
 
@@ -383,10 +391,10 @@
                 window.localStorage.setItem('save-state', savePoint);
                 document.getElementById("reload").removeAttribute("disabled");
                 window.localStorage.setItem('theme', document.body.classList.contains("dark") ? "dark" : "");
+
             } catch (e) {
                 console.warn("Couldn't save state");
             }
-
         });
 
         let reloadEl = document.getElementById("reload");
