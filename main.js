@@ -148,17 +148,19 @@
                     if (match) {
                         var id = match[1]; // Le premier groupe de capture contient le nom de l'ID
                         var img = document.getElementById(id); // Trouver l'élément avec l'ID correspondant
+                        var arrow = document.getElementById("arrow");
                         if (img) {
                             // Vérifier si le succès a déjà été débloqué
                             var successAlreadyUnlocked = localStorage.getItem(id + "_unlocked");
                             if (!successAlreadyUnlocked) {
                                 img.classList.add("flashlight");
+                                arrow.classList.add('illuminate');
                                 img.src = splitTag.val; // Changer la source de l'image
                                 // Jouer la musique de succès
                                   this.audio = new Audio("audio/win.wav");
                                   this.audio.play();
                                 // Afficher une boîte de dialogue d'alerte avec le titre de l'image
-                                showModal("Bravo ! Vous avez débloqué le succès " + img.title);
+                                showModal('Bravo ! Vous avez débloqué le succès "' + img.title + '"');
                                 // Marquer le succès comme débloqué pour qu'il ne soit pas déclenché à nouveau
                                 localStorage.setItem(id + "_unlocked", true);
                                 
@@ -415,12 +417,11 @@
 
     function showModal(message) {
         var modal = document.getElementById("custom-modal");
+        var modalBox = document.getElementById("modal-content");
         var modalMessage = document.getElementById("modal-message");
         modalMessage.innerHTML = message;
         modal.style.display = "block";
-
-        var closeButton = document.getElementsByClassName("close")[0];
-        closeButton.onclick = function() {
+        modalBox.onclick = function() {
             modal.style.display = "none";
         }
     }
@@ -432,6 +433,27 @@
     arrow.addEventListener('click', function() {
         this.classList.toggle('rotate');
         successBoxMobile.classList.toggle('show');
-    });
+        disableArrowAnimation(); // Désactivez l'animation de la flèche
+    })
 
+    function disableArrowAnimation() {
+    arrow.classList.remove('illuminate'); // Supprimez la classe pour désactiver l'animation
+    }
+
+    // DialogBox 
+    function CreateDialogBox() {
+            var CloseBtn = document.createElement("span");
+            CloseBtn.setAttribute("class", "closebtn");
+            CloseBtn.setAttribute("onclick", "this.parentElement.style.display='none';");
+            CloseBtn.innerHTML = "&times;";
+
+            var DialogBox = document.createElement("div");
+            DialogBox.setAttribute("class", "alert");
+            DialogBox.innerHTML = 'L\'utilisation du pronom <i><b>iel</b></i>&nbsp pour désigner la personne de Zucchi vise à éviter tout préjugé sexiste dans la lecture de la fiction.  En particulier, le Robert le définit comme un "Pronom personnel sujet de la troisième personne du singulier (iel) et du pluriel (iels), employé pour évoquer une personne quel que soit son genre.". Dans notre cas, c\'est exactement l\'effet recherché. Un.e lecteur.ice non habitué.e pourrait le lire de la même manière qu\'iel lirait "elle" ou "il".;'
+        
+            DialogBox.appendChild(CloseBtn);
+            document.getElementById("dialogbox").appendChild(DialogBox);
+    };
+
+    
 })(storyContent);

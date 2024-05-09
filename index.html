@@ -14,7 +14,7 @@
 <body>
 
     <div class="outerContainer">
-        <div class="arrow rotate">➜</div>
+        <div id="arrow" class="arrow rotate">➜</div>
         <div id="success" class="success-box show">
             <h2 class="success-title">Succès</h2>
             <div class="success-columns">
@@ -63,8 +63,7 @@
         </div>        
         <div id="dialogbox"></div>
         <div id="custom-modal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
+          <div id="modal-content" class="modal-content">
             <p id="modal-message"></p>
           </div>
         </div>
@@ -77,21 +76,6 @@
         </div>
     </div>
 
-    <script>
-        function CreateDialogBox() {
-            var CloseBtn = document.createElement("span");
-            CloseBtn.setAttribute("class", "closebtn");
-            CloseBtn.setAttribute("onclick", "this.parentElement.style.display='none';");
-            CloseBtn.innerHTML = "&times;";
-
-            var DialogBox = document.createElement("div");
-            DialogBox.setAttribute("class", "alert");
-            DialogBox.innerHTML = 'L\'utilisation du pronom <i><b>iel</b></i>&nbsp pour désigner la personne de Zucchi vise à éviter tout préjugé sexiste dans la lecture de la fiction.  En particulier, le Robert le définit comme un "Pronom personnel sujet de la troisième personne du singulier (iel) et du pluriel (iels), employé pour évoquer une personne quel que soit son genre.". Dans notre cas, c\'est exactement l\'effet recherché. Un.e lecteur.ice non habitué.e pourrait le lire de la même manière qu\'iel lirait "elle" ou "il".;'
-        
-            DialogBox.appendChild(CloseBtn);
-            document.getElementById("dialogbox").appendChild(DialogBox);
-            };
-    </script>
     <script src="ink.js"></script>
     <script src="daily_routine.js"></script>
     <script src="main.js"></script>
