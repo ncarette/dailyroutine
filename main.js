@@ -5,17 +5,8 @@
 
     var savePoint = "";
 
-    var imgs_array = ["cgm","friends","glucometer","hypo","insulin","love","meal","selfcare","time","work"]
-    let imgs = JSON.string(imgs_array)
-    localStorage.setItem("key", imgs)
+    var img_array = ["cgm","friends","glucometer","hypo","insulin","love","meal","selfcare","time","work"]
 
-/* 
-// Retrieving the string
-let retString = localStorage.getItem("key")
-
-// Retrieved array
-let retArray = JSON.parse(retString)
-*/
     let savedTheme;
     let globalTagTheme;
 
@@ -159,8 +150,7 @@ let retArray = JSON.parse(retString)
                         var arrow = document.getElementById("arrow");
                         if (img) {
                             // Vérifier si le succès a déjà été débloqué
-                            var successAlreadyUnlocked = localStorage.getItem(id + "_unlocked");
-                            if (!successAlreadyUnlocked) {
+                            if (img_array.includes(id)) {
                                 img.classList.add("flashlight");
                                 arrow.classList.add('illuminate');
                                 img.src = splitTag.val; // Changer la source de l'image
@@ -170,8 +160,8 @@ let retArray = JSON.parse(retString)
                                 // Afficher une boîte de dialogue d'alerte avec le titre de l'image
                                 showModal('Bravo ! Vous avez débloqué le succès "' + img.title + '"');
                                 // Marquer le succès comme débloqué pour qu'il ne soit pas déclenché à nouveau
-                                localStorage.setItem(id + "_unlocked", true);
-                                
+                                var index = img_array.indexOf(id);
+                                img_array[index] = id + "_unlocked";
                                 // Ajoute cette condition pour gérer la boîte de succès mobile
                                 var successBoxMobileImg = successBoxMobile.querySelector('#' + id);
                                 if (successBoxMobileImg) {
