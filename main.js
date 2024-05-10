@@ -4,8 +4,23 @@
     var story = new inkjs.Story(storyContent);
 
     var savePoint = "";
-
-    var img_array = ["cgm","friends","glucometer","hypo","insulin","love","meal","selfcare","time","work"]
+    var unlockedSuccesses = {};
+    var originalImageSources = {
+        "cgm": "./icons/cgm.png",
+        "hypo": "./icons/hypo.png",
+        "meal": "./icons/meal.png",
+        "selfcare": "./icons/selfcare.png",
+        "friends": "./icons/friends.png",
+        "glucometer": "./icons/glucometer.png",
+        "insulin": "./icons/insulin.png",
+        "time": "./icons/time.png",
+        "work": "./icons/work.png",
+        "love": "./icons/love.png"
+    };
+    
+    // Toggle mobile success-box
+    var arrow = document.querySelector('.arrow');
+    var successBoxMobile = document.querySelector('.success-box-mobile');
 
     let savedTheme;
     let globalTagTheme;
@@ -149,8 +164,10 @@
                         var img = document.getElementById(id); // Trouver l'élément avec l'ID correspondant
                         var arrow = document.getElementById("arrow");
                         if (img) {
-                            // Vérifier si le succès a déjà été débloqué
-                            if (img_array.includes(id)) {
+                            if (!unlockedSuccesses[id]) {
+                                // Débloquer le succès
+                                unlockedSuccesses[id] = true;
+                                // Edit
                                 img.classList.add("flashlight");
                                 arrow.classList.add('illuminate');
                                 img.src = splitTag.val; // Changer la source de l'image
@@ -159,15 +176,12 @@
                                   this.audio.play();
                                 // Afficher une boîte de dialogue d'alerte avec le titre de l'image
                                 showModal('Bravo ! Vous avez débloqué le succès "' + img.title + '"');
-                                // Marquer le succès comme débloqué pour qu'il ne soit pas déclenché à nouveau
-                                var index = img_array.indexOf(id);
-                                img_array[index] = id + "_unlocked";
-                                // Ajoute cette condition pour gérer la boîte de succès mobile
+                                // gérer la boîte de succès mobile
                                 var successBoxMobileImg = successBoxMobile.querySelector('#' + id);
                                 if (successBoxMobileImg) {
                                     successBoxMobileImg.src = splitTag.val;
                                 }
-                            }   
+                            }
                         }
                     }
                 }
@@ -373,6 +387,11 @@
             removeAll("img");
             setVisible(".header", false);
             restart();
+            // Restaurer les images des succès débloqués à leur source d'origine
+            restoreSuccessImages();
+    
+            // Réinitialiser les succès lors du redémarrage de l'histoire
+            resetSuccesses();
         });
 
         let saveEl = document.getElementById("save");
@@ -381,10 +400,16 @@
                 window.localStorage.setItem('save-state', savePoint);
                 document.getElementById("reload").removeAttribute("disabled");
                 window.localStorage.setItem('theme', document.body.classList.contains("dark") ? "dark" : "");
-
             } catch (e) {
                 console.warn("Couldn't save state");
             }
+                try {
+                    // Sauvegarder les succès débloqués dans le localStorage
+                    let savedSuccess = JSON.stringify(unlockedSuccesses)
+                    window.localStorage.setItem("unlockedSuccesses", savedSuccess);
+                } catch (e) {
+                    console.warn("Couldn't save success");
+                }
         });
 
         let reloadEl = document.getElementById("reload");
@@ -403,6 +428,26 @@
             } catch (e) {
                 console.debug("Couldn't load save state");
             }
+                try {
+                    // Charger les succès débloqués depuis le localStorage
+                    let retString = localStorage.getItem("unlockedSuccesses");
+                    if (retString) {
+                        let savedSuccess = JSON.parse(retString);
+                        // Mettre à jour les images des succès débloqués
+                        for (var id in savedSuccess) {
+                            if (savedSuccess[id]) {
+                                var img = document.getElementById(id);
+                                if (img) {
+                                    img.src = originalImageSources[id];
+                                    img.classList.remove("flashlight");
+                                }
+                                unlockedSuccesses[id] = true; // Actualiser la liste des succès débloqués
+                            }
+                        }
+                    }
+                } catch (e) {
+                    console.debug("Couldn't load success state");
+                }
             continueStory(true);
         });
 
@@ -423,10 +468,6 @@
             modal.style.display = "none";
         }
     }
-
-    // Toggle mobile success-box
-    var arrow = document.querySelector('.arrow');
-    var successBoxMobile = document.querySelector('.success-box-mobile');
 
     arrow.addEventListener('click', function() {
         this.classList.toggle('rotate');
@@ -453,5 +494,27 @@
             document.getElementById("dialogbox").appendChild(DialogBox);
     };
 
-    
+
+
+    // Fonction pour vérifier si un succès est déjà débloqué
+    function isSuccessUnlocked(id) {
+        return unlockedSuccesses[id];
+    }
+
+    // Fonction pour réinitialiser les succès
+    function resetSuccesses() {
+        unlockedSuccesses = {}; // Réinitialiser les succès débloqués
+    }
+    // Fonction pour restaurer les images des succès débloqués à leur source d'origine
+    function restoreSuccessImages() {
+        for (var id in unlockedSuccesses) {
+            var img = document.getElementById(id);
+            if (img) {
+                // Restaurer la source de l'image à sa valeur d'origine à partir de l'objet originalImageSources
+                img.src = originalImageSources[id];
+                img.classList.remove("flashlight");
+            }
+        }
+    }
+
 })(storyContent);
