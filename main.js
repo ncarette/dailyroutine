@@ -482,6 +482,56 @@
         }
     }
 
+    function showMobileTooltip(event) {
+        var title = event.target.getAttribute('title');
+        var tooltip = null;
+
+        function createTooltip() {
+            if (title) {
+                tooltip = document.createElement('div');
+                tooltip.classList.add('custom-tooltip');
+                tooltip.textContent = title;
+                tooltip.style.left = (event.touches[0].pageX + 10) + 'px';
+                tooltip.style.top = (event.touches[0].pageY - 40) + 'px';
+                document.body.appendChild(tooltip);
+            }
+        }
+
+        function removeTooltip() {
+            if (tooltip) {
+                tooltip.parentNode.removeChild(tooltip);
+                tooltip = null;
+            }
+        }
+
+        createTooltip();
+
+        event.target.addEventListener('touchmove', touchMoveHandler, { passive: true });
+        event.target.addEventListener('touchend', touchEndHandler);
+
+        function touchMoveHandler(event) {
+            event.preventDefault();
+            createTooltip();
+        }
+
+        function touchEndHandler(event) {
+            removeTooltip();
+            event.target.removeEventListener('touchmove', touchMoveHandler);
+            event.target.removeEventListener('touchend', touchEndHandler);
+        }
+
+        event.stopPropagation();
+    }
+
+
+
+    // Add touch event listeners to images with the mobile-tooltip class
+    var mobileImages = document.querySelectorAll('.mobile-tooltip');
+    mobileImages.forEach(function(image) {
+        image.addEventListener('touchstart', showMobileTooltip, { passive: true });
+    });
+
+
     arrow.addEventListener('click', function() {
         this.classList.toggle('rotate');
         successBoxMobile.classList.toggle('show');

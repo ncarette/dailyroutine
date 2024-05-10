@@ -181,6 +181,19 @@ h2 {
     }
 }
 
+.custom-tooltip {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    color: white; /* Couleur du texte */
+    padding: 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 14px; /* Taille de la police */
+    max-width: 200px; /* Largeur maximale */
+    word-wrap: break-word; /* Coupe les mots longs */
+    z-index: 9999; /* Assure que le tooltip est en avant-plan */
+}
+
+
 p {
     font-size: 13pt;
     color: #888;
