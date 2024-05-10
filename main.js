@@ -17,6 +17,19 @@
         "work": "./icons/work.png",
         "love": "./icons/love.png"
     };
+    var unlockedImageSources = {
+        "cgm": "./icons/cgm_c.png",
+        "hypo": "./icons/hypo_c.png",
+        "meal": "./icons/meal_c.png",
+        "selfcare": "./icons/selfcare_c.png",
+        "friends": "./icons/friends_c.png",
+        "glucometer": "./icons/glucometer_c.png",
+        "insulin": "./icons/insulin_c.png",
+        "time": "./icons/time_c.png",
+        "work": "./icons/work_c.png",
+        "love": "./icons/love_c.png"
+    };
+
     
     // Toggle mobile success-box
     var arrow = document.querySelector('.arrow');
@@ -438,7 +451,7 @@
                             if (savedSuccess[id]) {
                                 var img = document.getElementById(id);
                                 if (img) {
-                                    img.src = originalImageSources[id];
+                                    img.src = unlockedImageSources[id]; // Utiliser la source de l'image mise à jour
                                     img.classList.remove("flashlight");
                                 }
                                 unlockedSuccesses[id] = true; // Actualiser la liste des succès débloqués
