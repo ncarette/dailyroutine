@@ -464,6 +464,7 @@
         }
     }
 
+    // Fonction pour afficher le tooltip au toucher de l'image
     function showMobileTooltip(event) {
         var title = event.target.getAttribute('title');
         var tooltip = null;
@@ -476,6 +477,11 @@
                 tooltip.style.left = (event.touches[0].pageX + 10) + 'px';
                 tooltip.style.top = (event.touches[0].pageY - 40) + 'px';
                 document.body.appendChild(tooltip);
+
+                // Supprimer le tooltip après 2 secondes
+                setTimeout(function() {
+                    removeTooltip();
+                }, 1400); // 2000 millisecondes = 2 secondes
             }
         }
 
@@ -487,22 +493,6 @@
         }
 
         createTooltip();
-
-        event.target.addEventListener('touchmove', touchMoveHandler, { passive: true });
-        event.target.addEventListener('touchend', touchEndHandler);
-
-        function touchMoveHandler(event) {
-            event.preventDefault();
-            createTooltip();
-        }
-
-        function touchEndHandler(event) {
-            removeTooltip();
-            event.target.removeEventListener('touchmove', touchMoveHandler);
-            event.target.removeEventListener('touchend', touchEndHandler);
-        }
-
-        event.stopPropagation();
     }
 
 
@@ -533,7 +523,7 @@
     function resetSuccesses() {
         unlockedSuccesses = {}; // Réinitialiser les succès débloqués
     }
-    
+
     // Fonction pour restaurer les images des succès débloqués à leur source d'origine
     function restoreSuccessImages() {
         var images = document.getElementsByClassName("success-image");
