@@ -11,17 +11,17 @@ body.switched {
     transition: color 0.6s, background-color 0.6s;
 }
 
-h1,
-h2 {
+h1, h2 {
     text-align: center;
     font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère */
 }
 
 h1 {
-    font-size: 30pt;
-    margin-bottom: 10px;
+    font-size: 36pt; /* Augmente la taille du titre principal */
+    margin-bottom: 20px; /* Augmente l'espace sous le titre principal */
 }
 
 h2 {
@@ -31,6 +31,7 @@ h2 {
     font-weight: lighter;
     color: #BBB;
 }
+
 .subtitle {
     font-size: 20pt;
     font-style: italic;
@@ -69,7 +70,6 @@ h2 {
     margin-top: 24px;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 @media screen and (max-width: 980px) {
@@ -107,7 +107,7 @@ h2 {
         position: fixed;
         top: 50px;
         left: 10px;
-        z-index: 999;
+        z-index: 998;
         background: white;
         padding: 10px;
         display: flex;
@@ -177,7 +177,7 @@ h2 {
         transition: transform 0.3s ease;
     }
     .rotate {
-    transform: rotate(180deg); /* Applique une rotation de 180 degrés */
+        transform: rotate(180deg); /* Applique une rotation de 180 degrés */
     }
 }
 
@@ -192,7 +192,6 @@ h2 {
     word-wrap: break-word; /* Coupe les mots longs */
     z-index: 9999; /* Assure que le tooltip est en avant-plan */
 }
-
 
 p {
     font-size: 13pt;
@@ -298,7 +297,7 @@ img {
 
 #controls {
     text-align: center;
-    z-index: 4;
+    z-index: 1000;
     font-size: 9pt;
     position: fixed;
     right: 14px;
@@ -324,7 +323,7 @@ img {
 
 @media screen and (max-width: 980px) {
     #controls {
-        z-index: 2;
+        z-index: 1001;
         padding-top: 22px;
         top: 0;
         left: 0;
@@ -334,51 +333,110 @@ img {
 
 /* The alert message box */
 .alert {
-  padding: 20px;
-  background-color: #702963; /* Red */
-  color: white;
-  margin-bottom: 15px;
-  position: fixed;
+    padding: 20px;
+    background-color: #702963; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    position: fixed;
+    z-index: 9999;
 }
 
 /* The close button */
 .closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 /* When moving the mouse over the close button */
 .closebtn:hover {
-  color: black;
+    color: black;
 }
 
 /* Style de la boîte de dialogue modale */
 .modal {
-  display: none; /* Par défaut, la boîte de dialogue est cachée */
-  position: fixed; 
-  z-index: 1000; /* Valeur de z-index plus haute pour être au-dessus des autres éléments */
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); /* Fond semi-transparent */
+    display: none; /* Par défaut, la boîte de dialogue est cachée */
+    position: fixed; 
+    z-index: 10000; /* Valeur de z-index plus haute pour être au-dessus des autres éléments */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); /* Fond semi-transparent */
 }
 
 /* Contenu de la boîte de dialogue modale */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* Positionnée au centre */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; 
-  max-width: 400px;
+    background-color: #fefefe;
+    margin: 15% auto; /* Positionnée au centre */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 400px;
+}
+
+/* Styles spécifiques pour les appareils mobiles */
+@media screen and (max-width: 768px) {
+    .modal {
+        position: fixed; 
+        z-index: 1000; /* Valeur de z-index plus haute pour être au-dessus des autres éléments */
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: transparent; /* Pas d'arrière-plan grisé */
+        animation: slideDown 0.5s ease, fadeOut 0.5s 2.5s forwards; /* Animation de glissement vers le bas et de disparition */
+    }
+
+    @keyframes slideDown {
+        0% { top: -100%; } /* Démarre tout en haut de l'écran */
+        100% { top: 0; } /* Se termine à la position 0 (tout en haut) */
+    }
+
+    @keyframes fadeOut {
+        0% { opacity: 1; } /* Opacité à 100% au début */
+        100% { opacity: 0; display: none; } /* Opacité à 0% à la fin */
+    }
+
+    .modal.show {
+        display: block; /* Affiche la modal */
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* Positionnée au centre */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; 
+        max-width: 400px;
+        border-radius: 10px; /* Coins arrondis */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+    }
+}
+
+
+
+/* Styles spécifiques pour les ordinateurs */
+@media screen and (min-width: 769px) {
+    .modal-content {
+        margin: auto; /* Centre la boîte de dialogue horizontalement */
+        max-width: 50%; /* Réduit légèrement la largeur */
+        background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+        border-radius: 10px; /* Coins arrondis */
+        border: 2px solid #ccc; /* Bordure grise */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+        position: fixed; /* Positionnement fixe pour centrer */
+        top: 50%; /* Déplace la boîte de dialogue vers le milieu */
+        left: 50%; /* Déplace la boîte de dialogue vers le milieu */
+        transform: translate(-50%, -50%); /* Centrage vertical et horizontal */
+    }
 }
 
 .modal-content:hover,
@@ -387,28 +445,35 @@ img {
 }
 
 .flashlight {
-  animation: flashlight 0.5s ease-out;
+    animation: flashlight 0.5s ease-out;
 }
 
 @keyframes flashlight {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes illuminate {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 .illuminate {
-  animation: illuminate 1s infinite;
+    animation: illuminate 1s infinite;
 }
 
+.container {
+    transition: background-color 0.4s ease, box-shadow 0.4s ease; /* Transition pour le fond et l'ombre */
+}
+
+.choice a {
+    transition: color 0.3s ease; /* Transition pour les liens de choix */
+}

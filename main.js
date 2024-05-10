@@ -396,15 +396,16 @@
 
         let rewindEl = document.getElementById("rewind");
         if (rewindEl) rewindEl.addEventListener("click", function(event) {
-            removeAll("p");
-            removeAll("img");
-            setVisible(".header", false);
-            restart();
             // Restaurer les images des succès débloqués à leur source d'origine
             restoreSuccessImages();
     
             // Réinitialiser les succès lors du redémarrage de l'histoire
             resetSuccesses();
+            removeAll("p");
+            removeAll("img");
+            setVisible(".header", false);
+            restart();
+
         });
 
         let saveEl = document.getElementById("save");
@@ -424,14 +425,14 @@
                     console.warn("Couldn't save success");
                 }
         });
-
         let reloadEl = document.getElementById("reload");
         if (!hasSave) {
             reloadEl.setAttribute("disabled", "disabled");
         }
         reloadEl.addEventListener("click", function(event) {
-            if (reloadEl.getAttribute("disabled"))
+            if (reloadEl.getAttribute("disabled")) {
                 return;
+            }
 
             removeAll("p");
             removeAll("img");
@@ -441,26 +442,7 @@
             } catch (e) {
                 console.debug("Couldn't load save state");
             }
-                try {
-                    // Charger les succès débloqués depuis le localStorage
-                    let retString = localStorage.getItem("unlockedSuccesses");
-                    if (retString) {
-                        let savedSuccess = JSON.parse(retString);
-                        // Mettre à jour les images des succès débloqués
-                        for (var id in savedSuccess) {
-                            if (savedSuccess[id]) {
-                                var img = document.getElementById(id);
-                                if (img) {
-                                    img.src = unlockedImageSources[id]; // Utiliser la source de l'image mise à jour
-                                    img.classList.remove("flashlight");
-                                }
-                                unlockedSuccesses[id] = true; // Actualiser la liste des succès débloqués
-                            }
-                        }
-                    }
-                } catch (e) {
-                    console.debug("Couldn't load success state");
-                }
+            reloadUnlockedSuccesses(); // Recharger les succès débloqués
             continueStory(true);
         });
 
@@ -542,23 +524,6 @@
     arrow.classList.remove('illuminate'); // Supprimez la classe pour désactiver l'animation
     }
 
-    // DialogBox 
-    function CreateDialogBox() {
-            var CloseBtn = document.createElement("span");
-            CloseBtn.setAttribute("class", "closebtn");
-            CloseBtn.setAttribute("onclick", "this.parentElement.style.display='none';");
-            CloseBtn.innerHTML = "&times;";
-
-            var DialogBox = document.createElement("div");
-            DialogBox.setAttribute("class", "alert");
-            DialogBox.innerHTML = 'L\'utilisation du pronom <i><b>iel</b></i>&nbsp pour désigner la personne de Zucchi vise à éviter tout préjugé sexiste dans la lecture de la fiction.  En particulier, le Robert le définit comme un "Pronom personnel sujet de la troisième personne du singulier (iel) et du pluriel (iels), employé pour évoquer une personne quel que soit son genre.". Dans notre cas, c\'est exactement l\'effet recherché. Un.e lecteur.ice non habitué.e pourrait le lire de la même manière qu\'iel lirait "elle" ou "il".;'
-        
-            DialogBox.appendChild(CloseBtn);
-            document.getElementById("dialogbox").appendChild(DialogBox);
-    };
-
-
-
     // Fonction pour vérifier si un succès est déjà débloqué
     function isSuccessUnlocked(id) {
         return unlockedSuccesses[id];
@@ -568,10 +533,13 @@
     function resetSuccesses() {
         unlockedSuccesses = {}; // Réinitialiser les succès débloqués
     }
+    
     // Fonction pour restaurer les images des succès débloqués à leur source d'origine
     function restoreSuccessImages() {
-        for (var id in unlockedSuccesses) {
-            var img = document.getElementById(id);
+        var images = document.getElementsByClassName("success-image");
+        for (var i = 0; i < images.length; i++) {
+            var img = images[i];
+            var id = img.id;
             if (img) {
                 // Restaurer la source de l'image à sa valeur d'origine à partir de l'objet originalImageSources
                 img.src = originalImageSources[id];
@@ -579,5 +547,38 @@
             }
         }
     }
+
+    // Fonction pour recharger l'état des succès débloqués depuis le localStorage
+    function reloadUnlockedSuccesses() {
+        try {
+            // Charger les succès débloqués depuis le localStorage
+            let retString = localStorage.getItem("unlockedSuccesses");
+            if (retString) {
+                let savedSuccess = JSON.parse(retString);
+                // Mettre à jour les images des succès débloqués
+                var images = document.getElementsByClassName("success-image");
+                for (var i = 0; i < images.length; i++) {
+                    var img = images[i];
+                    var id = img.id;
+                    if (savedSuccess[id]) {
+                        img.src = unlockedImageSources[id]; // Utiliser la source de l'image mise à jour
+                        img.classList.remove("flashlight");
+                        unlockedSuccesses[id] = true; // Actualiser la liste des succès débloqués
+                    }
+                }
+            }
+        } catch (e) {
+            console.debug("Couldn't load success state");
+        }
+    }
+
+
+    // Simple hack to click on rewind when page is reloaded, which avoids some bugs ive had a hard time with
+    window.addEventListener('load', function() {
+        var rewindEl = document.getElementById("rewind");
+        if (rewindEl) {
+            rewindEl.click(); // Simule un clic sur le bouton rewind
+        }
+    });
 
 })(storyContent);
