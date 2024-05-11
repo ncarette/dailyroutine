@@ -179,6 +179,22 @@ h2 {
     .rotate {
         transform: rotate(180deg); /* Applique une rotation de 180 degrés */
     }
+    .success-box-mobile .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrer les éléments horizontalement */
+        justify-content: center; /* Centrer les éléments verticalement */
+        height: 100%; /* Assurer que la hauteur de la boîte mobile est utilisée */
+    }
+
+    .success-box-mobile .success-images {
+        flex: 1;
+    }
+
+    .success-box-mobile .success-image {
+        margin-bottom: 10px; /* Espacement entre les images */
+    }
+
 }
 
 .custom-tooltip {
