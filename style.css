@@ -94,14 +94,14 @@ h2 {
 }
 
 /* Styles pour les appareils mobiles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1045px) {
     .success-box {
         /* Masque la success-box sur les appareils mobiles */
         display: none;
     }
 }
 /* Styles pour les ordinateurs */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1045px) {
     .success-box {
         /* Styles spécifiques pour les ordinateurs */
         position: fixed;
@@ -148,36 +148,59 @@ h2 {
     width: 80px;
     height: 80px;
     margin-bottom: 10px; /* Espacement entre les images */
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Styles spécifiques pour les appareils mobiles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 757px) {
+    .success-box-mobile.show {
+        left: 50%; /* Fait glisser la success-box au milieu de l'écran */
+    }
+}
+
+/* Styles spécifiques pour les ordinateurs */
+@media screen and (min-width: 758px) and (max-width: 1045px) {
+    .success-box-mobile.show {
+        left: 20%; /* Fait glisser la success-box à 20% de la largeur de l'écran */
+    }
+}
+
+/* Styles spécifiques pour les appareils mobiles */
+@media screen and (max-width: 1045px) {
     .success-box-mobile {
         position: fixed;
-        top: 0;
-        left: -100%; /* Masque la success-box en dehors de l'écran */
-        width: 100%;
-        height: 100%;
-        background: white;
+        top: 50%; /* Positionne le haut de la boîte au milieu de l'écran */
+        left: -150%; /* Hors de l'écran à gauche */
+        transform: translate(-50%, -50%); /* Décale la boîte de moitié de sa largeur et de moitié de sa hauteur vers le haut et la gauche */
+        min-height: 40%; /* Hauteur minimale de la boîte à 60% de la hauteur de l'écran */
+        max-height: 80%; /* Hauteur maximale de la boîte à 90% de la hauteur de l'écran */
+        width: 250px;
         z-index: 997;
         transition: left 0.3s ease; /* Animation de transition */
-    }
 
-    .success-box-mobile.show {
-        left: 0; /* Fait glisser la success-box depuis la gauche */
+        background-color: #ffffff; /* Couleur de fond */
+        border: 4px solid #702963; /* Bordure plus visible */
+        border-radius: 10px; /* Coins arrondis */
+        box-shadow: 0 0 40px rgba(0, 0, 0, 1); /* Ombre */
+        padding-left: 20px;
+        padding-right: 20px;
+        padding: 10px; /* Espacement intérieur réduit */
+        overflow: auto; /* Ajouter un défilement si le contenu dépasse */
     }
 
     .arrow {
+        transform: rotate(180deg);
         position: fixed;
         top: 50px;
         left: 10px;
         cursor: pointer;
         z-index: 998; 
-        font-size: 20px;
+        font-size: 25px;
         transition: transform 0.3s ease;
     }
     .rotate {
-        transform: rotate(180deg); /* Applique une rotation de 180 degrés */
+        transform: rotate(0deg); /* Applique une rotation de 180 degrés */
     }
     .success-box-mobile .content {
         display: flex;
@@ -196,6 +219,8 @@ h2 {
     }
 
 }
+
+
 
 .custom-tooltip {
     position: fixed;
@@ -398,7 +423,7 @@ img {
 }
 
 /* Styles spécifiques pour les appareils mobiles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1045px) {
     .modal {
         position: fixed; 
         z-index: 1000; /* Valeur de z-index plus haute pour être au-dessus des autres éléments */
