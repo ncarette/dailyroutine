@@ -184,15 +184,15 @@
                                 img.classList.add("flashlight");
                                 arrow.classList.add('illuminate');
                                 img.src = splitTag.val; // Changer la source de l'image
-                                // Jouer la musique de succès
-                                  this.audio = new Audio("audio/win.wav");
-                                  this.audio.play();
-                                // Afficher une boîte de dialogue d'alerte avec le titre de l'image
-                                showModal('Bravo ! Vous avez débloqué le succès "' + img.title + '"');
                                 // gérer la boîte de succès mobile
                                 var successBoxMobileImg = successBoxMobile.querySelector('#' + id);
                                 if (successBoxMobileImg) {
                                     successBoxMobileImg.src = splitTag.val;
+                                // Jouer la musique de succès
+                                this.audio = new Audio("audio/win.wav");
+                                this.audio.play();
+                                // Afficher une boîte de dialogue d'alerte avec le titre de l'image
+                                showModal('Bravo ! Vous avez débloqué le succès "' + img.title + '"');
                                 }
                             }
                         }
