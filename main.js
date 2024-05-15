@@ -571,4 +571,25 @@
         }
     });
 
+    const background = document.querySelector('.background');
+
+    for (let i = 0; i < 50; i++) {
+        const glare = document.createElement('div');
+        glare.classList.add('glare');
+        glare.style.left = `${Math.random() * 100}%`;
+        glare.style.top = `${Math.random() * 100}%`;
+        glare.style.animationDuration = `${Math.random() * 20 + 10}s`;
+        background.appendChild(glare);
+        
+        // Ajouter un délai aléatoire pour mettre à jour les positions des éléments glare
+        setTimeout(() => {
+            setInterval(() => {
+                glare.style.left = `${Math.random() * 100}%`;
+                glare.style.top = `${Math.random() * 100}%`;
+            }, 5000); // Mettre à jour toutes les 5 secondes (ajustez si nécessaire)
+        }, Math.random() * 10000); // Délai initial aléatoire (ajustez si nécessaire)
+
+        glare.classList.add('move-glare');
+    }
+
 })(storyContent);

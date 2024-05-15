@@ -3,25 +3,55 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
-    background: #f6edf6;
     overflow: hidden;
 }
 
-body.switched {
-    transition: color 0.6s, background-color 0.6s;
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background: linear-gradient(to bottom right, #ADD8E6, #87CEEB);/*linear-gradient(to right, #d9d9d9, #f2f2f2);*/ /* Couleur argentée */
 }
+
+.glare {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.7), transparent);
+    border-radius: 50%;
+    z-index: -1;
+    transition: left 15s ease, top 15s ease; /* Transition de 15 secondes pour le déplacement */
+}
+
+
+/* Animation du mouvement initial */
+@keyframes moveGlare {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    100% {
+        left: 100%;
+        top: 100%;
+    }
+}
+
 
 h1, h2 {
     text-align: center;
     font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère */
+    text-shadow: 2px 2px 4px rgba(30, 42, 56, 0.4); /* Ajoute une ombre légère */
 }
 
 h1 {
     font-size: 36pt; /* Augmente la taille du titre principal */
     margin-bottom: 20px; /* Augmente l'espace sous le titre principal */
+    color: #004080;
 }
 
 h2 {
@@ -29,14 +59,14 @@ h2 {
     font-style: italic;
     font-family: sans-serif;
     font-weight: lighter;
-    color: #BBB;
+    color: #004080;
 }
 
 .subtitle {
     font-size: 20pt;
     font-style: italic;
     font-weight: lighter;
-    color: #702963;
+    color: #333;
 }
 
 .header {
@@ -67,7 +97,6 @@ h2 {
     width: 100%;
     top: 0;
     left: 0;
-    margin-top: 24px;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -87,6 +116,7 @@ h2 {
     padding: 20px;
     padding-top: 4em;
     background: white;
+    box-shadow: whitesmoke 0px 7px 29px 0px;
 }
 
 .switched .container {
@@ -94,14 +124,14 @@ h2 {
 }
 
 /* Styles pour les appareils mobiles */
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1175px) {
     .success-box {
         /* Masque la success-box sur les appareils mobiles */
         display: none;
     }
 }
 /* Styles pour les ordinateurs */
-@media screen and (min-width: 1045px) {
+@media screen and (min-width: 1175px) {
     .success-box {
         /* Styles spécifiques pour les ordinateurs */
         position: fixed;
@@ -112,6 +142,8 @@ h2 {
         padding: 10px;
         display: flex;
         flex-direction: column;
+        border-radius: 10px; /* Pour des coins arrondis */
+        box-shadow: whitesmoke 0px 7px 29px 0px;
     }
     .success-box-mobile{
         /* Masque la success-box sur les ordinateurs */
@@ -127,7 +159,7 @@ h2 {
     font-size: 20pt;
     font-style: normal;
     font-weight: lighter;
-    color: #702963;
+    color: #004080;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -160,14 +192,14 @@ h2 {
 }
 
 /* Styles spécifiques pour les ordinateurs */
-@media screen and (min-width: 758px) and (max-width: 1045px) {
+@media screen and (min-width: 758px) and (max-width: 1175px) {
     .success-box-mobile.show {
         left: 20%; /* Fait glisser la success-box à 20% de la largeur de l'écran */
     }
 }
 
 /* Styles spécifiques pour les appareils mobiles */
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1175px) {
     .success-box-mobile {
         position: fixed;
         top: 50%; /* Positionne le haut de la boîte au milieu de l'écran */
@@ -180,9 +212,9 @@ h2 {
         transition: left 0.3s ease; /* Animation de transition */
 
         background-color: #ffffff; /* Couleur de fond */
-        border: 4px solid #702963; /* Bordure plus visible */
+        border: 0px solid #004080; /* Bordure plus visible */
         border-radius: 10px; /* Coins arrondis */
-        box-shadow: 0 0 40px rgba(0, 0, 0, 1); /* Ombre */
+        box-shadow: 0 0 40px 20px whitesmoke;  /* Ombre */
         padding-left: 20px;
         padding-right: 20px;
         padding: 10px; /* Espacement intérieur réduit */
@@ -191,14 +223,20 @@ h2 {
 
     .arrow {
         transform: rotate(180deg);
+        padding-left: 10px;
+        padding-right: 10px;
         position: fixed;
         top: 50px;
         left: 10px;
         cursor: pointer;
         z-index: 998; 
-        font-size: 25px;
+        font-size: 50px;
         transition: transform 0.3s ease;
     }
+    @media screen and (max-width: 757px) {
+        .arrow{font-size: 14vw;}
+    }
+
     .rotate {
         transform: rotate(0deg); /* Applique une rotation de 180 degrés */
     }
@@ -242,7 +280,7 @@ p {
 }
 
 a {
-    color: #702963;
+    color: #004080;
     font-family: sans-serif;
     transition: color 0.6s;
     text-decoration: none;
@@ -263,7 +301,7 @@ warning {
 }
 
 chapter {
-    color: #702963;
+    color: #004080;
     font-size: 25pt;
 }
 
@@ -372,10 +410,18 @@ img {
     }
 }
 
+@media screen and (min-width: 981px) {
+    #controls {
+        box-shadow: whitesmoke 0px 7px 29px 0px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}   
+
 /* The alert message box */
 .alert {
     padding: 20px;
-    background-color: #702963; /* Red */
+    background-color: #004080;
     color: white;
     margin-bottom: 15px;
     position: fixed;
@@ -410,14 +456,13 @@ img {
     height: 100%; 
     overflow: auto; 
     background-color: rgba(0,0,0,0.4); /* Fond semi-transparent */
-}
+    }
 
 /* Contenu de la boîte de dialogue modale */
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* Positionnée au centre */
     padding: 20px;
-    border: 1px solid #888;
     width: 80%; 
     max-width: 400px;
 }
@@ -428,7 +473,7 @@ img {
         position: fixed; 
         z-index: 1000; /* Valeur de z-index plus haute pour être au-dessus des autres éléments */
         left: 0;
-        top: 0;
+        bottom: 0;
         width: 100%; 
         height: 100%; 
         overflow: auto; 
@@ -451,14 +496,16 @@ img {
     }
 
     .modal-content {
-        background-color: #fefefe;
         margin: 15% auto; /* Positionnée au centre */
         padding: 20px;
-        border: 1px solid #888;
         width: 80%; 
         max-width: 400px;
         border-radius: 10px; /* Coins arrondis */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* Ombre portée légère */
+    }
+    #modal-message {
+        color: #004080;
+        text-align: center;
     }
 }
 
@@ -468,15 +515,17 @@ img {
 @media screen and (min-width: 769px) {
     .modal-content {
         margin: auto; /* Centre la boîte de dialogue horizontalement */
-        max-width: 50%; /* Réduit légèrement la largeur */
-        background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+        max-width: 40%; /* Réduit légèrement la largeur */
         border-radius: 10px; /* Coins arrondis */
-        border: 2px solid #ccc; /* Bordure grise */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* Ombre portée légère */
         position: fixed; /* Positionnement fixe pour centrer */
         top: 50%; /* Déplace la boîte de dialogue vers le milieu */
         left: 50%; /* Déplace la boîte de dialogue vers le milieu */
         transform: translate(-50%, -50%); /* Centrage vertical et horizontal */
+    }
+    #modal-message {
+        color: #004080;
+        text-align: center;
     }
 }
 
