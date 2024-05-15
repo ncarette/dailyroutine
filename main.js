@@ -573,23 +573,37 @@
 
     const background = document.querySelector('.background');
 
-    for (let i = 0; i < 50; i++) {
+    function animateGlare(glare, left, top) {
+        let time = Date.now() * 0.001; // Utiliser le temps comme base pour l'animation
+        const movementX = Math.sin(time + left * Math.PI * 0.1) * 5; // Calculer le mouvement horizontal initial
+        const movementY = Math.cos(time + top * Math.PI * 0.1) * 5; // Calculer le mouvement vertical initial
+        glare.style.transform = `translate(${movementX}px, ${movementY}px)`; // Appliquer le mouvement
+
+        // Animation avec requestAnimationFrame
+        function animate() {
+            time = Date.now() * 0.001; // Mettre à jour le temps
+            const movementX = Math.sin(time + left * Math.PI * 0.1) * 5; // Calculer le mouvement horizontal
+            const movementY = Math.cos(time + top * Math.PI * 0.1) * 5; // Calculer le mouvement vertical
+            glare.style.transform = `translate(${movementX}px, ${movementY}px)`; // Appliquer le mouvement
+            requestAnimationFrame(animate); // Appeler la fonction à nouveau pour la prochaine frame
+        }
+
+        requestAnimationFrame(animate); // Lancer l'animation
+    }
+
+    for (let i = 0; i < 40; i++) {
         const glare = document.createElement('div');
         glare.classList.add('glare');
-        glare.style.left = `${Math.random() * 100}%`;
-        glare.style.top = `${Math.random() * 100}%`;
+        
+        const left = Math.random() * 100 - 10; // Répartir les éléments entre 10% et 90% de la largeur de l'écran
+        const top = Math.random() * 100 - 10; // Répartir les éléments entre 10% et 90% de la hauteur de l'écran
+        
+        glare.style.left = `${left}%`;
+        glare.style.top = `${top}%`;
         glare.style.animationDuration = `${Math.random() * 20 + 10}s`;
         background.appendChild(glare);
-        
-        // Ajouter un délai aléatoire pour mettre à jour les positions des éléments glare
-        setTimeout(() => {
-            setInterval(() => {
-                glare.style.left = `${Math.random() * 100}%`;
-                glare.style.top = `${Math.random() * 100}%`;
-            }, 5000); // Mettre à jour toutes les 5 secondes (ajustez si nécessaire)
-        }, Math.random() * 10000); // Délai initial aléatoire (ajustez si nécessaire)
 
-        glare.classList.add('move-glare');
+        animateGlare(glare, left, top);
     }
 
 })(storyContent);
