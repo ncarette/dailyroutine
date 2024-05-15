@@ -1,4 +1,4 @@
-# A Daily Routine
+# A Daily Routine - Équilibre au quotidien
 
 <i> Experience T1D life through Zucchi's daily struggles.. </i>
 
