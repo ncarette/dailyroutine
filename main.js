@@ -68,7 +68,7 @@
     setupTheme(globalTagTheme);
     var hasSave = loadSavePoint();
     setupButtons(hasSave);
-
+    reloadUnlockedSuccesses()
     // Set initial save point
     savePoint = story.state.toJson();
 
@@ -266,6 +266,12 @@
 
         // set save point to here
         savePoint = story.state.toJson();
+        // Restaurer les images des succès débloqués à leur source d'origine
+        restoreSuccessImages();
+        // Réinitialiser les succès lors du redémarrage de l'histoire
+        resetSuccesses();
+        localStorage.removeItem('save-state');
+        localStorage.removeItem('unlockedSuccesses');
 
         continueStory(true);
 
@@ -396,11 +402,6 @@
 
         let rewindEl = document.getElementById("rewind");
         if (rewindEl) rewindEl.addEventListener("click", function(event) {
-            // Restaurer les images des succès débloqués à leur source d'origine
-            restoreSuccessImages();
-    
-            // Réinitialiser les succès lors du redémarrage de l'histoire
-            resetSuccesses();
             removeAll("p");
             removeAll("img");
             setVisible(".header", false);
@@ -561,14 +562,5 @@
             console.debug("Couldn't load success state");
         }
     }
-
-
-    // Simple hack to click on rewind when page is reloaded, which avoids some bugs ive had a hard time with
-    window.addEventListener('load', function() {
-        var rewindEl = document.getElementById("rewind");
-        if (rewindEl) {
-            rewindEl.click(); // Simule un clic sur le bouton rewind
-        }
-    });
 
 })(storyContent);
