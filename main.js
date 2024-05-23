@@ -262,17 +262,24 @@
     function restart() {
         story.ResetState();
 
+        // enlever le bouton charger puisqu'il n'y a rien a charger
+        let reloadEl = document.getElementById("reload");
+        reloadEl.setAttribute("disabled", "disabled");
+
         setVisible(".header", true);
 
-        // set save point to here
-        savePoint = story.state.toJson();
+        // enlever la notif flèche si elle est active
+        disableArrowAnimation()
         // Restaurer les images des succès débloqués à leur source d'origine
         restoreSuccessImages();
         // Réinitialiser les succès lors du redémarrage de l'histoire
         resetSuccesses();
+
         localStorage.removeItem('save-state');
         localStorage.removeItem('unlockedSuccesses');
 
+        // set save point to here
+        savePoint = story.state.toJson();
         continueStory(true);
 
         outerScrollContainer.scrollTo(0, 0);
@@ -512,7 +519,7 @@
     })
 
     function disableArrowAnimation() {
-    arrow.classList.remove('illuminate'); // Supprimez la classe pour désactiver l'animation
+        arrow.classList.remove('illuminate'); // Supprimez la classe pour désactiver l'animation
     }
 
     // Fonction pour vérifier si un succès est déjà débloqué
