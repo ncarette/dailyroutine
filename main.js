@@ -159,7 +159,13 @@
                 else if( tag == "CLEAR" || tag == "RESTART" ) {
                     removeAll("p");
                     removeAll("img");
+                    // enlever le bouton charger puisqu'il n'y a rien a charger
+                    let reloadEl = document.getElementById("reload");
+                    reloadEl.setAttribute("disabled", "disabled");
 
+                    localStorage.removeItem('save-state');
+                    // enlever la notif flèche si elle est active
+                    disableArrowAnimation()
                     // Comment out this line if you want to leave the header visible when clearing
                     setVisible(".header", false);
 
@@ -169,7 +175,7 @@
                     }
                 }
 
-                if (splitTag && splitTag.property == "SUCCESS") {
+                else if (splitTag && splitTag.property == "SUCCESS") {
                     var regex = /\/(\w+)_c\.png$/; // Expression régulière pour extraire le nom de l'ID
                     var match = splitTag.val.match(regex); // Trouver la correspondance dans l'URL
                     if (match) {
@@ -261,27 +267,10 @@
 
     function restart() {
         story.ResetState();
-
-        // enlever le bouton charger puisqu'il n'y a rien a charger
-        let reloadEl = document.getElementById("reload");
-        reloadEl.setAttribute("disabled", "disabled");
-
         setVisible(".header", true);
-
-        // enlever la notif flèche si elle est active
-        disableArrowAnimation()
-        // Restaurer les images des succès débloqués à leur source d'origine
-        restoreSuccessImages();
-        // Réinitialiser les succès lors du redémarrage de l'histoire
-        resetSuccesses();
-
-        localStorage.removeItem('save-state');
-        localStorage.removeItem('unlockedSuccesses');
-
         // set save point to here
         savePoint = story.state.toJson();
         continueStory(true);
-
         outerScrollContainer.scrollTo(0, 0);
     }
 
@@ -412,8 +401,20 @@
             removeAll("p");
             removeAll("img");
             setVisible(".header", false);
-            restart();
+            // enlever le bouton charger puisqu'il n'y a rien a charger
+            let reloadEl = document.getElementById("reload");
+            reloadEl.setAttribute("disabled", "disabled");
 
+            localStorage.removeItem('save-state');
+            localStorage.removeItem('unlockedSuccesses');
+            // enlever la notif flèche si elle est active
+            disableArrowAnimation()
+            // Restaurer les images des succès débloqués à leur source d'origine
+            restoreSuccessImages();
+            // Réinitialiser les succès lors du redémarrage de l'histoire
+            resetSuccesses();
+
+            restart();
         });
 
         let saveEl = document.getElementById("save");
