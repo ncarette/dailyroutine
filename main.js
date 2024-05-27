@@ -68,7 +68,7 @@
     setupTheme(globalTagTheme);
     var hasSave = loadSavePoint();
     setupButtons(hasSave);
-    reloadUnlockedSuccesses()
+    reloadUnlockedSuccesses();
     // Set initial save point
     savePoint = story.state.toJson();
 
@@ -111,7 +111,7 @@
                     this.audio.load();
                   }
                   this.audio = new Audio(splitTag.val);
-                  this.audio.play();
+                  fadeInAudio(this.audio, 5000); // Appel de la fonction fadeInAudio
                 }
 
                 // AUDIOLOOP: src
@@ -122,7 +122,7 @@
                     this.audioLoop.load();
                   }
                   this.audioLoop = new Audio(splitTag.val);
-                  this.audioLoop.play();
+                  fadeInAudio(this.audioLoop, 10000); // Appel de la fonction fadeInAudio
                   this.audioLoop.loop = true;
                 }
 
@@ -175,7 +175,7 @@
 
                     localStorage.removeItem('save-state');
                     // enlever la notif flèche si elle est active
-                    disableArrowAnimation()
+                    disableArrowAnimation();
                     // Comment out this line if you want to leave the header visible when clearing
                     setVisible(".header", false);
 
@@ -240,7 +240,7 @@
             // Create paragraph with anchor element
             var choiceParagraphElement = document.createElement('p');
             choiceParagraphElement.classList.add("choice");
-            choiceParagraphElement.innerHTML = `<a href='#'>${choice.text}</a>`
+            choiceParagraphElement.innerHTML = `<a href='#'>${choice.text}</a>`;
             storyContainer.appendChild(choiceParagraphElement);
 
             // Fade choice in after a short delay
@@ -302,7 +302,7 @@
     // Fades in an element after a specified delay
     function showAfter(delay, el) {
         el.classList.add("hide");
-        setTimeout(function() { el.classList.remove("hide") }, delay);
+        setTimeout(function() { el.classList.remove("hide"); }, delay);
     }
 
     // Scrolls the page down, but no further than the bottom edge of what you could
@@ -464,7 +464,7 @@
             localStorage.removeItem('save-state');
             localStorage.removeItem('unlockedSuccesses');
             // enlever la notif flèche si elle est active
-            disableArrowAnimation()
+            disableArrowAnimation();
             // Restaurer les images des succès débloqués à leur source d'origine
             restoreSuccessImages();
             // Réinitialiser les succès lors du redémarrage de l'histoire
@@ -484,7 +484,7 @@
             }
                 try {
                     // Sauvegarder les succès débloqués dans le localStorage
-                    let savedSuccess = JSON.stringify(unlockedSuccesses)
+                    let savedSuccess = JSON.stringify(unlockedSuccesses);
                     window.localStorage.setItem("unlockedSuccesses", savedSuccess);
                 } catch (e) {
                     console.warn("Couldn't save success");
@@ -526,7 +526,7 @@
         modal.style.display = "block";
         modalBox.onclick = function() {
             modal.style.display = "none";
-        }
+        };
     }
 
     // Fonction pour afficher le tooltip au toucher de l'image
@@ -573,7 +573,7 @@
         this.classList.toggle('rotate');
         successBoxMobile.classList.toggle('show');
         disableArrowAnimation(); // Désactivez l'animation de la flèche
-    })
+    });
 
     function disableArrowAnimation() {
         arrow.classList.remove('illuminate'); // Supprimez la classe pour désactiver l'animation
@@ -626,5 +626,33 @@
             console.debug("Couldn't load success state");
         }
     }
+
+    function fadeInAudio(audioElement, duration) {
+        if (!audioElement) {
+            console.log("No audio element provided.");
+            return;
+        }
+        
+        audioElement.volume = 0;
+        audioElement.play();
+        console.log(`Starting fade-in for ${audioElement.src} with duration ${duration}ms.`);
+
+        const fadeInInterval = 50; // Intervalle en millisecondes
+        const step = 1 / (duration / fadeInInterval);
+
+        function fade() {
+            if (audioElement.volume < 1 - step) {
+                audioElement.volume += step;
+                console.log(`Audio volume: ${audioElement.volume}`);
+                setTimeout(fade, fadeInInterval);
+            } else {
+                audioElement.volume = 1;
+                console.log(`Fade-in complete for ${audioElement.src}.`);
+            }
+        }
+
+        fade();
+    }
+
 
 })(storyContent);

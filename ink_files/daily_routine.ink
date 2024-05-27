@@ -285,7 +285,6 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
 
 ===trajet_velo===
 # AUDIO: audio/bike.wav
-# AUDIOLOOP:
 {glycemie <= 5: Zucchi s'élance sur son vélo, mais rapidement, iel réalise que ses jambes sont lourdes et faibles. Une hypoglycémie le·a ralentit, l'obligeant à faire demi-tour. Déçu·e et frustré·e, Zucchi abandonne l'idée du vélo et se dirige vers l'arrêt de bus le plus proche. -> trajet_bus | Zucchi opte pour le vélo, espérant arriver au travail rapidement et sans encombre. La brise matinale caresse son visage alors qu'iel pédale avec détermination, savourant chaque instant de liberté sur deux roues.}
     ~ velo = true
     ~ glycemie -= 3
@@ -294,12 +293,12 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
 
 ===trajet_bus===
 ~ temps += 2
-# AUDIOLOOP:
 {not trajet_velo:Zucchi décide de prendre le bus pour se rendre au travail.|} A l'arrêt de bus, iel attend de longues minutes que le bus arrive. Il finit par arriver avec assez de retard pour augmenter son stress d'être à l'heure au travail. Acceptant qu'iel sera en retard, iel monte dans le bus tout en se rappelant de regarder où en est sa glycémie.
     * [Regarder sa glycémie]
     {glycemie >= 5: {glycemie >= 15: -> situ_hyper_trajet| ->situ_normale_trajet}| -> situ_hypo_trajet}
 
     ===situ_hypo_trajet===
+# AUDIO:
 # AUDIOLOOP: audio/bus.wav
     Alors que Zucchi monte dans le bus, une sensation de faiblesse l'envahit subitement, signe que sa glycémie est en baisse. Cette sensation le·a contraint à chercher un siège, incapable de rester debout en raison de l'hypoglycémie qui le prend au dépourvu. Iel check son téléphone afin de vérifier son capteur, qui affiche effectivement une glycémie basse.
     
@@ -341,6 +340,9 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
         {temps > 12: Après avoir récupéré, Zucchi reprend son chemin vers le travail, mais réalise avec consternation qu'iel est bien plus en retard que prévu. Iel se dépêche autant que possible, mais le temps perdu et la faiblesse persistante commencent à peser lourdement sur son esprit. Les pensées de justifications et d'excuses se bousculent alors qu'iel se rapproche du bâtiment, agacé·e d'avoir dû sortir du bus plus tôt et redoutant les réactions de ses collègues et de son patron. ->retard_gros |{temps<6: Après avoir récupéré, Zucchi poursuit son trajet vers le travail, se sentant soulagé·e en voyant qu'iel devrait arriver à l'heure. Cependant, iel ne peut s'empêcher de ressentir une pointe d'agacement d'avoir dû se dépêcher autant avant de partir, sacrifiant ainsi une préparation adéquate pour la journée. Malgré cela, iel aborde la journée avec une attitude positive, même si iel reste un peu faible et irrité·e par cette situation. ->retard_sans | Après avoir récupéré, Zucchi poursuit son trajet vers le travail, réalisant avec soulagement qu'iel est seulement un peu en retard. Iel accélère le pas, agacé·e d'avoir dû sortir du bus plus tôt et de s'être pressé·e pour arriver à l'heure. Malgré cette frustration, iel se sent mieux après avoir pris soin de sa santé et aborde la journée avec optimisme, bien que la faiblesse persistante soit encore présente. ->retard_moyen}}
 
     ===situ_hyper_trajet===
+    
+    # AUDIO:
+    # AUDIOLOOP: audio/bus.wav
     La glycémie de Zucchi est élevée, ce qui indique une concentration importante de sucre dans son sang. Une sensation de soif et de fatigue l'accable, lui rappelant la nécessité pressante de s'administrer de l'insuline dès que possible.
 
     <expl> L'hyperglycémie se produit lorsque le taux de glucose dans le sang devient anormalement élevé. Cela peut se produire si l'insuline n'est pas administrée en quantité suffisante par rapport à la quantité de glucose consommée ou si les injections sont manquées. Les symptômes de l'hyperglycémie comprennent la soif excessive, l'envie fréquente d'uriner, la fatigue, la vision floue et une sensation générale de malaise. Pour traiter l'hyperglycémie, il est recommandé de boire beaucoup d'eau pour aider à éliminer le glucose en excès dans le sang. En outre, l'administration d'insuline supplémentaire peut être nécessaire pour ramener le taux de glucose sanguin à des niveaux normaux. Une hyperglycémie non traitée peut entraîner des complications à long terme telles que des dommages aux vaisseaux sanguins, aux nerfs et aux organes; qui peuvent dans les cas extrêmes conduire jusqu'au décès.</expl>
@@ -369,7 +371,8 @@ Zucchi décide d'aller tout de même au travail et se prépare à partir, consci
         {temps > 12: Après s'être piqué dans le bus pour traiter son hyperglycémie, Zucchi se sent un peu plus soulagé·e, mais reste préoccupé·e par l'ampleur de son retard. Les minutes semblent s'étirer comme des heures alors qu'il·elle attend anxieusement son arrêt. Lorsqu'il·elle finit par descendre, une bouffée d'air frais le·la revigore, mais le poids de son retard persiste, exacerbé par le sentiment d'inconfort d'avoir dû gérer sa condition dans un environnement public. ->retard_gros |{temps<6: Même si Zucchi parvient à traiter son hyperglycémie dans le bus, l'inconfort persiste alors qu'iel se fraye un chemin pour descendre du bus, arrivé à son arrêt. Le soulagement d'avoir géré sa santé s'entremêle avec l'inquiétude face à la journée de travail à venir. Malgré sa ponctualité, iel ressent toujours le poids de son état de santé fragile, un rappel constant de la complexité de sa condition.->retard_sans | Après s'être piqué pour traiter son hyperglycémie dans le bus, Zucchi ressent un mélange de soulagement et d'appréhension alors qu'iel attend son arrêt. Lorsqu'il·elle descend enfin, un sentiment de soulagement l'envahit, mais iel sait qu'iel est un peu en retard. ->retard_moyen}}
 
     ===situ_normale_trajet===
-    
+    # AUDIO:
+    # AUDIOLOOP: audio/bus.wav
     Zucchi se sent à l'aise dans le bus, sa glycémie étant dans la normale. Iel se détend un peu malgré le retard du bus, ne sachant pas si iel arrivera à l'heure au travail. La douce oscillation du véhicule et le brouhaha apaisant des passagers endormis l'entourent, créant un cocon de tranquillité dans lequel iel se laisse volontiers envelopper.
     # BACKGROUND : midi
     {temps > 12: Malgré sa glycémie stable, Zucchi ressent une pointe d'impatience alors que le bus avance lentement vers son arrêt. Le confort du véhicule est tempéré par l'urgence de la situation, iel se rongeant les ongles en regardant le trafic congestionné. Même si son état de santé est stable, l'incertitude de son retard persiste, un rappel constant de la réalité mouvante de sa condition. Iel finit par arriver au travail. ->retard_gros |{temps<6: Dans le bus, Zucchi savoure chaque instant de calme alors que le véhicule avance en douceur vers son arrêt. Sa glycémie normale lui procure un sentiment de soulagement, et iel se laisse bercer par le mouvement régulier du bus. Les pensées qui tourbillonnaient autrefois dans son esprit semblent s'être apaisées, laissant place à un sentiment de détente et de tranquillité. Malgré le retard potentiel du bus, iel apprécie ce moment de répit avant de plonger dans les tumultes de la journée de travail. En sortant du bus, après une petite marche, iel arrive devant son bureau.  ->retard_sans | Bien que sa glycémie soit stable, Zucchi ressent une légère tension alors que le bus avance à un rythme régulier vers son arrêt. Iel regarde anxieusement par la fenêtre, calculant mentalement le temps qu'il lui reste pour arriver à l'heure. Malgré le confort relatif du bus, l'ombre du retard plane toujours, une source constante de préoccupation dans l'esprit de Zucchi. Sorti·e du bus, iel se dépèche jusqu'à son bureau, et arrive enfin devant. ->retard_moyen}}
@@ -417,7 +420,6 @@ Iel se sent déçu·e de ellui-même car la ponctualité ne semble pas être que
 
 ===retard_moyen===
 *[Entrer]
-# AUDIO:
 # AUDIOLOOP: audio/office.wav
 # SUCCESS: icons/work_c.png
 
@@ -432,7 +434,6 @@ En commençant à lire ses mails, iel ressent sur ellui le jugement de ses coll�
 
 ===retard_sans===
 *[Entrer]
-# AUDIO:
 # AUDIOLOOP: audio/office.wav
 # SUCCESS: icons/work_c.png
 
