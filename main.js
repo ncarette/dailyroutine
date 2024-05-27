@@ -1,11 +1,10 @@
 (function(storyContent) {
-
-    // Create ink story from the content using inkjs
+    // Initialize the ink story
     var story = new inkjs.Story(storyContent);
-
     var savePoint = "";
     var unlockedSuccesses = {};
-    var originalImageSources = {
+
+    const originalImageSources = {
         "cgm": "./icons/cgm.png",
         "hypo": "./icons/hypo.png",
         "meal": "./icons/meal.png",
@@ -17,7 +16,7 @@
         "work": "./icons/work.png",
         "love": "./icons/love.png"
     };
-    var unlockedImageSources = {
+    const unlockedImageSources = {
         "cgm": "./icons/cgm_c.png",
         "hypo": "./icons/hypo_c.png",
         "meal": "./icons/meal_c.png",
@@ -30,54 +29,24 @@
         "love": "./icons/love_c.png"
     };
 
-    // Toggle mobile success-box
-    var arrow = document.querySelector('.arrow');
-    var successBoxMobile = document.querySelector('.success-box-mobile');
+    // DOM Elements
+    const arrow = document.querySelector('.arrow');
+    const successBoxMobile = document.querySelector('.success-box-mobile');
+    const storyContainer = document.querySelector('#story');
+    const outerScrollContainer = document.querySelector('.outerContainer');
+    let savedTheme, globalTagTheme;
 
-    let savedTheme;
-    let globalTagTheme;
-
-    // Global tags - those at the top of the ink file
-    // We support:
-    //  # theme: dark
-    //  # author: Your Name
-    var globalTags = story.globalTags;
-    if( globalTags ) {
-        for(var i=0; i<story.globalTags.length; i++) {
-            var globalTag = story.globalTags[i];
-            var splitTag = splitPropertyTag(globalTag);
-
-            // THEME: dark
-            if( splitTag && splitTag.property == "theme" ) {
-                globalTagTheme = splitTag.val;
-            }
-
-            // author: Your Name
-            else if( splitTag && splitTag.property == "author" ) {
-                var byline = document.querySelector('.byline');
-                byline.innerHTML = "by "+splitTag.val;
-            }
-        }
-    }
-
-    var storyContainer = document.querySelector('#story');
-    var outerScrollContainer = document.querySelector('.outerContainer');
-
-    // page features setup
+    // Initialization
+    setupGlobalTags();
     setupTheme(globalTagTheme);
-    var hasSave = loadSavePoint();
+    const hasSave = loadSavePoint();
     setupButtons(hasSave);
     reloadUnlockedSuccesses();
-    // Set initial save point
     savePoint = story.state.toJson();
-
-    // Kick off the start of the story!
     continueStory(true);
 
-    // Main story processing function. Each time this is called it generates
-    // all the next content up as far as the next set of choices.
+    // Main story processing function
     function continueStory(firstTime) {
-
         var paragraphIndex = 0;
         var delay = 0.0;
 
@@ -85,15 +54,14 @@
         var previousBottomEdge = firstTime ? 0 : contentBottomEdgeY();
 
         // Generate story text - loop through available content
-        while(story.canContinue) {
-
+        while (story.canContinue) {
             // Get ink to generate the next paragraph
             var paragraphText = story.Continue();
             var tags = story.currentTags;
 
             // Any special tags included with this line
             var customClasses = [];
-            for(var i=0; i<tags.length; i++) {
+            for (var i = 0; i < tags.length; i++) {
                 var tag = tags[i];
 
                 console.log("Received tag:", tag);
@@ -103,30 +71,30 @@
                 var backgroundTag = splitBackgroundTag(tag);
 
                 // AUDIO: src
-                if( splitTag && splitTag.property == "AUDIO" ) {
-                  if('audio' in this) {
-                    this.audio.pause();
-                    this.audio.removeAttribute('src');
-                    this.audio.load();
-                  }
-                  this.audio = new Audio(splitTag.val);
-                  fadeInAudio(this.audio, 5000); // Call the fadeInAudio function
+                if (splitTag && splitTag.property == "AUDIO") {
+                    if ('audio' in this) {
+                        this.audio.pause();
+                        this.audio.removeAttribute('src');
+                        this.audio.load();
+                    }
+                    this.audio = new Audio(splitTag.val);
+                    fadeInAudio(this.audio, 5000); // Call the fadeInAudio function
                 }
 
                 // AUDIOLOOP: src
-                else if( splitTag && splitTag.property == "AUDIOLOOP" ) {
-                  if('audioLoop' in this) {
-                    this.audioLoop.pause();
-                    this.audioLoop.removeAttribute('src');
-                    this.audioLoop.load();
-                  }
-                  this.audioLoop = new Audio(splitTag.val);
-                  fadeInAudio(this.audioLoop, 10000); // Call the fadeInAudio function
-                  this.audioLoop.loop = true;
+                else if (splitTag && splitTag.property == "AUDIOLOOP") {
+                    if ('audioLoop' in this) {
+                        this.audioLoop.pause();
+                        this.audioLoop.removeAttribute('src');
+                        this.audioLoop.load();
+                    }
+                    this.audioLoop = new Audio(splitTag.val);
+                    fadeInAudio(this.audioLoop, 10000); // Call the fadeInAudio function
+                    this.audioLoop.loop = true;
                 }
 
                 // IMAGE: src
-                if( splitTag && splitTag.property == "IMAGE" ) {
+                if (splitTag && splitTag.property == "IMAGE") {
                     var imageElement = document.createElement('img');
                     imageElement.src = splitTag.val;
                     storyContainer.appendChild(imageElement);
@@ -136,12 +104,12 @@
                 }
 
                 // LINK: url
-                else if( splitTag && splitTag.property == "LINK" ) {
+                else if (splitTag && splitTag.property == "LINK") {
                     window.location.href = splitTag.val;
                 }
 
                 // LINKOPEN: url
-                else if( splitTag && splitTag.property == "LINKOPEN" ) {
+                else if (splitTag && splitTag.property == "LINKOPEN") {
                     window.open(splitTag.val);
                 }
 
@@ -158,13 +126,13 @@
                 }
 
                 // CLASS: className
-                else if( splitTag && splitTag.property == "CLASS" ) {
+                else if (splitTag && splitTag.property == "CLASS") {
                     customClasses.push(splitTag.val);
                 }
 
                 // CLEAR - removes all existing content.
                 // RESTART - clears everything and restarts the story from the beginning
-                else if( tag == "CLEAR" || tag == "RESTART" ) {
+                else if (tag == "CLEAR" || tag == "RESTART") {
                     removeAll("p");
                     removeAll("img");
                     // remove the load button since there is nothing to load
@@ -177,7 +145,7 @@
                     // Comment out this line if you want to leave the header visible when clearing
                     setVisible(".header", false);
 
-                    if( tag == "RESTART" ) {
+                    if (tag == "RESTART") {
                         restart();
                         return;
                     }
@@ -202,17 +170,16 @@
                                 var successBoxMobileImg = successBoxMobile.querySelector('#' + id);
                                 if (successBoxMobileImg) {
                                     successBoxMobileImg.src = splitTag.val;
-                                // Play the success music
-                                this.audio = new Audio("audio/win.wav");
-                                this.audio.play();
-                                // Display an alert dialog box with the image title
-                                showModal('Congratulations! You have unlocked the success "' + img.title + '"');
+                                    // Play the success music
+                                    this.audio = new Audio("audio/win.wav");
+                                    this.audio.play();
+                                    // Display an alert dialog box with the image title
+                                    showModal('Bravo ! Vous avez débloqué le succès "' + img.title + '"');
                                 }
                             }
                         }
                     }
                 }
-
             }
 
             // Create paragraph element (initially hidden)
@@ -224,7 +191,7 @@
             paragraphElement.classList.add('new');
 
             // Add any custom classes derived from ink tags
-            for(var i=0; i<customClasses.length; i++)
+            for (var i = 0; i < customClasses.length; i++)
                 paragraphElement.classList.add(customClasses[i]);
 
             // Fade in paragraph after a short delay
@@ -234,7 +201,6 @@
 
         // Create HTML choices from ink choices
         story.currentChoices.forEach(function(choice) {
-
             // Create paragraph with anchor element
             var choiceParagraphElement = document.createElement('p');
             choiceParagraphElement.classList.add("choice");
@@ -248,7 +214,6 @@
             // Click on choice
             var choiceAnchorEl = choiceParagraphElement.querySelectorAll("a")[0];
             choiceAnchorEl.addEventListener("click", function(event) {
-
                 // Don't follow <a> link
                 event.preventDefault();
 
@@ -277,11 +242,10 @@
         // Extend height to fit
         // We do this manually so that removing elements and creating new ones doesn't
         // cause the height (and therefore scroll) to jump backwards temporarily.
-        storyContainer.style.height = contentBottomEdgeY()+"px";
+        storyContainer.style.height = contentBottomEdgeY() + "px";
 
-        if( !firstTime )
+        if (!firstTime)
             scrollDown(previousBottomEdge);
-
     }
 
     function restart() {
@@ -306,25 +270,24 @@
     // Scrolls the page down, but no further than the bottom edge of what you could
     // see previously, so it doesn't go too far.
     function scrollDown(previousBottomEdge) {
-
         // Line up top of screen with the bottom of where the previous content ended
         var target = previousBottomEdge;
 
         // Can't go further than the very bottom of the page
         var limit = outerScrollContainer.scrollHeight - outerScrollContainer.clientHeight;
-        if( target > limit ) target = limit;
+        if (target > limit) target = limit;
 
         var start = outerScrollContainer.scrollTop;
 
         var dist = target - start;
-        var duration = 300 + 300*dist/100;
+        var duration = 300 + 300 * dist / 100;
         var startTime = null;
         function step(time) {
-            if( startTime == null ) startTime = time;
-            var t = (time-startTime) / duration;
-            var lerp = 3*t*t - 2*t*t*t; // ease in/out
-            outerScrollContainer.scrollTo(0, (1.0-lerp)*start + lerp*target);
-            if( t < 1 ) requestAnimationFrame(step);
+            if (startTime == null) startTime = time;
+            var t = (time - startTime) / duration;
+            var lerp = 3 * t * t - 2 * t * t * t; // ease in/out
+            outerScrollContainer.scrollTo(0, (1.0 - lerp) * start + lerp * target);
+            if (t < 1) requestAnimationFrame(step);
         }
         requestAnimationFrame(step);
     }
@@ -338,22 +301,20 @@
 
     // Remove all elements that match the given selector. Used for removing choices after
     // you've picked one, as well as for the CLEAR and RESTART tags.
-    function removeAll(selector)
-    {
+    function removeAll(selector) {
         var allElements = storyContainer.querySelectorAll(selector);
-        for(var i=0; i<allElements.length; i++) {
+        for (var i = 0; i < allElements.length; i++) {
             var el = allElements[i];
             el.parentNode.removeChild(el);
         }
     }
 
     // Used for hiding and showing the header when you CLEAR or RESTART the story respectively.
-    function setVisible(selector, visible)
-    {
+    function setVisible(selector, visible) {
         var allElements = storyContainer.querySelectorAll(selector);
-        for(var i=0; i<allElements.length; i++) {
+        for (var i = 0; i < allElements.length; i++) {
             var el = allElements[i];
-            if( !visible )
+            if (!visible)
                 el.classList.add("invisible");
             else
                 el.classList.remove("invisible");
@@ -376,6 +337,7 @@
 
         return null;
     }
+
     // For the background color change
     function splitBackgroundTag(tag) {
         var regex = /^([^:]+):\s*(matin|midi|aprem|soir)$/;
@@ -409,7 +371,6 @@
 
     // Loads save state if exists in the browser memory
     function loadSavePoint() {
-
         try {
             let savedState = window.localStorage.getItem('save-state');
             if (savedState) {
@@ -424,7 +385,6 @@
 
     // Detects which theme (light or dark) to use
     function setupTheme(globalTagTheme) {
-
         // load theme from browser memory
         var savedTheme;
         try {
@@ -444,7 +404,6 @@
 
     // Used to hook up the functionality for global functionality buttons
     function setupButtons(hasSave) {
-
         let rewindEl = document.getElementById("rewind");
         if (rewindEl) rewindEl.addEventListener("click", function(event) {
             removeAll("p");
@@ -475,14 +434,15 @@
             } catch (e) {
                 console.warn("Couldn't save state");
             }
-                try {
-                    // Save the unlocked successes in the localStorage
-                    let savedSuccess = JSON.stringify(unlockedSuccesses);
-                    window.localStorage.setItem("unlockedSuccesses", savedSuccess);
-                } catch (e) {
-                    console.warn("Couldn't save success");
-                }
+            try {
+                // Save the unlocked successes in the localStorage
+                let savedSuccess = JSON.stringify(unlockedSuccesses);
+                window.localStorage.setItem("unlockedSuccesses", savedSuccess);
+            } catch (e) {
+                console.warn("Couldn't save success");
+            }
         });
+
         let reloadEl = document.getElementById("reload");
         if (!hasSave) {
             reloadEl.setAttribute("disabled", "disabled");
@@ -510,6 +470,7 @@
             document.body.classList.toggle("dark");
         });
     }
+
     // Function to display the modal box announcing the unlocked successes
     function showModal(message) {
         var modal = document.getElementById("custom-modal");
@@ -624,7 +585,7 @@
             console.log("No audio element provided.");
             return;
         }
-        
+
         audioElement.volume = 0;
         audioElement.play();
 
@@ -641,6 +602,24 @@
         }
 
         fade();
+    }
+
+    function setupGlobalTags() {
+        var globalTags = story.globalTags;
+        if (globalTags) {
+            globalTags.forEach(tag => {
+                var splitTag = splitPropertyTag(tag);
+
+                if (splitTag) {
+                    if (splitTag.property == "theme") {
+                        globalTagTheme = splitTag.val;
+                    } else if (splitTag.property == "author") {
+                        var byline = document.querySelector('.byline');
+                        byline.innerHTML = "by " + splitTag.val;
+                    }
+                }
+            });
+        }
     }
 
 })(storyContent);
