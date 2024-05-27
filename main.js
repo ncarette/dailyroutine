@@ -222,6 +222,9 @@
             paragraphElement.innerHTML = paragraphText;
             storyContainer.appendChild(paragraphElement);
 
+            // Add new class to the new paragraph
+            paragraphElement.classList.add('new');
+
             // Add any custom classes derived from ink tags
             for(var i=0; i<customClasses.length; i++)
                 paragraphElement.classList.add(customClasses[i]);
@@ -260,6 +263,14 @@
                 // This is where the save button will save from
                 savePoint = story.state.toJson();
 
+                // Remove 'new' class and add 'old' class to previous paragraphs
+                var allParagraphs = storyContainer.querySelectorAll('p');
+                allParagraphs.forEach(function(paragraph) {
+                    if (paragraph !== choiceParagraphElement) {
+                        paragraph.classList.remove('new');
+                        paragraph.classList.add('old');
+                    }
+                });
                 // Aaand loop
                 continueStory();
             });

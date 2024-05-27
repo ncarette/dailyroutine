@@ -21,17 +21,16 @@ body {
     z-index: -2;
     background: linear-gradient(to bottom right, #ADD8E6, #87CEEB);
     overflow: hidden;
-    transition: background 5s ease;
 }
 
-/* Transition applied to all classes */
+/* 
 .background,
 .matin,
 .midi,
 .aprem,
 .soir {
     transition: background 5s ease;
-}
+}*/
 
 /* CSS classes for different times of day */
 .matin {
@@ -49,6 +48,7 @@ body {
 .soir{
     background: linear-gradient(to bottom right, #87CEFA, #4682B4, #FFA07A);
 }
+
 
 .background span {
     z-index: -1;
@@ -313,6 +313,14 @@ p {
     color: #888;
     line-height: 1.7em;
     font-weight: lighter;
+}
+
+p.new {
+    color: #222; /* Gris très foncé */
+}
+
+p.old {
+    color: #888; /* Gris clair */
 }
 
 a {
