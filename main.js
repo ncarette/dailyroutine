@@ -409,11 +409,6 @@
         return null;
     }
 
-
-
-
-
-
     // Loads save state if exists in the browser memory
     function loadSavePoint() {
 
@@ -517,7 +512,7 @@
             document.body.classList.toggle("dark");
         });
     }
-
+    // fonction pour faire apparaitre la boite modale annoncant les succès débloqués
     function showModal(message) {
         var modal = document.getElementById("custom-modal");
         var modalBox = document.getElementById("modal-content");
@@ -568,7 +563,7 @@
         image.addEventListener('touchstart', showMobileTooltip, { passive: true });
     });
 
-
+    // Fonction pour faire tourner la flèche quand on tape dessus sur mobile ou quand on clique sur ordi
     arrow.addEventListener('click', function() {
         this.classList.toggle('rotate');
         successBoxMobile.classList.toggle('show');
@@ -627,6 +622,7 @@
         }
     }
 
+    // Pour le fade-in des audio et audioloop
     function fadeInAudio(audioElement, duration) {
         if (!audioElement) {
             console.log("No audio element provided.");
@@ -635,7 +631,6 @@
         
         audioElement.volume = 0;
         audioElement.play();
-        console.log(`Starting fade-in for ${audioElement.src} with duration ${duration}ms.`);
 
         const fadeInInterval = 50; // Intervalle en millisecondes
         const step = 1 / (duration / fadeInInterval);
@@ -643,11 +638,9 @@
         function fade() {
             if (audioElement.volume < 1 - step) {
                 audioElement.volume += step;
-                console.log(`Audio volume: ${audioElement.volume}`);
                 setTimeout(fade, fadeInInterval);
             } else {
                 audioElement.volume = 1;
-                console.log(`Fade-in complete for ${audioElement.src}.`);
             }
         }
 
