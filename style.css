@@ -21,6 +21,33 @@ body {
     z-index: -2;
     background: linear-gradient(to bottom right, #ADD8E6, #87CEEB);
     overflow: hidden;
+    transition: background 5s ease;
+}
+
+/* Transition applied to all classes */
+.background,
+.matin,
+.midi,
+.aprem,
+.soir {
+    transition: background 5s ease;
+}
+
+/* CSS classes for different times of day */
+.matin {
+    background: linear-gradient(to bottom right, #E0FFFF, #B0E0E6);
+}
+
+.midi {
+    background: linear-gradient(to bottom right, #ADD8E6, #87CEEB);
+}
+
+.aprem {
+    background: linear-gradient(to bottom right, #87CEFA, #4682B4, #FFA07A);
+}
+
+.soir{
+    background: linear-gradient(to bottom right, #87CEFA, #4682B4, #FFA07A);
 }
 
 .background span {
@@ -38,6 +65,8 @@ body {
     filter: blur(10px); /* Ajout de flou */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Effet d'ombre */
 }
+
+
 
 h1, h2 {
     text-align: center;
@@ -117,6 +146,13 @@ h2 {
     padding-top: 4em;
     background: white;
     box-shadow: whitesmoke 0px 7px 29px 0px;
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        background: none;
+        box-shadow: none;
+    }
 }
 
 .switched .container {

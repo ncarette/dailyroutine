@@ -97,9 +97,11 @@
             for(var i=0; i<tags.length; i++) {
                 var tag = tags[i];
 
+                console.log("Received tag:", tag);
                 // Detect tags of the form "X: Y". Currently used for IMAGE and CLASS but could be
                 // customised to be used for other things too.
                 var splitTag = splitPropertyTag(tag);
+                var backgroundTag = splitBackgroundTag(tag);
 
                 // AUDIO: src
                 if( splitTag && splitTag.property == "AUDIO" ) {
@@ -144,10 +146,18 @@
                     window.open(splitTag.val);
                 }
 
-                // BACKGROUND: src
-                else if( splitTag && splitTag.property == "BACKGROUND" ) {
-                    outerScrollContainer.style.backgroundImage = 'url('+splitTag.val+')';
+                // BACKGROUND: timeOfDay
+                else if (backgroundTag && backgroundTag.property === "BACKGROUND") {
+                    console.log("Changing background to:", backgroundTag.val);
+                    var fond = document.getElementById("fonddecran");
+                    if (fond) {
+                        fond.className = 'background';
+                        fond.classList.add(backgroundTag.val);
+                    } else {
+                        console.error("Element with ID 'fonddecran' not found.");
+                    }
                 }
+
 
                 // CLASS: className
                 else if( splitTag && splitTag.property == "CLASS" ) {
@@ -346,9 +356,9 @@
     // e.g. IMAGE: source path
     function splitPropertyTag(tag) {
         var propertySplitIdx = tag.indexOf(":");
-        if( propertySplitIdx != null ) {
+        if (propertySplitIdx !== -1) {
             var property = tag.substr(0, propertySplitIdx).trim();
-            var val = tag.substr(propertySplitIdx+1).trim();
+            var val = tag.substr(propertySplitIdx + 1).trim();
             return {
                 property: property,
                 val: val
@@ -357,6 +367,41 @@
 
         return null;
     }
+    // Pour le background color change
+    function splitBackgroundTag(tag) {
+        var regex = /^([^:]+):\s*(matin|midi|aprem|soir)$/;
+        var match = tag.match(regex);
+        if (match) {
+            var property = match[1].trim();
+            var timeOfDay = match[2].trim();
+            var backgroundClass;
+            switch (timeOfDay) {
+                case 'matin':
+                    backgroundClass = 'matin';
+                    break;
+                case 'midi':
+                    backgroundClass = 'midi';
+                    break;
+                case 'aprem':
+                    backgroundClass = 'aprem';
+                    break;
+                case 'soir':
+                    backgroundClass = 'soir';
+                    break;
+            }
+
+            return {
+                property: property,
+                val: backgroundClass
+            };
+        }
+        return null;
+    }
+
+
+
+
+
 
     // Loads save state if exists in the browser memory
     function loadSavePoint() {
