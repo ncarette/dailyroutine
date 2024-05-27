@@ -30,7 +30,6 @@
         "love": "./icons/love_c.png"
     };
 
-    
     // Toggle mobile success-box
     var arrow = document.querySelector('.arrow');
     var successBoxMobile = document.querySelector('.success-box-mobile');
@@ -111,7 +110,7 @@
                     this.audio.load();
                   }
                   this.audio = new Audio(splitTag.val);
-                  fadeInAudio(this.audio, 5000); // Appel de la fonction fadeInAudio
+                  fadeInAudio(this.audio, 5000); // Call the fadeInAudio function
                 }
 
                 // AUDIOLOOP: src
@@ -122,7 +121,7 @@
                     this.audioLoop.load();
                   }
                   this.audioLoop = new Audio(splitTag.val);
-                  fadeInAudio(this.audioLoop, 10000); // Appel de la fonction fadeInAudio
+                  fadeInAudio(this.audioLoop, 10000); // Call the fadeInAudio function
                   this.audioLoop.loop = true;
                 }
 
@@ -158,7 +157,6 @@
                     }
                 }
 
-
                 // CLASS: className
                 else if( splitTag && splitTag.property == "CLASS" ) {
                     customClasses.push(splitTag.val);
@@ -169,12 +167,12 @@
                 else if( tag == "CLEAR" || tag == "RESTART" ) {
                     removeAll("p");
                     removeAll("img");
-                    // enlever le bouton charger puisqu'il n'y a rien a charger
+                    // remove the load button since there is nothing to load
                     let reloadEl = document.getElementById("reload");
                     reloadEl.setAttribute("disabled", "disabled");
 
                     localStorage.removeItem('save-state');
-                    // enlever la notif flèche si elle est active
+                    // remove the arrow notification if it is active
                     disableArrowAnimation();
                     // Comment out this line if you want to leave the header visible when clearing
                     setVisible(".header", false);
@@ -186,29 +184,29 @@
                 }
 
                 else if (splitTag && splitTag.property == "SUCCESS") {
-                    var regex = /\/(\w+)_c\.png$/; // Expression régulière pour extraire le nom de l'ID
-                    var match = splitTag.val.match(regex); // Trouver la correspondance dans l'URL
+                    var regex = /\/(\w+)_c\.png$/; // Regular expression to extract the ID name
+                    var match = splitTag.val.match(regex); // Find the match in the URL
                     if (match) {
-                        var id = match[1]; // Le premier groupe de capture contient le nom de l'ID
-                        var img = document.getElementById(id); // Trouver l'élément avec l'ID correspondant
+                        var id = match[1]; // The first capture group contains the ID name
+                        var img = document.getElementById(id); // Find the element with the corresponding ID
                         var arrow = document.getElementById("arrow");
                         if (img) {
                             if (!unlockedSuccesses[id]) {
-                                // Débloquer le succès
+                                // Unlock the success
                                 unlockedSuccesses[id] = true;
                                 // Edit
                                 img.classList.add("flashlight");
                                 arrow.classList.add('illuminate');
-                                img.src = splitTag.val; // Changer la source de l'image
-                                // gérer la boîte de succès mobile
+                                img.src = splitTag.val; // Change the image source
+                                // handle the mobile success box
                                 var successBoxMobileImg = successBoxMobile.querySelector('#' + id);
                                 if (successBoxMobileImg) {
                                     successBoxMobileImg.src = splitTag.val;
-                                // Jouer la musique de succès
+                                // Play the success music
                                 this.audio = new Audio("audio/win.wav");
                                 this.audio.play();
-                                // Afficher une boîte de dialogue d'alerte avec le titre de l'image
-                                showModal('Bravo ! Vous avez débloqué le succès "' + img.title + '"');
+                                // Display an alert dialog box with the image title
+                                showModal('Congratulations! You have unlocked the success "' + img.title + '"');
                                 }
                             }
                         }
@@ -378,7 +376,7 @@
 
         return null;
     }
-    // Pour le background color change
+    // For the background color change
     function splitBackgroundTag(tag) {
         var regex = /^([^:]+):\s*(matin|midi|aprem|soir)$/;
         var match = tag.match(regex);
@@ -452,17 +450,17 @@
             removeAll("p");
             removeAll("img");
             setVisible(".header", false);
-            // enlever le bouton charger puisqu'il n'y a rien a charger
+            // remove the load button since there is nothing to load
             let reloadEl = document.getElementById("reload");
             reloadEl.setAttribute("disabled", "disabled");
 
             localStorage.removeItem('save-state');
             localStorage.removeItem('unlockedSuccesses');
-            // enlever la notif flèche si elle est active
+            // remove the arrow notification if it is active
             disableArrowAnimation();
-            // Restaurer les images des succès débloqués à leur source d'origine
+            // Restore the images of unlocked successes to their original source
             restoreSuccessImages();
-            // Réinitialiser les succès lors du redémarrage de l'histoire
+            // Reset successes when restarting the story
             resetSuccesses();
 
             restart();
@@ -478,7 +476,7 @@
                 console.warn("Couldn't save state");
             }
                 try {
-                    // Sauvegarder les succès débloqués dans le localStorage
+                    // Save the unlocked successes in the localStorage
                     let savedSuccess = JSON.stringify(unlockedSuccesses);
                     window.localStorage.setItem("unlockedSuccesses", savedSuccess);
                 } catch (e) {
@@ -502,7 +500,7 @@
             } catch (e) {
                 console.debug("Couldn't load save state");
             }
-            reloadUnlockedSuccesses(); // Recharger les succès débloqués
+            reloadUnlockedSuccesses(); // Reload unlocked successes
             continueStory(true);
         });
 
@@ -512,7 +510,7 @@
             document.body.classList.toggle("dark");
         });
     }
-    // fonction pour faire apparaitre la boite modale annoncant les succès débloqués
+    // Function to display the modal box announcing the unlocked successes
     function showModal(message) {
         var modal = document.getElementById("custom-modal");
         var modalBox = document.getElementById("modal-content");
@@ -524,7 +522,7 @@
         };
     }
 
-    // Fonction pour afficher le tooltip au toucher de l'image
+    // Function to display the tooltip when touching the image
     function showMobileTooltip(event) {
         var title = event.target.getAttribute('title');
         var tooltip = null;
@@ -538,10 +536,10 @@
                 tooltip.style.top = (event.touches[0].pageY - 40) + 'px';
                 document.body.appendChild(tooltip);
 
-                // Supprimer le tooltip après 2 secondes
+                // Remove the tooltip after 2 seconds
                 setTimeout(function() {
                     removeTooltip();
-                }, 1400); // 2000 millisecondes = 2 secondes
+                }, 1400); // 2000 milliseconds = 2 seconds
             }
         }
 
@@ -555,65 +553,63 @@
         createTooltip();
     }
 
-
-
     // Add touch event listeners to images with the mobile-tooltip class
     var mobileImages = document.querySelectorAll('.mobile-tooltip');
     mobileImages.forEach(function(image) {
         image.addEventListener('touchstart', showMobileTooltip, { passive: true });
     });
 
-    // Fonction pour faire tourner la flèche quand on tape dessus sur mobile ou quand on clique sur ordi
+    // Function to rotate the arrow when tapped on mobile or clicked on desktop
     arrow.addEventListener('click', function() {
         this.classList.toggle('rotate');
         successBoxMobile.classList.toggle('show');
-        disableArrowAnimation(); // Désactivez l'animation de la flèche
+        disableArrowAnimation(); // Disable arrow animation
     });
 
     function disableArrowAnimation() {
-        arrow.classList.remove('illuminate'); // Supprimez la classe pour désactiver l'animation
+        arrow.classList.remove('illuminate'); // Remove the class to disable the animation
     }
 
-    // Fonction pour vérifier si un succès est déjà débloqué
+    // Function to check if a success is already unlocked
     function isSuccessUnlocked(id) {
         return unlockedSuccesses[id];
     }
 
-    // Fonction pour réinitialiser les succès
+    // Function to reset successes
     function resetSuccesses() {
-        unlockedSuccesses = {}; // Réinitialiser les succès débloqués
+        unlockedSuccesses = {}; // Reset unlocked successes
     }
 
-    // Fonction pour restaurer les images des succès débloqués à leur source d'origine
+    // Function to restore the images of unlocked successes to their original source
     function restoreSuccessImages() {
         var images = document.getElementsByClassName("success-image");
         for (var i = 0; i < images.length; i++) {
             var img = images[i];
             var id = img.id;
             if (img) {
-                // Restaurer la source de l'image à sa valeur d'origine à partir de l'objet originalImageSources
+                // Restore the image source to its original value from the originalImageSources object
                 img.src = originalImageSources[id];
                 img.classList.remove("flashlight");
             }
         }
     }
 
-    // Fonction pour recharger l'état des succès débloqués depuis le localStorage
+    // Function to reload the state of unlocked successes from localStorage
     function reloadUnlockedSuccesses() {
         try {
-            // Charger les succès débloqués depuis le localStorage
+            // Load unlocked successes from localStorage
             let retString = localStorage.getItem("unlockedSuccesses");
             if (retString) {
                 let savedSuccess = JSON.parse(retString);
-                // Mettre à jour les images des succès débloqués
+                // Update the images of unlocked successes
                 var images = document.getElementsByClassName("success-image");
                 for (var i = 0; i < images.length; i++) {
                     var img = images[i];
                     var id = img.id;
                     if (savedSuccess[id]) {
-                        img.src = unlockedImageSources[id]; // Utiliser la source de l'image mise à jour
+                        img.src = unlockedImageSources[id]; // Use the updated image source
                         img.classList.remove("flashlight");
-                        unlockedSuccesses[id] = true; // Actualiser la liste des succès débloqués
+                        unlockedSuccesses[id] = true; // Update the list of unlocked successes
                     }
                 }
             }
@@ -622,7 +618,7 @@
         }
     }
 
-    // Pour le fade-in des audio et audioloop
+    // For the fade-in of audio and audioloop
     function fadeInAudio(audioElement, duration) {
         if (!audioElement) {
             console.log("No audio element provided.");
@@ -632,7 +628,7 @@
         audioElement.volume = 0;
         audioElement.play();
 
-        const fadeInInterval = 50; // Intervalle en millisecondes
+        const fadeInInterval = 50; // Interval in milliseconds
         const step = 1 / (duration / fadeInInterval);
 
         function fade() {
@@ -646,6 +642,5 @@
 
         fade();
     }
-
 
 })(storyContent);
