@@ -6,6 +6,13 @@ body {
     overflow: hidden;
 }
 
+@font-face {
+  font-family: "FolksDreaming";
+  src: 
+    url("Folks Dreaming.wof") format("woff"),
+    url("Folks Dreaming.ttf") format("truetype"),
+}
+
 @keyframes move {
     100% {
         transform: translate3d(0, 0, 1px) rotate(360deg);
@@ -609,6 +616,7 @@ img {
 }
 
 .choice a {
+    font-weight: 400;
     transition: color 0.3s ease; /* Transition pour les liens de choix */
 }
 
