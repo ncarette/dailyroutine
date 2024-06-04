@@ -586,10 +586,10 @@ img {
 }
 
 .flashlight {
-    animation: flashlight 0.5s ease-out;
+    animation: lights 0.5s ease-out;
 }
 
-@keyframes flashlight {
+@keyframes lights {
     0% {
         opacity: 0;
     }
@@ -601,14 +601,14 @@ img {
     }
 }
 
-@keyframes illuminate {
+@keyframes lumos {
     0% { opacity: 0; }
     50% { opacity: 1; }
     100% { opacity: 0; }
 }
 
 .illuminate {
-    animation: illuminate 1s infinite;
+    animation: lumos 1s infinite;
 }
 
 .container {

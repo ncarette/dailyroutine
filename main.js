@@ -151,13 +151,13 @@
                     }
                 }
 
+                // Success handler
                 else if (splitTag && splitTag.property == "SUCCESS") {
                     var regex = /\/(\w+)_c\.png$/; // Regular expression to extract the ID name
                     var match = splitTag.val.match(regex); // Find the match in the URL
                     if (match) {
                         var id = match[1]; // The first capture group contains the ID name
                         var img = document.getElementById(id); // Find the element with the corresponding ID
-                        var arrow = document.getElementById("arrow");
                         if (img) {
                             if (!unlockedSuccesses[id]) {
                                 // Unlock the success
@@ -234,6 +234,10 @@
                         paragraph.classList.add('old');
                     }
                 });
+
+                //reset modal box (to avoid bug #26)
+                var modal = document.getElementById("custom-modal");
+                modal.style.display = "none";
                 // Aaand loop
                 continueStory();
             });
