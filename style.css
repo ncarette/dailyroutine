@@ -26,35 +26,27 @@ body {
     top: 0;
     left: 0;
     z-index: -2;
-    background: linear-gradient(to bottom right, #ADD8E6, #87CEEB);
     overflow: hidden;
-}
-
-/* 
-.background,
-.matin,
-.midi,
-.aprem,
-.soir {
     transition: background 5s ease;
-}*/
+}
 
 /* CSS classes for different times of day */
 .matin {
-    background: linear-gradient(to bottom right, #E0FFFF, #B0E0E6);
+    background: linear-gradient(to bottom right, #E0FFFF, #B0E0E6, #B0E0E6, #ADD8E6, #87CEEB, #87CEEB);
 }
 
 .midi {
-    background: linear-gradient(to bottom right, #ADD8E6, #87CEEB);
+    background: linear-gradient(to bottom right, #ADD8E6, #87CEEB, #87CEEB, #ADD8E6);
 }
 
 .aprem {
-    background: linear-gradient(to bottom right, #87CEFA, #4682B4, #FFA07A);
+    background: linear-gradient(to bottom right, #87CEEB, #4682B4, #4682B4, #B0C4DE, #FFB6C1);
 }
 
-.soir{
-    background: linear-gradient(to bottom right, #87CEFA, #4682B4, #FFA07A);
+.soir {
+    background: linear-gradient(to bottom right, #4682B4, #4682B4, #4682B4, #5F9EA0, #5F9EA0, #2F4F4F);
 }
+
 
 
 .background span {
