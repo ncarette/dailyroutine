@@ -65,7 +65,7 @@ body {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Effet d'ombre */
 }
 
-
+a {cursor: pointer;}
 
 h1, h2 {
     text-align: center;
@@ -109,6 +109,9 @@ h2 {
     font-style: italic;
 }
 
+.credits {
+    font-style: italic;
+}
 /* 
   Enables <iframe> support work on itch.io when using mobile iOS
 */
@@ -470,22 +473,39 @@ img {
     position: fixed;
     z-index: 9999;
 }
+.alert a{
+    color: white;
+    cursor: pointer;
+}
+.alert a:hover{
+    color: black;
+}
 
 /* The close button */
 .closebtn {
     margin-left: 15px;
     color: white;
     font-weight: bold;
-    float: right;
     font-size: 22px;
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
+    float: right;
 }
 
 /* When moving the mouse over the close button */
 .closebtn:hover {
     color: black;
+}
+
+#infobox .alert {
+    font-size: 10pt;
+}
+#infobox p {
+    font-size: 12pt;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Style de la boîte de dialogue modale */

@@ -2,40 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-
     <title>Équilibre au Quotidien</title>
-
     <link rel="icon" type="image/x-icon" href="./icons/logo.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
     <div class="outerContainer">
         <div id="fonddecran" class="background midi">
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
             <span></span>
            <span></span>
            <span></span>
@@ -66,7 +40,26 @@
            <span></span>
            <span></span>
            <span></span>
-
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+            <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
         </div>
         <div id="arrow" class="arrow rotate">➜</div>
         <div id="success" class="success-box show">
@@ -106,17 +99,18 @@
                         <img class="success-image mobile-tooltip" id="work" src="./icons/work.png" alt="Aller au travail" title="Aller au travail">
                         <img class="success-image mobile-tooltip" id="love" src="./icons/love.png" alt="Faire une nouvelle rencontre" title="Faire une nouvelle rencontre">
                     </div>
-
                 </div>
             </div>
         </div>
         <div id="controls" class="buttons">
           <a onclick="CreateDialogBox()"><i><b>Pourquoi le pronom "iel" ?</b></i></a>
+          <a class="credits" onclick="CreateInfoBox()">crédits</a>
           <a id="rewind" title="Restart story from beginning">recommencer</a>
           <a id="save" title="Save progress">sauvegarder</a>
           <a id="reload" title="Reload from save point">charger</a>
         </div>        
         <div id="dialogbox"></div>
+        <div id="infobox"></div>
         <div id="custom-modal" class="modal">
           <div id="modal-content" class="modal-content">
             <p id="modal-message"></p>
@@ -130,21 +124,46 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-            // DialogBox 
-            function CreateDialogBox() {
-                    var CloseBtn = document.createElement("span");
-                    CloseBtn.setAttribute("class", "closebtn");
-                    CloseBtn.setAttribute("onclick", "this.parentElement.style.display='none';");
-                    CloseBtn.innerHTML = "&times;";
 
-                    var DialogBox = document.createElement("div");
-                    DialogBox.setAttribute("class", "alert");
-                    DialogBox.innerHTML = 'L\'utilisation du pronom <i><b>iel</b></i>&nbsp pour désigner la personne de Zucchi vise à éviter tout préjugé sexiste dans la lecture de la fiction.  En particulier, le Robert le définit comme un "Pronom personnel sujet de la troisième personne du singulier (iel) et du pluriel (iels), employé pour évoquer une personne quel que soit son genre.". Dans notre cas, c\'est exactement l\'effet recherché. Un·e lecteur·ice non habitué·e pourrait le lire de la même manière qu\'iel lirait "elle" ou "il".;'
-                
-                    DialogBox.appendChild(CloseBtn);
-                    document.getElementById("dialogbox").appendChild(DialogBox);
-            };
+    <script type="text/javascript">
+        // DialogBox 
+        function CreateDialogBox() {
+            var CloseBtn = document.createElement("span");
+            CloseBtn.setAttribute("class", "closebtn");
+            CloseBtn.setAttribute("onclick", "this.parentElement.style.display='none';");
+            CloseBtn.innerHTML = "&times;";
+
+            var DialogBox = document.createElement("div");
+            DialogBox.setAttribute("class", "alert");
+            DialogBox.innerHTML = 'L\'utilisation du pronom <i><b>iel</b></i>&nbsp pour désigner la personne de Zucchi vise à éviter tout préjugé sexiste dans la lecture de la fiction.  En particulier, le Robert le définit comme un "Pronom personnel sujet de la troisième personne du singulier (iel) et du pluriel (iels), employé pour évoquer une personne quel que soit son genre.". Dans notre cas, c\'est exactement l\'effet recherché. Un·e lecteur·ice non habitué·e pourrait le lire de la même manière qu\'iel lirait "elle" ou "il".';
+        
+            DialogBox.appendChild(CloseBtn);
+            document.getElementById("dialogbox").appendChild(DialogBox);
+        };
+
+        // InfoBox 
+        function CreateInfoBox() {
+            var CloseInfo = document.createElement("span");
+            CloseInfo.setAttribute("class", "closebtn");
+            CloseInfo.setAttribute("onclick", "this.parentElement.style.display='none';");
+            CloseInfo.innerHTML = "&times;";
+
+            var InfoBox = document.createElement("div");
+            InfoBox.setAttribute("class", "alert");
+                InfoBox.innerHTML = `
+                                    <p>Icons</p>
+                                        All icons including favicon created by <a href="https://www.flaticon.com/free-icons/"><i><b>Freepik – Flaticon</b></i></a>
+                                    <p>Sounds</p>
+                                        The Office by qubodup -- <a href="https://freesound.org/s/211945/">https://freesound.org/s/211945/</a> -- License: Attribution 4.0<br>
+                                        accordion street musician 01 121205_00.wav by klankbeeld -- <a href="https://freesound.org/s/172314/">https://freesound.org/s/172314/</a> -- License: Attribution 4.0<br>
+                                        221212_2261_FR_WalkingToMall.wav by kevp888 -- <a href="https://freesound.org/s/666275/">https://freesound.org/s/666275/</a> -- License: Attribution 4.0<br>
+                                        PuttingOnAShirt.wav by talithamaree_2L -- <a href="https://freesound.org/s/593583/">https://freesound.org/s/593583/</a> -- License: Attribution 3.0<br>
+                                        nixeno - house ambiance with radio music.mp3 by nixeno -- <a href="https://freesound.org/s/416001/">https://freesound.org/s/416001/</a> -- License: Attribution 4.0<br>                                        
+                                        Frying Eggs by JaimeLopes -- <a href="https://freesound.org/s/516891/">https://freesound.org/s/516891/</a> -- License: Attribution 4.0<br>
+                                        R05_0646.mp3 by WaveAdventurer -- <a href="https://freesound.org/s/199656/">https://freesound.org/s/199656/</a> -- License: Attribution 4.0`;   
+            InfoBox.appendChild(CloseInfo);
+            document.getElementById("infobox").appendChild(InfoBox);
+        };
     </script>
     <script src="./ink_files/ink.js"></script>
     <script src="./ink_files/daily_routine.js"></script>
